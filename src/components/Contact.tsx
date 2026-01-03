@@ -1,0 +1,164 @@
+import { motion } from 'framer-motion';
+import { X, Mail, MapPin, Phone } from 'lucide-react';
+import { useEffect, useState } from 'react';
+
+interface ContactProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const GlitchText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
+  const [displayText, setDisplayText] = useState('');
+  const [isDecoding, setIsDecoding] = useState(true);
+
+  useEffect(() => {
+    setIsDecoding(true);
+    setDisplayText('');
+
+    const chars = '01';
+    const iterations = 20;
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+      setDisplayText(
+        text
+          .split('')
+          .map((char, index) => {
+            if (index < iteration) {
+              return text[index];
+            }
+            return chars[Math.floor(Math.random() * 2)];
+          })
+          .join('')
+      );
+
+      if (iteration >= text.length) {
+        clearInterval(interval);
+        setIsDecoding(false);
+      }
+
+      iteration += 1 / 3;
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return <span>{displayText || text}</span>;
+};
+
+export default function Contact({ isOpen, onClose }: ContactProps) {
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setStartAnimation(false);
+      const timer = setTimeout(() => setStartAnimation(true), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
+  return (
+    <motion.div
+      initial={{ y: '100%' }}
+      animate={{ y: 0 }}
+      exit={{ y: '100%' }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed inset-0 z-[100] bg-black"
+    >
+      <div className="h-full w-full overflow-y-auto scrollbar-hide">
+        <button
+          onClick={onClose}
+          className="fixed top-8 right-8 z-10 text-white hover:rotate-90 transition-transform duration-300"
+        >
+          <X size={32} strokeWidth={1.5} />
+        </button>
+
+        <div className="min-h-full flex items-center justify-center px-6 py-20">
+          <div className="max-w-3xl w-full">
+            <div>
+              <div className="space-y-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                >
+                  <h1
+                    className="text-white leading-[0.85] mb-6"
+                    style={{
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontWeight: 700,
+                      letterSpacing: '-0.04em',
+                      fontSize: 'clamp(4rem, 12vw, 8rem)',
+                    }}
+                  >
+                    LET'S
+                    <br />
+                    TALK
+                  </h1>
+                  <p className="text-white/60 text-lg leading-relaxed max-w-md">
+                    We usually contact you first. But here are the official channels used for communications.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="space-y-6"
+                >
+                  <div className="flex items-start gap-4 group">
+                    <Mail className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <div>
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Email</p>
+                      <a
+                        href="mailto:business@wexel.ai"
+                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
+                      >
+                        {startAnimation && <GlitchText text="business@wexel.ai" />} <span className="text-white/40 text-sm">[Under Maintenance]</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group">
+                    <Phone className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <div>
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Phone</p>
+                      <a
+                        href="tel:+918910949074"
+                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
+                      >
+                        {startAnimation && <GlitchText text="+91 8910949074" />}
+                      </a>
+                      <p className="text-green-400/80 text-sm mt-2 flex items-center gap-2">
+                        <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        WhatsApp Available
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4 group">
+                    <MapPin className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <div>
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Location</p>
+                      <div className="text-white text-2xl font-mono">
+                        {startAnimation && (
+                          <>
+                            <GlitchText text="Kolkata, WB" />
+                            <br />
+                            <GlitchText text="India" />
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
