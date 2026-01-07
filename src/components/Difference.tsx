@@ -7,26 +7,26 @@ export default function Difference() {
   const differences = [
     {
       id: 1,
-      title: 'Tailored to you',
-      description: 'We don\'t retrofit AI into old processes. Every solution is built from the ground up with AI at its core, designed to maximize automation and intelligence.',
+      title: 'Transformation-First Mindset',
+      description: 'We architect solutions for the future, not patch legacy systems. Every engagement begins with reimagining what\'s possible, unlocking endless opportunities for innovation and growth.',
       icon: Sparkles,
     },
     {
       id: 2,
-      title: 'Speed & Precision',
-      description: 'Traditional agencies take weeks to deliver. We leverage autonomous AI agents to deliver production-ready solutions in days, not months.',
+      title: 'Rapid Deployment & Scale',
+      description: 'Traditional consultants take months. Our AI-powered approach delivers enterprise transformation in weeks, enabling you to capitalize on opportunities faster than competition.',
       icon: Zap,
     },
     {
       id: 3,
-      title: 'Results-Driven Approach',
-      description: 'We measure success by ROI, not deliverables. Our solutions directly impact your bottom line through measurable efficiency gains and revenue growth.',
+      title: 'Measurable Business Impact',
+      description: 'We\'re obsessed with outcomes. Every solution is engineered to deliver quantifiable ROI through operational excellence, revenue acceleration, and sustainable competitive advantage.',
       icon: Target,
     },
     {
       id: 4,
-      title: 'Killing machines',
-      description: 'Unlike human limitations. AI never sleeps or rests. It works non stop 24/7. Might replace humans and fix trust issues with critical data.',
+      title: 'Always-On Intelligence',
+      description: 'Deploy solutions that never sleep. Our AI-powered systems operate 24/7 with superhuman consistency, eliminating bottlenecks and scaling infinitely with your ambitions.',
       icon: Bot,
     },
   ];
@@ -68,10 +68,10 @@ export default function Difference() {
               transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="text-lg text-white text-opacity-60 mt-3">
-                Why choose Wexel over traditional agencies. here's why! →
+                Why leading organizations choose Wexel as their transformation partner →
               </p>
               <p className="text-base text-white text-opacity-60 mt-0.5">
-                We're not just another digital agency.
+                We're a digital transformation solution provider built for the AI era.
               </p>
             </motion.div>
           </motion.div>
@@ -110,10 +110,10 @@ export default function Difference() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Experience the difference yourself
+                  Begin your transformation journey
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Let's discuss how we can transform your business with AI
+                  Discover how our solutions unlock endless possibilities for your business
                 </p>
               </motion.div>
               <motion.div

@@ -6,37 +6,37 @@ export default function Industries() {
     {
       id: 1,
       title: 'E-Commerce & Retail',
-      description: 'Transform your online shopping experience with AI-powered personalization, inventory management, and customer service automation.',
+      description: 'Complete digital transformation of customer journeys with AI-powered personalization, intelligent inventory optimization, and seamless omnichannel experiences that drive conversion and loyalty.',
       icon: ShoppingCart,
     },
     {
       id: 2,
       title: 'Healthcare',
-      description: 'Streamline patient care and administrative workflows with intelligent automation while maintaining compliance and security.',
+      description: 'Modernize patient experiences and operational workflows with intelligent automation, predictive analytics, and secure platforms that enhance care delivery while ensuring compliance.',
       icon: Heart,
     },
     {
       id: 3,
       title: 'Professional Services',
-      description: 'Enhance productivity and client delivery with AI-driven document processing, workflow automation, and insights.',
+      description: 'Transform service delivery with AI-driven insights, automated workflows, and intelligent systems that amplify expertise and accelerate client outcomes.',
       icon: Briefcase,
     },
     {
       id: 4,
       title: 'Real Estate',
-      description: 'Revolutionize property management and sales with automated lead qualification, virtual tours, and market analysis.',
+      description: 'Revolutionize property operations with end-to-end digital solutions: automated lead nurturing, intelligent matching, virtual experiences, and predictive market intelligence.',
       icon: Building2,
     },
     {
       id: 5,
       title: 'Manufacturing',
-      description: 'Optimize production and supply chain operations with predictive maintenance, quality control, and inventory management.',
+      description: 'Drive operational excellence with smart factory solutions, predictive maintenance, supply chain intelligence, and quality systems that optimize every aspect of production.',
       icon: Factory,
     },
     {
       id: 6,
       title: 'Education',
-      description: 'Elevate learning experiences with personalized content delivery, automated grading, and student engagement tracking.',
+      description: 'Reimagine learning with adaptive platforms, personalized experiences, intelligent assessment, and data-driven insights that unlock potential for every student.',
       icon: GraduationCap,
     },
   ];
@@ -59,10 +59,10 @@ export default function Industries() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-lg text-white text-opacity-60 mt-3">
-                AI automation solutions tailored for your industry.
+                Industry-specific digital transformation solutions with endless potential.
               </p>
               <p className="text-base text-white text-opacity-60 mt-0.5">
-                We understand the unique challenges and opportunities across sectors.
+                We architect transformation strategies that address your sector's unique challenges and unlock new opportunities.
               </p>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function Industries() {
                 Don't see your industry?
               </h2>
               <p className="text-white text-opacity-60 mb-8">
-                We work across all sectors. Our AI solutions are adaptable to any industry's unique needs and challenges.
+                We transform businesses across all sectors. Our solutions adapt to your industry's unique requirements, unlocking possibilities you haven't imagined.
               </p>
               <Link
                 to="/"

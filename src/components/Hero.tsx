@@ -28,7 +28,7 @@ export default function Hero() {
         </h1>
         <div className="mt-6 md:mt-12">
           <p className="text-white text-xl md:text-2xl leading-relaxed font-semibold tracking-wide">
-            More Growth. More Turn Over. More Time Saved.
+            Digital Transformation. Powered by AI. Endless Possibilities.
           </p>
         </div>
       </div>

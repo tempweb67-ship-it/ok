@@ -5,37 +5,37 @@ export default function Solutions() {
   const features = [
     {
       id: 1,
-      title: 'AI-Powered CRM Solutions',
-      description: 'Automating workflows and predicting customer needs with smart data insights.',
-      category: 'Design Intelligence',
+      title: 'Intelligent CRM Transformation',
+      description: 'Transform customer relationships with AI-driven automation, predictive analytics, and seamless workflow orchestration that drives revenue growth.',
+      category: 'Customer Experience',
       icon: BarChart3,
     },
     {
       id: 2,
-      title: 'Autonomous Voice Agents',
-      description: 'Human-like AI that handles inbound and outbound calls, books appointments, and qualifies leads 24/7.',
-      category: 'Voice',
+      title: 'AI Voice Solutions',
+      description: 'Deploy autonomous voice agents that revolutionize customer interactions, scale operations infinitely, and deliver human-quality experiences 24/7.',
+      category: 'Conversational AI',
       icon: PhoneCall,
     },
     {
       id: 3,
-      title: 'Hyper-Personalized Email',
-      description: 'Send thousands of tailored emails that bypass spam filters and read like they were written by hand.',
-      category: 'Marketing',
+      title: 'Marketing Automation Excellence',
+      description: 'Transform outreach with hyper-personalized campaigns, intelligent segmentation, and AI-powered content that converts at scale.',
+      category: 'Digital Marketing',
       icon: Mail,
     },
     {
       id: 4,
-      title: 'AI Store Optimization',
-      description: 'Maximize revenue with predictive product recommendations and dynamic pricing that adapts to buyer behavior.',
-      category: 'Ecommerce',
+      title: 'E-Commerce Intelligence',
+      description: 'Elevate your online business with predictive merchandising, dynamic optimization, and AI-driven insights that maximize every transaction.',
+      category: 'Commerce Solutions',
       icon: ShoppingCart,
     },
     {
       id: 5,
-      title: 'Social Media Automation',
-      description: 'Save hours every week with AI-powered scheduling, content optimization, and engagement across all platforms.',
-      category: 'Social Media',
+      title: 'Social Media Transformation',
+      description: 'Amplify your brand presence with intelligent automation, performance analytics, and AI-powered engagement strategies across all channels.',
+      category: 'Social Intelligence',
       icon: Share2,
     },
   ];
@@ -58,7 +58,7 @@ export default function Solutions() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-lg text-white mt-2">
-                Scale with vision seamlessly.
+                Comprehensive digital transformation solutions with endless possibilities.
               </p>
               <p
                 className="text-base mt-0.5"
@@ -152,10 +152,10 @@ export default function Solutions() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to start something amazing?
+                  Ready to transform your business?
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Let's collaborate and bring your vision to life
+                  Partner with us to unlock endless possibilities and accelerate your digital evolution
                 </p>
               </div>
               <Link

@@ -9,18 +9,18 @@ export default function Vision() {
   const objectives = [
     {
       icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'Pushing boundaries with emerging technologies to deliver cutting-edge solutions that stay ahead of the curve.'
+      title: 'Innovation-Driven Transformation',
+      description: 'Leveraging cutting-edge AI and emerging technologies to reimagine how your business operates, competes, and delivers value.'
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'Building a world where AI empowers every organization to achieve more across industries and borders.'
+      title: 'End-to-End Solutions',
+      description: 'Comprehensive digital transformation from strategy to execution, ensuring seamless integration across all business functions and markets.'
     },
     {
       icon: Users,
-      title: 'Human-Centered Approach',
-      description: 'Technology that enhances human potential. AI that amplifies your team\'s capabilities and creativity.'
+      title: 'Human-Centered Design',
+      description: 'Transformation solutions that empower your people, enhance experiences, and unlock your organization\'s full potential.'
     }
   ];
 
@@ -28,22 +28,22 @@ export default function Vision() {
     {
       icon: Sparkles,
       title: 'Transparency',
-      description: 'Clear communication about how our AI works, what it can do, and its limitations.'
+      description: 'Clear insights into our transformation approach, technology roadmaps, and measurable outcomes at every stage.'
     },
     {
       icon: Target,
       title: 'Excellence',
-      description: 'Uncompromising commitment to quality, performance, and continuous improvement.'
+      description: 'Delivering world-class solutions with precision, backed by proven methodologies and continuous optimization.'
     },
     {
       icon: Heart,
       title: 'Partnership',
-      description: 'Your success is our success. We build lasting relationships, not just transactions.'
+      description: 'True collaboration from discovery to deployment. Your transformation journey is our shared mission.'
     },
     {
       icon: Shield,
-      title: 'Responsibility',
-      description: 'Ethical AI development with careful consideration for privacy, security, and societal impact.'
+      title: 'Trust & Security',
+      description: 'Enterprise-grade security, ethical AI practices, and unwavering commitment to protecting your data and privacy.'
     }
   ];
 
@@ -72,11 +72,11 @@ export default function Vision() {
                 fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
             >
-              Shaping an Intelligent Future
+              Transforming Businesses for Tomorrow
             </h1>
 
             <p className="text-xl md:text-2xl text-white text-opacity-70 leading-relaxed max-w-3xl mx-auto">
-              We're democratizing AI automation, making enterprise-grade intelligent solutions accessible to businesses of all sizes.
+              We're pioneering digital transformation solutions that unlock endless possibilities for businesses ready to evolve, scale, and thrive in the AI era.
             </p>
 
             <p className="text-sm text-white text-opacity-40 mt-6">
@@ -89,7 +89,7 @@ export default function Vision() {
           <div className="mb-32">
             <SectionHeader
               title="Strategic Objectives"
-              subtitle="Our roadmap to transforming the future of work"
+              subtitle="How we drive transformation success for our clients"
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {objectives.map((objective, index) => (
@@ -164,10 +164,10 @@ function MissionSection() {
             letterSpacing: '-0.02em',
           }}
         >
-          Democratizing AI Automation
+          Enabling Digital Transformation at Scale
         </h3>
         <p className="text-lg md:text-xl text-white text-opacity-70 leading-relaxed">
-          Advanced technology should not be limited to large corporations but should empower every organization to achieve operational excellence. Through innovation, transparency, and a human-centered approach, we're making it happen.
+          We deliver transformative solutions that modernize operations, unlock new revenue streams, and position businesses for sustainable growth. From AI-powered automation to intelligent workflows, we architect the future of how organizations operate and compete.
         </p>
       </div>
     </motion.div>
@@ -243,10 +243,10 @@ function FutureSection() {
               letterSpacing: '-0.02em',
             }}
           >
-            Join Us in Shaping Tomorrow
+            Your Transformation Partner
           </h2>
           <p className="text-lg md:text-xl text-white text-opacity-70 leading-relaxed max-w-3xl mx-auto">
-            We're not just adapting to the future—we're creating it. Through relentless innovation and deep collaboration, we're transforming ambitious visions into reality and building technology that serves humanity's greatest aspirations.
+            We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
           </p>
         </div>
       </div>
