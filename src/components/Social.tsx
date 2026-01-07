@@ -7,18 +7,18 @@ export default function Social() {
   const features = [
     {
       icon: Calendar,
-      title: 'Intelligent Scheduling',
-      description: 'AI analyzes audience engagement patterns to automatically schedule posts at optimal times for maximum reach and interaction.',
+      title: 'Strategic Timing Intelligence',
+      description: 'Maximize reach and engagement with AI that identifies optimal posting windows, analyzes audience behavior patterns, and automatically schedules content for peak performance across every platform.',
     },
     {
       icon: Target,
-      title: 'Content Optimization',
-      description: 'Predictive algorithms suggest the best content formats, hashtags, and messaging for each platform to boost engagement.',
+      title: 'Performance-Driven Content',
+      description: 'Transform content strategy with predictive intelligence that recommends formats, messaging, and tactics proven to drive engagement, conversions, and audience growth for your brand.',
     },
     {
       icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Real-time tracking of engagement metrics, audience growth, and campaign performance across all social channels.',
+      title: 'Strategic Analytics Platform',
+      description: 'Make data-driven decisions with comprehensive performance tracking, predictive insights, and actionable intelligence that connects social engagement directly to business outcomes.',
     },
   ];
 
@@ -102,7 +102,7 @@ export default function Social() {
             <div className="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-white bg-opacity-5 rounded-full">
               <Share2 size={20} className="text-white text-opacity-60" />
               <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
-                Social Media
+                Social Intelligence
               </span>
             </div>
 
@@ -115,13 +115,11 @@ export default function Social() {
                 fontSize: 'clamp(3rem, 10vw, 6rem)',
               }}
             >
-              Social Media Automation
+              Social Media Transformation
             </h1>
 
             <p className="text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
-              Transform your social media presence with AI-powered automation that handles scheduling,
-              content optimization, and engagement across all platforms. Save hours every week while
-              growing your audience and boosting engagement with intelligent automation.
+              Transform social presence from time-consuming to transformative with intelligent automation that amplifies your brand across every channel. Our AI-powered platform orchestrates content, optimizes engagement, and delivers analytics that turn followers into customers and posts into measurable business results—all while saving hours each week and unlocking unprecedented growth.
             </p>
           </div>
 
@@ -442,10 +440,10 @@ export default function Social() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to automate your social media?
+                  Ready to amplify your brand presence?
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Let's discuss how AI can transform your social media strategy
+                  Transform social media into a growth engine with endless possibilities
                 </p>
               </div>
               <Link

@@ -16,6 +16,7 @@ import VoiceAgent from './components/VoiceAgent';
 import Outreach from './components/Outreach';
 import Ecommerce from './components/Ecommerce';
 import Social from './components/Social';
+import Website from './components/Website';
 
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -40,6 +41,7 @@ function AppContent() {
         <Route path="/solutions/outreach" element={<Outreach />} />
         <Route path="/solutions/ecommerce" element={<Ecommerce />} />
         <Route path="/solutions/social" element={<Social />} />
+        <Route path="/solutions/website" element={<Website />} />
         <Route path="/difference" element={<Difference />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/vision" element={<Vision />} />

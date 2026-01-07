@@ -7,18 +7,18 @@ export default function AICRM() {
   const features = [
     {
       icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'Leverage machine learning to predict customer behavior and identify high-value opportunities before your competitors.',
+      title: 'Predictive Intelligence',
+      description: 'Anticipate customer needs and opportunities with AI-driven forecasting that keeps you steps ahead of market dynamics and competitive threats.',
     },
     {
       icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Eliminate repetitive tasks with intelligent automation that adapts to your business processes and scales effortlessly.',
+      title: 'Intelligent Process Automation',
+      description: 'Eliminate operational friction with self-optimizing workflows that adapt in real-time, scaling infinitely with your business ambitions.',
     },
     {
       icon: TrendingUp,
-      title: 'Smart Insights',
-      description: 'Transform raw data into actionable insights with AI-powered analytics that reveal patterns and trends in real-time.',
+      title: 'Strategic Analytics',
+      description: 'Convert complex data into business-changing insights with real-time analytics that drive decisions, optimize performance, and accelerate growth.',
     },
   ];
 
@@ -75,7 +75,7 @@ export default function AICRM() {
             >
               <BarChart3 size={20} className="text-white text-opacity-60" />
               <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
-                Design Intelligence
+                Customer Experience
               </span>
             </motion.div>
 
@@ -91,7 +91,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              AI-Powered CRM Solutions
+              Intelligent CRM Transformation
             </motion.h1>
 
             <motion.p
@@ -100,9 +100,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform your customer relationships with intelligent automation that predicts needs,
-              streamlines workflows, and delivers actionable insights. Our AI-powered CRM solutions
-              adapt to your business, learning from every interaction to drive better outcomes.
+              Transform customer relationships from transactional to strategic with our intelligent CRM platform. Powered by advanced AI, we orchestrate seamless workflows, unlock predictive insights, and drive measurable revenue growth. Every interaction becomes an opportunity for deeper engagement and accelerated business outcomes.
             </motion.p>
           </motion.div>
 
@@ -163,8 +161,8 @@ export default function AICRM() {
           />
 
           <CTASection
-            title="Ready to transform your CRM?"
-            description="Let's discuss how AI can revolutionize your customer relationships"
+            title="Ready to transform customer relationships?"
+            description="Discover how our CRM transformation unlocks endless growth possibilities"
           />
         </div>
       </div>

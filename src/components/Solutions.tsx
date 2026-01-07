@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, PhoneCall, Mail, ShoppingCart, Share2 } from 'lucide-react';
+import { ArrowRight, BarChart3, PhoneCall, Mail, ShoppingCart, Share2, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Solutions() {
@@ -37,6 +37,13 @@ export default function Solutions() {
       description: 'Amplify your brand presence with intelligent automation, performance analytics, and AI-powered engagement strategies across all channels.',
       category: 'Social Intelligence',
       icon: Share2,
+    },
+    {
+      id: 6,
+      title: 'Next-Gen Web Experiences',
+      description: 'Transform your digital presence with cutting-edge websites that captivate, convert, and scale—engineered for performance, optimized for growth, and designed to dominate.',
+      category: 'Digital Presence',
+      icon: Globe,
     },
   ];
 
@@ -89,7 +96,8 @@ export default function Solutions() {
                 2: "/solutions/voice",
                 3: "/solutions/outreach",
                 4: "/solutions/ecommerce",
-                5: "/solutions/social"
+                5: "/solutions/social",
+                6: "/solutions/website"
               }[feature.id];
 
               const content = (

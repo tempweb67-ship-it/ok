@@ -8,18 +8,18 @@ export default function Ecommerce() {
   const features = [
     {
       icon: Brain,
-      title: 'Predictive Recommendations',
-      description: 'Advanced AI analyzes browsing patterns, purchase history, and user behavior to suggest products with laser precision.',
+      title: 'Intelligent Product Discovery',
+      description: 'Transform browsing into buying with AI that predicts desires, understands intent, and surfaces perfect products at the perfect moment—driving conversion and basket value.',
     },
     {
       icon: TrendingUp,
-      title: 'Dynamic Pricing',
-      description: 'Real-time price optimization based on demand, inventory levels, competitor pricing, and customer segments.',
+      title: 'Strategic Pricing Intelligence',
+      description: 'Maximize profitability with real-time pricing that responds to market dynamics, demand signals, and customer value—optimizing revenue while maintaining competitive advantage.',
     },
     {
       icon: Users,
-      title: 'Customer Segmentation',
-      description: 'Automatically group customers by behavior, preferences, and value to deliver targeted experiences and offers.',
+      title: 'Behavioral Intelligence',
+      description: 'Unlock deep customer understanding with AI-powered segmentation that identifies patterns, predicts actions, and enables hyper-targeted experiences that drive loyalty and lifetime value.',
     },
   ];
 
@@ -81,7 +81,7 @@ export default function Ecommerce() {
             <div className="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-white bg-opacity-5 rounded-full">
               <ShoppingCart size={20} className="text-white text-opacity-60" />
               <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
-                Ecommerce
+                Commerce Solutions
               </span>
             </div>
 
@@ -94,14 +94,11 @@ export default function Ecommerce() {
                 fontSize: 'clamp(3rem, 10vw, 6rem)',
               }}
             >
-              AI Store Optimization
+              E-Commerce Intelligence
             </h1>
 
             <p className="text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
-              Transform your online store into a revenue-generating machine with AI-powered
-              optimization. Maximize revenue with predictive product recommendations and dynamic
-              pricing that adapts to buyer behavior, inventory levels, and market conditions in
-              real-time.
+              Transform your online business from transactional to exceptional with AI-driven intelligence that maximizes every interaction. Deploy predictive merchandising, dynamic optimization, and real-time insights that turn browsers into buyers and transactions into lasting relationships. Every product discovery becomes personalized, every price point optimized, and every customer experience elevated to drive sustainable growth.
             </p>
           </div>
 
@@ -417,10 +414,10 @@ export default function Ecommerce() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to optimize your store?
+                  Ready to transform your commerce experience?
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Let's discuss how AI can transform your ecommerce performance
+                  Unlock endless revenue possibilities with intelligent e-commerce transformation
                 </p>
               </div>
               <Link

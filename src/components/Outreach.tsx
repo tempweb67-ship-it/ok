@@ -8,18 +8,18 @@ export default function Outreach() {
   const features = [
     {
       icon: Target,
-      title: 'Deep Personalization',
-      description: 'Every email is uniquely crafted based on recipient data, behavior patterns, and engagement history for maximum relevance.',
+      title: 'Precision Personalization',
+      description: 'Transform every outreach touchpoint with AI that crafts individually tailored messages based on deep behavioral insights, engagement patterns, and contextual intelligence.',
     },
     {
       icon: Shield,
-      title: 'Spam Filter Bypass',
-      description: 'Advanced algorithms ensure your emails land in the inbox, not the spam folder, with high deliverability rates.',
+      title: 'Guaranteed Deliverability',
+      description: 'Ensure your message reaches decision-makers with advanced delivery optimization that bypasses filters and maximizes inbox placement rates consistently.',
     },
     {
       icon: Zap,
-      title: 'Scale Without Limits',
-      description: 'Send thousands of personalized emails that maintain the authentic feel of hand-written messages, all automated.',
+      title: 'Infinite Scale',
+      description: 'Break capacity barriers with automation that sends thousands of authentically personalized emails—each one optimized to engage, persuade, and convert.',
     },
   ];
 
@@ -101,7 +101,7 @@ export default function Outreach() {
             >
               <Mail size={20} className="text-white text-opacity-60" />
               <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
-                Marketing
+                Digital Marketing
               </span>
             </motion.div>
 
@@ -117,7 +117,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              Hyper-Personalized Email
+              Marketing Automation Excellence
             </motion.h1>
 
             <motion.p
@@ -126,10 +126,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform your email outreach with AI-powered personalization that creates thousands
-              of unique, tailored messages. Bypass spam filters, increase engagement, and drive
-              conversions with emails that read like they were written by hand—because they
-              practically are.
+              Transform outreach from mass messaging to meaningful conversations at scale. Our AI-powered platform crafts hyper-personalized campaigns that break through noise, bypass filters, and convert prospects into customers. Each message feels handwritten, each touchpoint drives engagement, and every campaign delivers measurable transformation to your pipeline.
             </motion.p>
           </motion.div>
 
@@ -308,10 +305,10 @@ export default function Outreach() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to transform your outreach?
+                  Ready to revolutionize your marketing?
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Let's discuss how personalized email can drive your growth
+                  Discover how marketing transformation unlocks exponential growth possibilities
                 </p>
               </div>
               <Link

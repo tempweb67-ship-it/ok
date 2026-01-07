@@ -8,18 +8,18 @@ export default function VoiceAgent() {
   const features = [
     {
       icon: Clock,
-      title: '24/7 Availability',
-      description: 'Never miss a call or opportunity. Our AI voice agents work around the clock, handling customer inquiries at any time of day or night.',
+      title: 'Always-On Operations',
+      description: 'Eliminate capacity constraints with AI agents that never sleep. Transform customer access into a competitive advantage with round-the-clock availability and instant response.',
     },
     {
       icon: Target,
-      title: 'Lead Qualification',
-      description: 'Intelligently screen and qualify leads through natural conversation, routing only high-value prospects to your sales team.',
+      title: 'Intelligent Lead Orchestration',
+      description: 'Maximize sales efficiency with AI-powered qualification that identifies high-value opportunities, gathers critical insights, and routes prospects with precision.',
     },
     {
       icon: MessageSquare,
-      title: 'Natural Conversations',
-      description: 'Advanced language models enable human-like dialogue that understands context, handles objections, and adapts to each caller.',
+      title: 'Human-Quality Dialogue',
+      description: 'Deploy conversations that build trust and drive action. Advanced AI delivers contextual understanding, emotional intelligence, and adaptive responses that convert.',
     },
   ];
 
@@ -93,7 +93,7 @@ export default function VoiceAgent() {
             >
               <PhoneCall size={20} className="text-white text-opacity-60" />
               <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
-                Voice
+                Conversational AI
               </span>
             </motion.div>
 
@@ -109,7 +109,7 @@ export default function VoiceAgent() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              Autonomous Voice Agents
+              AI Voice Solutions
             </motion.h1>
 
             <motion.p
@@ -118,9 +118,7 @@ export default function VoiceAgent() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Deploy human-like AI voice agents that handle inbound and outbound calls with natural
-              conversation abilities. From appointment booking to lead qualification, our autonomous
-              agents work 24/7 to engage customers, answer questions, and drive conversions.
+              Revolutionize customer interactions with autonomous voice agents that deliver human-quality conversations at infinite scale. Transform how your business handles calls, qualifies leads, and serves customers—24/7, without limits. Every conversation drives efficiency, captures opportunities, and elevates experiences beyond what human teams can achieve alone.
             </motion.p>
           </motion.div>
 
@@ -205,8 +203,8 @@ export default function VoiceAgent() {
           />
 
           <CTASection
-            title="Ready to deploy voice AI?"
-            description="Let's discuss how autonomous agents can transform your customer engagement"
+            title="Ready to scale conversations infinitely?"
+            description="Transform customer engagement with voice AI that unlocks endless possibilities"
           />
         </div>
       </div>
