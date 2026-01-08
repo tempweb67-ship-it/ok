@@ -116,7 +116,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                         href="mailto:business@wexel.ai"
                         className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
                       >
-                        {startAnimation && <GlitchText text="business@wexel.ai" />} <span className="text-white/40 text-sm">[Under Maintenance]</span>
+                        {startAnimation && <GlitchText text="business@wexel.ai" />}
                       </a>
                     </div>
                   </div>
