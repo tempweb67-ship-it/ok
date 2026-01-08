@@ -27,7 +27,7 @@ export default function Hero() {
           {displayedText}
         </h1>
         <div className="mt-6 md:mt-12">
-          <p className="text-white text-xl md:text-2xl leading-relaxed font-semibold tracking-wide">
+          <p className="text-white text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap">
             Digital Transformation Agency.
           </p>
         </div>
