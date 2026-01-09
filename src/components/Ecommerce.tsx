@@ -343,14 +343,14 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className="border border-white border-opacity-10 rounded-lg p-12">
-            <div className="flex items-start gap-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg">
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12">
+            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+              <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
                 <ShoppingCart size={40} className="text-white" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <h2
-                  className="text-3xl font-bold mb-4"
+                  className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-4"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.02em',
@@ -358,43 +358,43 @@ export default function Ecommerce() {
                 >
                   Perfect For
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <ShoppingCart size={20} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <ShoppingCart size={20} className="flex-shrink-0" />
                       Online Retailers
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Maximize revenue and customer lifetime value with intelligent product
                       recommendations and pricing.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <TrendingUp size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <TrendingUp size={20} className="flex-shrink-0" />
                       Marketplaces
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Optimize seller performance and buyer experience with smart matching and
                       pricing algorithms.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Users size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Users size={20} className="flex-shrink-0" />
                       Subscription Services
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Reduce churn and increase upsells with personalized product suggestions and
                       pricing tiers.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Brain size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Brain size={20} className="flex-shrink-0" />
                       Direct-to-Consumer Brands
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Build stronger customer relationships with tailored experiences and strategic
                       pricing.
                     </p>

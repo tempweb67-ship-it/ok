@@ -358,19 +358,19 @@ export default function Social() {
           </div>
 
           <motion.div
-            className="border border-white border-opacity-10 rounded-lg p-12"
+            className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-start gap-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg">
+            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+              <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
                 <Share2 size={40} className="text-white" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <h2
-                  className="text-3xl font-bold mb-4"
+                  className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-4"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.02em',
@@ -378,43 +378,43 @@ export default function Social() {
                 >
                   Perfect For
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Target size={20} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Target size={20} className="flex-shrink-0" />
                       Brands & Businesses
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Build consistent brand presence and engage your audience across multiple
                       platforms without the manual overhead.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <TrendingUp size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <TrendingUp size={20} className="flex-shrink-0" />
                       Marketing Agencies
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Manage multiple client accounts efficiently with powerful collaboration
                       and reporting tools.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Users size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Users size={20} className="flex-shrink-0" />
                       Content Creators
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Focus on creating great content while automation handles scheduling
                       and engagement optimization.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <BarChart3 size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <BarChart3 size={20} className="flex-shrink-0" />
                       E-commerce Stores
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Drive sales with automated product promotions and targeted social
                       campaigns tied to inventory data.
                     </p>

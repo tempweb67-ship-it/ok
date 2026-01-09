@@ -128,14 +128,14 @@ export default function VoiceAgent() {
 
           <UseCasesSection useCases={useCases} />
 
-          <div className="border border-white border-opacity-10 rounded-lg p-12 mb-20">
-            <div className="flex items-start gap-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg">
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-20">
+            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+              <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
                 <PhoneCall size={40} className="text-white" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 <h2
-                  className="text-3xl font-bold mb-4"
+                  className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-4"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.02em',
@@ -143,40 +143,40 @@ export default function VoiceAgent() {
                 >
                   Perfect For
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Headphones size={20} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Headphones size={20} className="flex-shrink-0" />
                       Call Centers
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Handle high call volumes efficiently while maintaining quality customer interactions and reducing wait times.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Stethoscope size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Stethoscope size={20} className="flex-shrink-0" />
                       Healthcare Providers
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Automate appointment scheduling, reminders, and patient inquiries while maintaining HIPAA compliance.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Home size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Home size={20} className="flex-shrink-0" />
                       Real Estate Agencies
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Qualify leads, schedule property viewings, and follow up with prospects around the clock.
                     </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-                      <Building2 size={20} />
+                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                      <Building2 size={20} className="flex-shrink-0" />
                       Service Businesses
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       Manage bookings, answer common questions, and provide 24/7 customer support without additional staffing.
                     </p>
                   </div>
