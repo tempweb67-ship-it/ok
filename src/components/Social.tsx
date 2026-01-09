@@ -215,7 +215,7 @@ export default function Social() {
           </div>
 
           <motion.div
-            className="border border-white border-opacity-10 rounded-lg p-12 mb-20"
+            className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-20"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -223,7 +223,7 @@ export default function Social() {
           >
             <div className="max-w-3xl">
               <h2
-                className="text-4xl font-bold mb-6"
+                className="text-2xl sm:text-4xl font-bold mb-6"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.03em',
@@ -232,7 +232,8 @@ export default function Social() {
                 How It Works
               </h2>
 
-              <div className="space-y-8">
+              {/* Desktop: Timeline layout */}
+              <div className="hidden sm:block space-y-8">
                 {howItWorksSteps.map((step, index) => (
                   <motion.div
                     key={index}
@@ -252,6 +253,32 @@ export default function Social() {
                       <p className="text-white text-opacity-60 leading-relaxed">
                         {step.description}
                       </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Mobile: Compact cards */}
+              <div className="sm:hidden grid gap-3">
+                {howItWorksSteps.map((step, index) => (
+                  <motion.div
+                    key={index}
+                    className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                        {index + 1}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-base font-bold mb-1">{step.title}</h3>
+                        <p className="text-white text-opacity-60 text-sm leading-snug">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
                   </motion.div>
                 ))}

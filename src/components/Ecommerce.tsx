@@ -181,10 +181,10 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className="border border-white border-opacity-10 rounded-lg p-12 mb-20">
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-20">
             <div className="max-w-3xl">
               <h2
-                className="text-4xl font-bold mb-6"
+                className="text-2xl sm:text-4xl font-bold mb-6"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.03em',
@@ -193,7 +193,8 @@ export default function Ecommerce() {
                 How It Works
               </h2>
 
-              <div className="space-y-8">
+              {/* Desktop: Timeline layout */}
+              <div className="hidden sm:block space-y-8">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold">
@@ -251,6 +252,69 @@ export default function Ecommerce() {
                       The system learns from every interaction, continuously improving accuracy and
                       effectiveness over time.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile: Compact cards */}
+              <div className="sm:hidden grid gap-3">
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Data Collection</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Our AI continuously gathers data on customer behavior, product performance,
+                        inventory levels, and market conditions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Pattern Recognition</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Machine learning models identify trends, preferences, and opportunities in your
+                        store data to predict future behavior.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      3
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Real-Time Optimization</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Recommendations and pricing adjust instantly based on current context,
+                        inventory, and customer segment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      4
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Continuous Learning</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        The system learns from every interaction, continuously improving accuracy and
+                        effectiveness over time.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

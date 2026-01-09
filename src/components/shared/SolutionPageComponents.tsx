@@ -81,7 +81,7 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
   return (
     <motion.div
       ref={ref}
-      className="relative border border-white border-opacity-10 rounded-3xl p-12 mb-20 overflow-hidden"
+      className="relative border border-white border-opacity-10 rounded-3xl p-6 sm:p-12 mb-20 overflow-hidden"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.8 }}
@@ -93,7 +93,7 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
       />
       <div className="max-w-3xl relative z-10">
         <h2
-          className="text-4xl font-bold mb-8"
+          className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             letterSpacing: '-0.03em',
@@ -102,7 +102,8 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
           How It Works
         </h2>
 
-        <div className="space-y-8">
+        {/* Desktop: Timeline layout */}
+        <div className="hidden sm:block space-y-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -124,6 +125,31 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
                 <p className="text-white text-opacity-60 leading-relaxed">
                   {step.description}
                 </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile: Compact cards */}
+        <div className="sm:hidden grid gap-3">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                  {index + 1}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-bold mb-1">{step.title}</h3>
+                  <p className="text-white text-opacity-60 text-sm leading-snug">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}

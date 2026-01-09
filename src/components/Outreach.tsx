@@ -160,10 +160,10 @@ export default function Outreach() {
             </div>
           </div>
 
-          <div className="border border-white border-opacity-10 rounded-lg p-12 mb-20">
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-20">
             <div className="max-w-3xl">
               <h2
-                className="text-4xl font-bold mb-6"
+                className="text-2xl sm:text-4xl font-bold mb-6"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.03em',
@@ -172,7 +172,8 @@ export default function Outreach() {
                 How It Works
               </h2>
 
-              <div className="space-y-8">
+              {/* Desktop: Timeline layout */}
+              <div className="hidden sm:block space-y-8">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold">
@@ -230,6 +231,69 @@ export default function Outreach() {
                       Track performance metrics and continuously refine messaging based on what
                       resonates with your audience.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile: Compact cards */}
+              <div className="sm:hidden grid gap-3">
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Data Enrichment</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Our AI gathers and analyzes data about each prospect from multiple sources to
+                        build comprehensive profiles.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Personalized Generation</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Advanced language models craft unique email content for each recipient,
+                        incorporating relevant details and context.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      3
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Optimized Delivery</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Emails are sent at the optimal time using best practices to ensure maximum
+                        deliverability and engagement.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      4
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Continuous Optimization</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Track performance metrics and continuously refine messaging based on what
+                        resonates with your audience.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
