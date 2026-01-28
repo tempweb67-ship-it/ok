@@ -60,7 +60,7 @@ export default function Difference() {
           <div className="mb-12 md:mb-20 text-center">
             <div className="inline-block mb-6">
               <span className="px-4 py-1.5 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-full text-sm font-medium">
-                The Wexel Advantage
+                The Winner's Advantage
               </span>
             </div>
 
