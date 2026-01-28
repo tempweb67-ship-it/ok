@@ -68,11 +68,11 @@ export default function Difference() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="relative z-10 pt-32 pb-20">
+      <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             ref={headerRef}
-            className="mb-20 text-center"
+            className="mb-12 md:mb-20 text-center"
             initial={{ opacity: 0, y: 40 }}
             animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -89,12 +89,12 @@ export default function Difference() {
             </motion.div>
 
             <motion.h1
-              className="text-white leading-[0.9] mb-6 max-w-4xl mx-auto"
+              className="text-white leading-[0.9] mb-4 md:mb-6 max-w-4xl mx-auto"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '-0.04em',
-                fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+                fontSize: 'clamp(2rem, 6vw, 5rem)',
               }}
               initial={{ opacity: 0, y: 20 }}
               animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ export default function Difference() {
             </motion.h1>
 
             <motion.p
-              className="text-lg text-white text-opacity-60 max-w-2xl mx-auto"
+              className="text-base md:text-lg text-white text-opacity-60 max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -117,7 +117,7 @@ export default function Difference() {
 
           <motion.div
             ref={statsRef}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24 max-w-5xl mx-auto"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-16 md:mb-24 max-w-5xl mx-auto"
           >
             {stats.map((stat, index) => {
               const Icon = stat.icon;
@@ -129,18 +129,18 @@ export default function Difference() {
                   animate={statsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="relative p-6 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl hover:border-opacity-20 transition-all duration-300 hover:bg-opacity-10">
+                  <div className="relative p-3 md:p-6 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl hover:border-opacity-20 transition-all duration-300 hover:bg-opacity-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300" />
-                    <Icon size={24} className="mb-3 text-white text-opacity-60" />
-                    <div className="text-3xl font-bold mb-1">{stat.value}</div>
-                    <div className="text-sm text-white text-opacity-50">{stat.label}</div>
+                    <Icon size={20} className="mb-2 md:mb-3 text-white text-opacity-60" />
+                    <div className="text-xl md:text-3xl font-bold mb-1">{stat.value}</div>
+                    <div className="text-xs md:text-sm text-white text-opacity-50">{stat.label}</div>
                   </div>
                 </motion.div>
               );
             })}
           </motion.div>
 
-          <div className="space-y-8 max-w-6xl mx-auto">
+          <div className="space-y-6 md:space-y-8 max-w-6xl mx-auto">
             {differences.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -156,16 +156,16 @@ export default function Difference() {
 
           <motion.div
             ref={ctaRef}
-            className="mt-32 text-center"
+            className="mt-16 md:mt-32 text-center"
             initial={{ opacity: 0, y: 40 }}
             animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8 }}
           >
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-xl opacity-30" />
-              <div className="relative bg-white bg-opacity-5 border border-white border-opacity-10 rounded-3xl p-12 backdrop-blur-sm">
+              <div className="relative bg-white bg-opacity-5 border border-white border-opacity-10 rounded-3xl p-6 md:p-12 backdrop-blur-sm">
                 <motion.h2
-                  className="text-4xl font-bold mb-4"
+                  className="text-2xl md:text-4xl font-bold mb-3 md:mb-4"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.02em',
@@ -177,7 +177,7 @@ export default function Difference() {
                   Ready to Transform?
                 </motion.h2>
                 <motion.p
-                  className="text-white text-opacity-60 mb-8 max-w-xl mx-auto"
+                  className="text-sm md:text-base text-white text-opacity-60 mb-6 md:mb-8 max-w-xl mx-auto"
                   initial={{ opacity: 0, y: 20 }}
                   animate={ctaInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -199,9 +199,9 @@ export default function Difference() {
                         (contactBtn as HTMLButtonElement).click();
                       }
                     }}
-                    className="px-10 py-4 bg-white text-black font-semibold rounded-xl hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2"
+                    className="px-6 md:px-10 py-3 md:py-4 bg-white text-black font-semibold rounded-xl hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 text-sm md:text-base"
                   >
-                    Start Your Journey <ArrowRight size={20} />
+                    Start Your Journey <ArrowRight size={16} className="md:size-5" />
                   </Link>
                 </motion.div>
               </div>
@@ -230,7 +230,7 @@ function DifferenceCard({ item, index, Icon }: { item: any; index: number; Icon:
       }}
     >
       <motion.div
-        className="relative p-8 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-[0.02] backdrop-blur-sm overflow-hidden"
+        className="relative p-5 md:p-8 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-[0.02] backdrop-blur-sm overflow-hidden"
         whileHover={{
           borderColor: 'rgba(255, 255, 255, 0.2)',
           backgroundColor: 'rgba(255, 255, 255, 0.05)'
@@ -240,7 +240,7 @@ function DifferenceCard({ item, index, Icon }: { item: any; index: number; Icon:
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full blur-[100px] opacity-0 group-hover:opacity-10 transition-opacity duration-700" />
 
         <div className="relative z-10">
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             <div className="flex-shrink-0">
               <motion.div
                 className="p-4 bg-white bg-opacity-5 rounded-2xl inline-block group-hover:bg-opacity-10 transition-all duration-300"
@@ -263,7 +263,7 @@ function DifferenceCard({ item, index, Icon }: { item: any; index: number; Icon:
                     {String(index + 1).padStart(2, '0')}
                   </motion.span>
                   <motion.h3
-                    className="text-3xl font-bold leading-tight mb-3"
+                    className="text-2xl md:text-3xl font-bold leading-tight mb-3"
                     style={{
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       letterSpacing: '-0.02em',
@@ -282,17 +282,17 @@ function DifferenceCard({ item, index, Icon }: { item: any; index: number; Icon:
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.6, delay: index * 0.15 + 0.4 }}
                 >
-                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                     {item.metric}
                   </div>
-                  <div className="text-xs text-white text-opacity-50 mt-1">
+                  <div className="text-xs text-white text-opacity-50 mt-1 leading-tight">
                     {item.metricLabel}
                   </div>
                 </motion.div>
               </div>
 
               <motion.p
-                className="text-white text-opacity-70 leading-relaxed mb-6 text-lg"
+                className="text-white text-opacity-70 leading-relaxed mb-6 text-sm md:text-base"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 0.7 } : { opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 + 0.4 }}
