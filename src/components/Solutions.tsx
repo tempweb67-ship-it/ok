@@ -5,7 +5,7 @@ export default function Solutions() {
   const features = [
     {
       id: 1,
-      title: 'Intelligent CRM Transformation',
+      title: 'Intelligent AI CRM',
       description: 'Transform customer relationships with AI-driven automation, predictive analytics, and seamless workflow orchestration that drives revenue growth.',
       category: 'Customer Experience',
       icon: BarChart3,

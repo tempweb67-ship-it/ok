@@ -91,7 +91,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              Intelligent CRM Transformation
+              Intelligent AI CRM
             </motion.h1>
 
             <motion.p
@@ -100,7 +100,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform customer relationships from transactional to strategic with our intelligent CRM platform. Powered by advanced AI, we orchestrate seamless workflows, unlock predictive insights, and drive measurable revenue growth. Every interaction becomes an opportunity for deeper engagement and accelerated business outcomes.
+              Revolutionize customer relationships with AI-powered CRM intelligence. Our platform transforms transactional interactions into strategic opportunities through predictive analytics, autonomous workflows, and intelligent automation. Every customer touchpoint becomes a moment for deeper engagement, smarter decisions, and accelerated revenue growth.
             </motion.p>
           </motion.div>
 
@@ -161,8 +161,8 @@ export default function AICRM() {
           />
 
           <CTASection
-            title="Ready to transform customer relationships?"
-            description="Discover how our CRM transformation unlocks endless growth possibilities"
+            title="Ready to revolutionize your customer relationships?"
+            description="Discover how Intelligent AI CRM transforms your business with predictive insights and autonomous workflows"
           />
         </div>
       </div>
