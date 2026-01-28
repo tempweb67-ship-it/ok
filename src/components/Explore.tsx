@@ -14,7 +14,7 @@ export default function Explore() {
     <div className="bg-black min-h-screen text-white">
       <div className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-16">
+          <div className="mb-8">
             <h1
               className="text-white leading-[0.85] mb-4"
               style={{
