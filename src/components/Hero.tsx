@@ -36,7 +36,7 @@ export default function Hero() {
         </h1>
         <div className="mt-6 md:mt-12">
           <p className="text-white text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap">
-            Digital Transformation Agency.
+            AI Automation Agency.
           </p>
         </div>
       </div>
