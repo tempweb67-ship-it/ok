@@ -47,7 +47,7 @@ export default function Difference() {
 
   const stats = [
     { icon: TrendingUp, value: '300%', label: 'Average ROI increase' },
-    { icon: Users, value: '100%', label: 'Trust' },
+    { icon: Users, value: '100%', label: 'Integrity' },
     { icon: Clock, value: '90%', label: 'Faster deployment' },
     { icon: Rocket, value: '24/7', label: 'Always-on systems' },
   ];
