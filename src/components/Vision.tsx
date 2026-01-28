@@ -1,8 +1,10 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket } from 'lucide-react';
+import Contact from './Contact';
 
 export default function Vision() {
+  const [contactOpen, setContactOpen] = useState(false);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true, amount: 0.2 });
 
@@ -48,8 +50,10 @@ export default function Vision() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
-      <div className="pt-32 pb-20">
+    <>
+      <Contact isOpen={contactOpen} onClose={() => setContactOpen(false)} />
+      <div className="bg-black min-h-screen text-white overflow-hidden">
+        <div className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             ref={heroRef}
@@ -110,10 +114,11 @@ export default function Vision() {
             </div>
           </div>
 
-          <FutureSection />
+          <FutureSection onContactClick={() => setContactOpen(true)} />
         </div>
       </div>
     </div>
+    </>
   );
 }
 
@@ -222,7 +227,7 @@ function ValueCard({ icon: Icon, title, description, index }: any) {
   );
 }
 
-function FutureSection() {
+function FutureSection({ onContactClick }: { onContactClick: () => void }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -248,14 +253,14 @@ function FutureSection() {
           <p className="text-lg md:text-xl text-white text-opacity-70 leading-relaxed max-w-3xl mx-auto mb-10">
             We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
           </p>
-          <motion.a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-black font-semibold transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-white/20"
+          <motion.button
+            onClick={onContactClick}
+            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-black font-semibold transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-white/20 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Start Your Journey
-          </motion.a>
+          </motion.button>
         </div>
       </div>
       <div className="mt-16 text-center text-white text-opacity-30 text-sm">
