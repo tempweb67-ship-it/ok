@@ -6,6 +6,5 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
-    include: ['three', '@react-three/fiber', '@react-three/postprocessing', 'postprocessing'],
   },
 });
