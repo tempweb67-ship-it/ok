@@ -19,7 +19,7 @@ export default function Solutions() {
     },
     {
       id: 3,
-      title: 'Intelligent Mass Outreach Automation',
+      title: 'Mass Outreach Automation',
       description: 'Transform outreach with hyper-personalized campaigns, intelligent segmentation, and AI-powered content that converts at scale.',
       category: 'Digital Marketing',
       icon: Mail,

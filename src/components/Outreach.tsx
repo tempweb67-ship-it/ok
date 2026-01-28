@@ -117,7 +117,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              Intelligent Mass Outreach Automation
+              Mass Outreach Automation
             </motion.h1>
 
             <motion.p
