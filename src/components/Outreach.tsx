@@ -117,7 +117,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
-              Marketing Automation Excellence
+              Intelligent Mass Outreach Automation
             </motion.h1>
 
             <motion.p
@@ -126,7 +126,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform outreach from mass messaging to meaningful conversations at scale. Our AI-powered platform crafts hyper-personalized campaigns that break through noise, bypass filters, and convert prospects into customers. Each message feels handwritten, each touchpoint drives engagement, and every campaign delivers measurable transformation to your pipeline.
+              Scale your outreach to thousands while maintaining authentic personalization. Our AI-powered automation crafts individually tailored messages that cut through noise, bypass spam filters, and drive genuine engagement. Send hyper-personalized campaigns at unlimited scale—each message optimized for conversion, every prospect treated like a one-person conversation.
             </motion.p>
           </motion.div>
 
@@ -369,10 +369,10 @@ export default function Outreach() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to revolutionize your marketing?
+                  Ready to scale your outreach intelligently?
                 </h2>
                 <p className="text-white text-opacity-60">
-                  Discover how marketing transformation unlocks exponential growth possibilities
+                  Discover how automated mass outreach at scale transforms your pipeline with personalized intelligence
                 </p>
               </div>
               <Link
