@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://wexel.com/sitemap.xml
+
+# Block common problematic bots (optional)
+User-agent: AhrefsBot
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Disallow specific paths if needed (none at the moment)

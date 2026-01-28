@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
+import SEO from './SEO';
 
 export default function VoiceAgent() {
   const features = [
@@ -61,7 +62,30 @@ export default function VoiceAgent() {
   const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
+    <>
+      <SEO
+        title="AI Voice Solutions - Voice Automation & AI Voice Agents | Wexel"
+        description="Transform customer interactions with AI voice agents that work 24/7. Deploy autonomous voice automation for appointment scheduling, lead qualification, and customer support. Scale conversations infinitely with human-quality AI voice technology."
+        keywords="AI voice agents, voice automation, AI phone agents, conversational AI, voice AI, automated phone calls, AI call center, voice bots, speech AI, customer service automation, AI receptionist, voice assistant"
+        canonical="https://wexel.com/solutions/voice"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "AI Voice Solutions",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "Autonomous voice agents that revolutionize customer interactions and deliver human-quality experiences 24/7",
+          "serviceType": "Voice Automation",
+          "areaServed": "Worldwide",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock"
+          }
+        }}
+      />
+      <div className="bg-black min-h-screen text-white overflow-hidden">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -209,6 +233,7 @@ export default function VoiceAgent() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

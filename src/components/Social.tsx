@@ -2,6 +2,7 @@ import { ArrowLeft, Share2, Calendar, TrendingUp, Target, Zap, BarChart3, Users 
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SEO from './SEO';
 
 export default function Social() {
   const features = [
@@ -84,7 +85,26 @@ export default function Social() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <>
+      <SEO
+        title="Autonomous Social Media Automation - AI Social Media Management | Wexel"
+        description="Automate your entire social media presence with AI. Intelligent content scheduling, multi-platform management, automated engagement, and performance analytics. Transform social media into a 24/7 growth engine with AI automation."
+        keywords="social media automation, AI social media, social media management, automated social posts, AI content scheduling, social media AI, automated engagement, social media analytics, social automation tools, AI social marketing"
+        canonical="https://wexel.com/solutions/social"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Autonomous Social Media",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "AI-powered social media automation with intelligent scheduling and engagement strategies",
+          "serviceType": "Social Media Automation",
+          "areaServed": "Worldwide"
+        }}
+      />
+      <div className="bg-black min-h-screen text-white">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <Link
@@ -448,5 +468,6 @@ export default function Social() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
+import SEO from './SEO';
 
 export default function Ecommerce() {
   const features = [
@@ -66,7 +67,26 @@ export default function Ecommerce() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <>
+      <SEO
+        title="E-Commerce Intelligence - AI-Powered E-Commerce Automation | Wexel"
+        description="Transform your online store with AI e-commerce intelligence. Predictive merchandising, dynamic pricing optimization, personalized shopping experiences, and AI-driven analytics that maximize revenue and conversions."
+        keywords="e-commerce AI, AI e-commerce, e-commerce automation, AI retail, intelligent merchandising, dynamic pricing AI, e-commerce personalization, AI shopping, retail automation, e-commerce optimization"
+        canonical="https://wexel.com/solutions/ecommerce"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "E-Commerce Intelligence",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "AI-driven e-commerce intelligence with predictive merchandising and dynamic optimization",
+          "serviceType": "E-Commerce Automation",
+          "areaServed": "Worldwide"
+        }}
+      />
+      <div className="bg-black min-h-screen text-white">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <Link
@@ -501,5 +521,6 @@ export default function Ecommerce() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { ArrowRight, BarChart3, PhoneCall, Mail, ShoppingCart, Share2, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from './SEO';
 
 export default function Solutions() {
   const features = [
@@ -48,7 +49,14 @@ export default function Solutions() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <>
+      <SEO
+        title="AI Automation Solutions - Voice AI, CRM, Marketing & E-Commerce | Wexel"
+        description="Comprehensive AI automation solutions for modern businesses. AI voice agents, intelligent CRM, mass outreach automation, e-commerce intelligence, social media automation, and next-gen web development. Transform your business with AI."
+        keywords="AI automation solutions, AI voice solutions, AI CRM, email automation, e-commerce automation, social media automation, web development, business automation, digital transformation solutions"
+        canonical="https://wexel.com/solutions"
+      />
+      <div className="bg-black min-h-screen text-white">
       <div className="pt-16 sm:pt-32 pb-8 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-6 sm:mb-16">
@@ -183,5 +191,6 @@ export default function Solutions() {
         </div>
       </div>
     </div>
+    </>
   );
 }

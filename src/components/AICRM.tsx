@@ -2,6 +2,7 @@ import { ArrowLeft, BarChart3, Brain, Zap, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SEO from './SEO';
 
 export default function AICRM() {
   const features = [
@@ -43,7 +44,26 @@ export default function AICRM() {
   const benefitsInView = useInView(benefitsRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
+    <>
+      <SEO
+        title="Intelligent AI CRM - AI-Powered Customer Relationship Management | Wexel"
+        description="Revolutionize customer relationships with AI-powered CRM. Predictive analytics, autonomous workflows, and intelligent automation that drive revenue growth. Transform every customer touchpoint with strategic AI intelligence."
+        keywords="AI CRM, intelligent CRM, AI customer management, CRM automation, predictive CRM, AI sales automation, customer intelligence, automated CRM, AI analytics, customer relationship automation"
+        canonical="https://wexel.com/solutions/aicrm"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Intelligent AI CRM",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "AI-powered CRM with predictive analytics, autonomous workflows, and intelligent automation",
+          "serviceType": "CRM Automation",
+          "areaServed": "Worldwide"
+        }}
+      />
+      <div className="bg-black min-h-screen text-white overflow-hidden">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -167,6 +187,7 @@ export default function AICRM() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

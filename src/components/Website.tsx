@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
+import SEO from './SEO';
 
 export default function Website() {
   const features = [
@@ -69,7 +70,26 @@ export default function Website() {
   const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
+    <>
+      <SEO
+        title="Next-Gen Web Development - AI-Powered Website Design & Development | Wexel"
+        description="Transform your digital presence with cutting-edge web development. High-performance websites engineered for conversion, optimized for search engines, and designed to dominate. Modern web experiences that captivate and scale."
+        keywords="web development, website design, AI website, modern web development, high-performance websites, responsive web design, SEO-optimized websites, web design agency, custom website development, professional web design"
+        canonical="https://wexel.com/solutions/website"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Next-Gen Web Experiences",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "Cutting-edge websites that captivate, convert, and scale with performance optimization",
+          "serviceType": "Web Development",
+          "areaServed": "Worldwide"
+        }}
+      />
+      <div className="bg-black min-h-screen text-white overflow-hidden">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -241,5 +261,6 @@ export default function Website() {
         </div>
       </div>
     </div>
+    </>
   );
 }

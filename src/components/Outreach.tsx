@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
+import SEO from './SEO';
 
 export default function Outreach() {
   const features = [
@@ -69,7 +70,26 @@ export default function Outreach() {
   const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
+    <>
+      <SEO
+        title="Mass Outreach Automation - AI Email Marketing & Sales Automation | Wexel"
+        description="Scale outreach with AI-powered email automation. Hyper-personalized campaigns, intelligent segmentation, and automated mass outreach that converts. Send thousands of personalized emails at scale with AI precision."
+        keywords="mass outreach automation, email automation, AI email marketing, automated email campaigns, cold email automation, sales outreach automation, personalized email automation, AI marketing automation, bulk email automation, lead generation automation"
+        canonical="https://wexel.com/solutions/outreach"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Mass Outreach Automation",
+          "provider": {
+            "@type": "Organization",
+            "name": "Wexel"
+          },
+          "description": "AI-powered mass outreach with hyper-personalized campaigns and intelligent automation",
+          "serviceType": "Email Marketing Automation",
+          "areaServed": "Worldwide"
+        }}
+      />
+      <div className="bg-black min-h-screen text-white overflow-hidden">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -392,5 +412,6 @@ export default function Outreach() {
         </div>
       </div>
     </div>
+    </>
   );
 }

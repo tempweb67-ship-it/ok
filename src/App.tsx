@@ -32,7 +32,8 @@ function AppContent() {
       <CustomCursor />
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
-      <Routes>
+      <main>
+        <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/solutions" element={<Solutions />} />
@@ -47,6 +48,7 @@ function AppContent() {
         <Route path="/vision" element={<Vision />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
+      </main>
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
