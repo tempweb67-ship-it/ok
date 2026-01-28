@@ -49,26 +49,26 @@ export default function Solutions() {
 
   return (
     <div className="bg-black min-h-screen text-white">
-      <div className="pt-32 pb-20">
+      <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-16">
+          <div className="mb-8 sm:mb-16">
             <h1
-              className="text-white leading-[0.85] mb-4"
+              className="text-white leading-[0.85] mb-3 sm:mb-4"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '-0.04em',
-                fontSize: 'clamp(3rem, 10vw, 6rem)',
+                fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
             >
               Solutions
             </h1>
             <div className="max-w-2xl">
-              <p className="text-lg text-white mt-2">
+              <p className="text-base sm:text-lg text-white mt-2">
                 Comprehensive digital transformation solutions with endless possibilities.
               </p>
               <p
-                className="text-base mt-0.5"
+                className="text-sm sm:text-base mt-0.5"
                 style={{
                   color: '#86efac',
                   overflow: 'hidden',
@@ -101,20 +101,20 @@ export default function Solutions() {
               }[feature.id];
 
               const content = (
-                <div className="py-12 border-t border-white border-opacity-10 group cursor-pointer transition-all duration-500">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-                    <div className="flex items-start gap-6 flex-1">
+                <div className="py-6 sm:py-12 border-t border-white border-opacity-10 group cursor-pointer transition-all duration-500">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 sm:gap-6 md:gap-8">
+                    <div className="flex items-start gap-4 sm:gap-6 flex-1">
                       <div className="flex-shrink-0">
-                        <Icon size={32} className="text-white text-opacity-40 group-hover:text-opacity-100 transition-all duration-500" />
+                        <Icon size={24} className="text-white text-opacity-40 group-hover:text-opacity-100 transition-all duration-500 sm:w-8 sm:h-8" />
                       </div>
 
                       <div className="flex-1">
-                        <p className="text-xs text-white text-opacity-40 mb-3 uppercase tracking-[0.2em] font-semibold">
+                        <p className="text-xs text-white text-opacity-40 mb-2 sm:mb-3 uppercase tracking-[0.2em] font-semibold">
                           {feature.category}
                         </p>
 
                         <h3
-                          className="text-3xl md:text-4xl font-bold leading-tight mb-4 group-hover:text-opacity-90 transition-all duration-300"
+                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-2 sm:mb-4 group-hover:text-opacity-90 transition-all duration-300"
                           style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                             letterSpacing: '-0.02em',
@@ -123,7 +123,7 @@ export default function Solutions() {
                           {feature.title}
                         </h3>
 
-                        <p className="text-white text-opacity-50 text-lg leading-relaxed max-w-2xl group-hover:text-opacity-70 transition-all duration-300">
+                        <p className="text-white text-opacity-50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl group-hover:text-opacity-70 transition-all duration-300">
                           {feature.description}
                         </p>
                       </div>
@@ -131,7 +131,7 @@ export default function Solutions() {
 
                     <div className="flex items-center justify-end md:justify-start">
                       <div className="text-white text-opacity-0 group-hover:text-opacity-100 group-hover:translate-x-2 transition-all duration-300">
-                        <ArrowRight size={28} />
+                        <ArrowRight size={20} className="sm:w-7 sm:h-7" />
                       </div>
                     </div>
                   </div>
@@ -150,11 +150,11 @@ export default function Solutions() {
             })}
           </div>
 
-          <div className="mt-20 pt-12 border-t border-white border-opacity-10">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-white border-opacity-10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
               <div>
                 <h2
-                  className="text-3xl font-bold mb-2"
+                  className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.02em',
@@ -162,7 +162,7 @@ export default function Solutions() {
                 >
                   Ready to transform your business?
                 </h2>
-                <p className="text-white text-opacity-60">
+                <p className="text-white text-opacity-60 text-sm sm:text-base">
                   Partner with us to unlock endless possibilities and accelerate your digital evolution
                 </p>
               </div>
@@ -174,9 +174,9 @@ export default function Solutions() {
                     (contactBtn as HTMLButtonElement).click();
                   }
                 }}
-                className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap"
+                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap text-sm sm:text-base"
               >
-                Get in Touch <ArrowRight size={18} />
+                Get in Touch <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
               </Link>
             </div>
           </div>
