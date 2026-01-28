@@ -112,11 +112,11 @@ export default function Social() {
                 fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
             >
-              Social Media Transformation
+              Autonomous Social Media
             </h1>
 
             <p className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
-              Transform social presence from time-consuming to transformative with intelligent automation that amplifies your brand across every channel. Our AI-powered platform orchestrates content, optimizes engagement, and delivers analytics that turn followers into customers and posts into measurable business results—all while saving hours each week and unlocking unprecedented growth.
+              Automate your entire social media presence with intelligent agents that craft, schedule, and optimize content across all channels. Our AI-powered platform handles posting, engagement, analytics, and strategy—turning your brand presence into a growth machine that works 24/7 without manual effort.
             </p>
           </div>
 

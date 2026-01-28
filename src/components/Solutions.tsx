@@ -33,7 +33,7 @@ export default function Solutions() {
     },
     {
       id: 5,
-      title: 'Social Media Transformation',
+      title: 'Autonomous Social Media',
       description: 'Amplify your brand presence with intelligent automation, performance analytics, and AI-powered engagement strategies across all channels.',
       category: 'Social Intelligence',
       icon: Share2,
