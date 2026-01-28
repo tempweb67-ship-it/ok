@@ -83,9 +83,6 @@ export default function Social() {
     },
   ];
 
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
     <div className="bg-black min-h-screen text-white">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
