@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Dither from './Dither';
 
 export default function Hero() {
   const fullText = "Wexel";
@@ -19,18 +18,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen bg-black flex items-center justify-center px-6 pt-12 relative overflow-hidden">
-      <div className="absolute inset-0 w-full h-full">
-        <Dither
-          waveColor={[1, 0, 0.4]}
-          disableAnimation={false}
-          enableMouseInteraction
-          mouseRadius={0.3}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
-        />
-      </div>
+      <div className="absolute inset-0 w-full h-full bg-black"></div>
       <div className="w-full max-w-[1800px] relative z-10 text-center">
         <h1
           className="text-white font-bold leading-[0.85] tracking-[0.08em] uppercase"
