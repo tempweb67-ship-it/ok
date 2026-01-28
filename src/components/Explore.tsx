@@ -27,7 +27,7 @@ export default function Explore() {
               Explore
             </h1>
             <p className="text-lg text-white text-opacity-60 max-w-2xl mt-6">
-              Discover how we drive digital transformation and unlock endless possibilities for forward-thinking organizations
+              Navigate across the website with ease and look at what we have to offer
             </p>
           </div>
 
