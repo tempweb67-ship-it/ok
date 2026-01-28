@@ -1,7 +1,47 @@
 import { ArrowRight, Sparkles, Zap, Target, Bot, TrendingUp, Users, Clock, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+const glitchStyles = `
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-2px, 2px);
+      opacity: 0.8;
+    }
+    40% {
+      transform: translate(-2px, -2px);
+      opacity: 0.9;
+    }
+    60% {
+      transform: translate(2px, 2px);
+      opacity: 0.7;
+    }
+    80% {
+      transform: translate(2px, -2px);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+
+  .glitch-number {
+    animation: glitch 0.6s ease-in-out;
+  }
+`;
 
 export default function Difference() {
+  const [glitched, setGlitched] = useState(false);
+
+  useEffect(() => {
+    setGlitched(true);
+  }, []);
+
   const differences = [
     {
       id: 1,
@@ -54,6 +94,7 @@ export default function Difference() {
 
   return (
     <div className="bg-black min-h-screen text-white overflow-hidden">
+      <style>{glitchStyles}</style>
 
       <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -91,7 +132,7 @@ export default function Difference() {
                   <div className="relative p-3 md:p-6 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl hover:border-opacity-20 transition-all duration-300 hover:bg-opacity-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300" />
                     <Icon size={20} className="mb-2 md:mb-3 text-white text-opacity-60" />
-                    <div className="text-xl md:text-3xl font-bold mb-1">{stat.value}</div>
+                    <div className={`text-xl md:text-3xl font-bold mb-1 ${glitched ? 'glitch-number' : ''}`}>{stat.value}</div>
                     <div className="text-xs md:text-sm text-white text-opacity-50">{stat.label}</div>
                   </div>
                 </div>
