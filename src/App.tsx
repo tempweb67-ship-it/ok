@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
-import HomePage from './components/HomePage';
+import Hero from './components/Hero';
 import BottomMarquee from './components/Marquee';
 import Contact from './components/Contact';
+import Explore from './components/Explore';
+import Solutions from './components/Solutions';
+import Difference from './components/Difference';
+import Industries from './components/Industries';
+import Vision from './components/Vision';
 import Privacy from './components/Privacy';
 import AICRM from './components/AICRM';
 import VoiceAgent from './components/VoiceAgent';
@@ -28,13 +33,18 @@ function AppContent() {
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
       <Routes>
-        <Route path="/" element={<HomePage onContactClick={() => setIsContactOpen(true)} />} />
+        <Route path="/" element={<Hero />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/solutions" element={<Solutions />} />
         <Route path="/solutions/aicrm" element={<AICRM />} />
         <Route path="/solutions/voice" element={<VoiceAgent />} />
         <Route path="/solutions/outreach" element={<Outreach />} />
         <Route path="/solutions/ecommerce" element={<Ecommerce />} />
         <Route path="/solutions/social" element={<Social />} />
         <Route path="/solutions/website" element={<Website />} />
+        <Route path="/difference" element={<Difference />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/vision" element={<Vision />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />

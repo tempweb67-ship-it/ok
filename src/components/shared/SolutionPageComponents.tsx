@@ -9,13 +9,13 @@ export function FeatureSection({ features }: { features: any[] }) {
   return (
     <motion.div
       ref={ref}
-      className="mb-20"
+      className="mb-10 sm:mb-20"
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       <motion.h2
-        className="text-4xl font-bold mb-12"
+        className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-12"
         style={{
           fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           letterSpacing: '-0.03em',
@@ -27,7 +27,7 @@ export function FeatureSection({ features }: { features: any[] }) {
         Key Features
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
         {features.map((feature, index) => {
           const Icon = feature.icon;
           return (
@@ -46,7 +46,7 @@ export function FeatureCard({ feature, Icon, index }: any) {
   return (
     <motion.div
       ref={ref}
-      className="relative border border-white border-opacity-10 rounded-2xl p-8 overflow-hidden group"
+      className="relative border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 overflow-hidden group"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -58,15 +58,15 @@ export function FeatureCard({ feature, Icon, index }: any) {
       />
       <div className="relative z-10">
         <motion.div
-          className="p-3 bg-white bg-opacity-5 rounded-xl inline-flex mb-6"
+          className="p-2.5 sm:p-3 bg-white bg-opacity-5 rounded-xl inline-flex mb-3 sm:mb-6"
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <Icon size={28} className="text-white" />
+          <Icon size={24} className="text-white sm:w-7 sm:h-7" />
         </motion.div>
 
-        <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-        <p className="text-white text-opacity-60 leading-relaxed">
+        <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
+        <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
           {feature.description}
         </p>
       </div>
@@ -81,7 +81,7 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
   return (
     <motion.div
       ref={ref}
-      className="relative border border-white border-opacity-10 rounded-3xl p-12 mb-20 overflow-hidden"
+      className="relative border border-white border-opacity-10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.8 }}
@@ -93,7 +93,7 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
       />
       <div className="max-w-3xl relative z-10">
         <h2
-          className="text-4xl font-bold mb-8"
+          className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             letterSpacing: '-0.03em',
@@ -102,7 +102,8 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
           How It Works
         </h2>
 
-        <div className="space-y-8">
+        {/* Desktop: Timeline layout */}
+        <div className="hidden sm:block space-y-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -128,6 +129,31 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
             </motion.div>
           ))}
         </div>
+
+        {/* Mobile: Compact cards */}
+        <div className="sm:hidden grid gap-3">
+          {steps.map((step, index) => (
+            <motion.div
+              key={index}
+              className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                  {index + 1}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-bold mb-1">{step.title}</h3>
+                  <p className="text-white text-opacity-60 text-sm leading-snug">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
@@ -140,19 +166,19 @@ export function CTASection({ title, description }: { title: string; description:
   return (
     <motion.div
       ref={ref}
-      className="mt-20 pt-12 border-t border-white border-opacity-10"
+      className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-white border-opacity-10"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2
-            className="text-3xl font-bold mb-2"
+            className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2"
             style={{
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               letterSpacing: '-0.02em',
@@ -160,7 +186,7 @@ export function CTASection({ title, description }: { title: string; description:
           >
             {title}
           </h2>
-          <p className="text-white text-opacity-60">{description}</p>
+          <p className="text-white text-opacity-60 text-sm sm:text-base">{description}</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -194,12 +220,12 @@ export function BenefitsGrid({ benefits }: { benefits: any[] }) {
   return (
     <motion.div
       ref={ref}
-      className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-20"
     >
       {benefits.map((benefit, index) => (
         <motion.div
           key={index}
-          className="relative border border-white border-opacity-10 rounded-2xl p-8 text-center overflow-hidden"
+          className="relative border border-white border-opacity-10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -212,7 +238,7 @@ export function BenefitsGrid({ benefits }: { benefits: any[] }) {
           />
           <div className="relative z-10">
             <motion.div
-              className="text-5xl font-bold mb-2"
+              className="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 letterSpacing: '-0.03em',
@@ -223,7 +249,7 @@ export function BenefitsGrid({ benefits }: { benefits: any[] }) {
             >
               {benefit.stat}
             </motion.div>
-            <p className="text-white text-opacity-60">{benefit.label}</p>
+            <p className="text-white text-opacity-60 text-sm sm:text-base">{benefit.label}</p>
           </div>
         </motion.div>
       ))}

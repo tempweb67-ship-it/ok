@@ -67,49 +67,49 @@ export default function Ecommerce() {
 
   return (
     <div className="bg-black min-h-screen text-white">
-      <div className="pt-32 pb-20">
+      <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <Link
             to="/solutions"
-            className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-8"
+            className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-4 sm:mb-8"
           >
             <ArrowLeft size={20} />
             Back to Solutions
           </Link>
 
-          <div className="mb-16">
-            <div className="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-white bg-opacity-5 rounded-full">
-              <ShoppingCart size={20} className="text-white text-opacity-60" />
-              <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
+          <div className="mb-8 sm:mb-16">
+            <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white bg-opacity-5 rounded-full">
+              <ShoppingCart size={18} className="text-white text-opacity-60 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-white text-opacity-60 uppercase tracking-wider">
                 Commerce Solutions
               </span>
             </div>
 
             <h1
-              className="text-white leading-[0.85] mb-6"
+              className="text-white leading-[0.85] mb-4 sm:mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '-0.04em',
-                fontSize: 'clamp(3rem, 10vw, 6rem)',
+                fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
             >
               E-Commerce Intelligence
             </h1>
 
-            <p className="text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
+            <p className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
               Transform your online business from transactional to exceptional with AI-driven intelligence that maximizes every interaction. Deploy predictive merchandising, dynamic optimization, and real-time insights that turn browsers into buyers and transactions into lasting relationships. Every product discovery becomes personalized, every price point optimized, and every customer experience elevated to drive sustainable growth.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-20">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="border border-white border-opacity-10 rounded-lg p-8 text-center"
+                className="border border-white border-opacity-10 rounded-lg p-6 sm:p-8 text-center"
               >
                 <div
-                  className="text-5xl font-bold mb-2"
+                  className="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2"
                   style={{
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     letterSpacing: '-0.03em',
@@ -117,14 +117,14 @@ export default function Ecommerce() {
                 >
                   {benefit.stat}
                 </div>
-                <p className="text-white text-opacity-60">{benefit.label}</p>
+                <p className="text-white text-opacity-60 text-sm sm:text-base">{benefit.label}</p>
               </div>
             ))}
           </div>
 
-          <div className="mb-20">
+          <div className="mb-10 sm:mb-20">
             <h2
-              className="text-4xl font-bold mb-12"
+              className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-12"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 letterSpacing: '-0.03em',
@@ -133,20 +133,20 @@ export default function Ecommerce() {
               Key Features
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
                   <div
                     key={index}
-                    className="border border-white border-opacity-10 rounded-lg p-8 hover:border-opacity-30 hover:bg-white hover:bg-opacity-5 transition-all duration-500"
+                    className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8 hover:border-opacity-30 hover:bg-white hover:bg-opacity-5 transition-all duration-500"
                   >
-                    <div className="p-3 bg-white bg-opacity-5 rounded-lg inline-flex mb-6">
-                      <Icon size={28} className="text-white" />
+                    <div className="p-2.5 sm:p-3 bg-white bg-opacity-5 rounded-lg inline-flex mb-3 sm:mb-6">
+                      <Icon size={24} className="text-white sm:w-7 sm:h-7" />
                     </div>
 
-                    <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                    <p className="text-white text-opacity-60 leading-relaxed">
+                    <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
+                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       {feature.description}
                     </p>
                   </div>
@@ -155,9 +155,9 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className="mb-20">
+          <div className="mb-10 sm:mb-20">
             <h2
-              className="text-4xl font-bold mb-12"
+              className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-12"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 letterSpacing: '-0.03em',
@@ -166,14 +166,14 @@ export default function Ecommerce() {
               Capabilities
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="border border-white border-opacity-10 rounded-lg p-8"
+                  className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
                 >
-                  <h3 className="text-2xl font-bold mb-4">{capability.title}</h3>
-                  <p className="text-white text-opacity-60 leading-relaxed">
+                  <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{capability.title}</h3>
+                  <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                     {capability.description}
                   </p>
                 </div>
@@ -181,10 +181,10 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className="border border-white border-opacity-10 rounded-lg p-12 mb-20">
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
             <div className="max-w-3xl">
               <h2
-                className="text-4xl font-bold mb-6"
+                className="text-2xl sm:text-4xl font-bold mb-6"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.03em',
@@ -193,7 +193,8 @@ export default function Ecommerce() {
                 How It Works
               </h2>
 
-              <div className="space-y-8">
+              {/* Desktop: Timeline layout */}
+              <div className="hidden sm:block space-y-8">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold">
@@ -254,16 +255,79 @@ export default function Ecommerce() {
                   </div>
                 </div>
               </div>
+
+              {/* Mobile: Compact cards */}
+              <div className="sm:hidden grid gap-3">
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      1
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Data Collection</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Our AI continuously gathers data on customer behavior, product performance,
+                        inventory levels, and market conditions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      2
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Pattern Recognition</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Machine learning models identify trends, preferences, and opportunities in your
+                        store data to predict future behavior.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      3
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Real-Time Optimization</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        Recommendations and pricing adjust instantly based on current context,
+                        inventory, and customer segment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                      4
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-bold mb-1">Continuous Learning</h3>
+                      <p className="text-white text-opacity-60 text-sm leading-snug">
+                        The system learns from every interaction, continuously improving accuracy and
+                        effectiveness over time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-            <div className="border border-white border-opacity-10 rounded-lg p-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-6">
-                <BarChart3 size={32} className="text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-20">
+            <div className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8">
+              <div className="p-3 sm:p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-4 sm:mb-6">
+                <BarChart3 size={24} className="text-white sm:w-8 sm:h-8" />
               </div>
               <h2
-                className="text-3xl font-bold mb-4"
+                className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.02em',
@@ -301,12 +365,12 @@ export default function Ecommerce() {
               </ul>
             </div>
 
-            <div className="border border-white border-opacity-10 rounded-lg p-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-6">
-                <Brain size={32} className="text-white" />
+            <div className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8">
+              <div className="p-3 sm:p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-4 sm:mb-6">
+                <Brain size={24} className="text-white sm:w-8 sm:h-8" />
               </div>
               <h2
-                className="text-3xl font-bold mb-4"
+                className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4"
                 style={{
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   letterSpacing: '-0.02em',
