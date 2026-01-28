@@ -147,20 +147,15 @@ export default function Website() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {capabilities.map((capability, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  whileHover={{ borderColor: 'rgba(255, 255, 255, 0.2)', backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+                  className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8 hover:border-opacity-20 hover:bg-white hover:bg-opacity-[0.02] transition-all duration-300"
                 >
                   <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{capability.title}</h3>
                   <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                     {capability.description}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

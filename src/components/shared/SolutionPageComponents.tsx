@@ -75,22 +75,9 @@ export function FeatureCard({ feature, Icon, index }: any) {
 }
 
 export function HowItWorksSection({ steps }: { steps: any[] }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.3 });
-
   return (
-    <motion.div
-      ref={ref}
-      className="relative border border-white border-opacity-10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden"
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.8 }}
-    >
-      <motion.div
-        className="absolute top-0 right-0 w-96 h-96 bg-white opacity-[0.02] rounded-full blur-3xl"
-        animate={{ scale: [1, 1.2, 1], opacity: [0.02, 0.03, 0.02] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-      />
+    <div className="relative border border-white border-opacity-10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-[0.02] rounded-full blur-3xl" />
       <div className="max-w-3xl relative z-10">
         <h2
           className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8"
@@ -102,23 +89,13 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
           How It Works
         </h2>
 
-        {/* Desktop: Timeline layout */}
         <div className="hidden sm:block space-y-8">
           {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className="flex gap-6"
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-            >
+            <div key={index} className="flex gap-6">
               <div className="flex-shrink-0">
-                <motion.div
-                  className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold"
-                  whileHover={{ scale: 1.1, backgroundColor: 'rgba(255, 255, 255, 0.15)' }}
-                >
+                <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold hover:bg-opacity-15 transition-colors duration-300">
                   {index + 1}
-                </motion.div>
+                </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
@@ -126,19 +103,15 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
                   {step.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Mobile: Compact cards */}
         <div className="sm:hidden grid gap-3">
           {steps.map((step, index) => (
-            <motion.div
+            <div
               key={index}
               className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
@@ -151,32 +124,19 @@ export function HowItWorksSection({ steps }: { steps: any[] }) {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export function CTASection({ title, description }: { title: string; description: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.5 });
-
   return (
-    <motion.div
-      ref={ref}
-      className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-white border-opacity-10"
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.8 }}
-    >
+    <div className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-white border-opacity-10">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <div>
           <h2
             className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2"
             style={{
@@ -187,29 +147,21 @@ export function CTASection({ title, description }: { title: string; description:
             {title}
           </h2>
           <p className="text-white text-opacity-60 text-sm sm:text-base">{description}</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
+        </div>
+        <Link
+          to="/"
+          onClick={(e) => {
+            const contactBtn = document.querySelector('[data-contact-btn]');
+            if (contactBtn) {
+              (contactBtn as HTMLButtonElement).click();
+            }
+          }}
+          className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap hover:scale-105 active:scale-95"
         >
-          <Link
-            to="/"
-            onClick={(e) => {
-              const contactBtn = document.querySelector('[data-contact-btn]');
-              if (contactBtn) {
-                (contactBtn as HTMLButtonElement).click();
-              }
-            }}
-            className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap"
-          >
-            Get Started
-          </Link>
-        </motion.div>
+          Get Started
+        </Link>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

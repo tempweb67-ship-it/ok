@@ -194,30 +194,20 @@ export default function Social() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {capabilities.map((capability, index) => (
-                <motion.div
+                <div
                   key={index}
                   className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
                 >
                   <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{capability.title}</h3>
                   <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                     {capability.description}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
-          <motion.div
-            className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
             <div className="max-w-3xl">
               <h2
                 className="text-2xl sm:text-4xl font-bold mb-6"
@@ -229,17 +219,9 @@ export default function Social() {
                 How It Works
               </h2>
 
-              {/* Desktop: Timeline layout */}
               <div className="hidden sm:block space-y-8">
                 {howItWorksSteps.map((step, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex gap-6"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.15 }}
-                  >
+                  <div key={index} className="flex gap-6">
                     <div className="flex-shrink-0">
                       <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold">
                         {index + 1}
@@ -251,20 +233,15 @@ export default function Social() {
                         {step.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
-              {/* Mobile: Compact cards */}
               <div className="sm:hidden grid gap-3">
                 {howItWorksSteps.map((step, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <div className="flex items-start gap-3">
                       <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
@@ -277,19 +254,15 @@ export default function Social() {
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
-            <motion.div
+            <div
               className="border border-white border-opacity-10 rounded-lg p-8"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
             >
               <div className="p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-6">
                 <TrendingUp size={32} className="text-white" />
@@ -331,14 +304,10 @@ export default function Social() {
                   <span className="text-white text-opacity-60">Competitor benchmarking</span>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
+            <div
               className="border border-white border-opacity-10 rounded-lg p-8"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
             >
               <div className="p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-6">
                 <Users size={32} className="text-white" />
@@ -378,15 +347,11 @@ export default function Social() {
                   <span className="text-white text-opacity-60">Influencer collaboration tracking</span>
                 </li>
               </ul>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
+          <div
             className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
             <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
               <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
@@ -446,14 +411,10 @@ export default function Social() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             className="mt-20 pt-12 border-t border-white border-opacity-10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
               <div>
@@ -483,7 +444,7 @@ export default function Social() {
                 Get Started
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
