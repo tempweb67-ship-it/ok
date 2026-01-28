@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Explore() {
@@ -44,8 +44,8 @@ export default function Explore() {
                   >
                     {item.name}
                   </h3>
-                  <div className="text-white text-opacity-0 group-hover:text-opacity-100 group-hover:translate-x-2 transition-all duration-300">
-                    <ArrowRight size={32} />
+                  <div className="text-white">
+                    <Plus size={32} />
                   </div>
                 </div>
               );
