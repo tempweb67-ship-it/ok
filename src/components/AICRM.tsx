@@ -44,7 +44,7 @@ export default function AICRM() {
 
   return (
     <div className="bg-black min-h-screen text-white overflow-hidden">
-      <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
+      <div className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -53,7 +53,7 @@ export default function AICRM() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -62,30 +62,30 @@ export default function AICRM() {
 
           <motion.div
             ref={heroRef}
-            className="mb-8 sm:mb-16"
+            className="mb-16"
             initial={{ opacity: 0, y: 40 }}
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white bg-opacity-5 rounded-full"
+              className="inline-flex items-center gap-3 mb-6 px-4 py-2 bg-white bg-opacity-5 rounded-full"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <BarChart3 size={18} className="text-white text-opacity-60 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-white text-opacity-60 uppercase tracking-wider">
+              <BarChart3 size={20} className="text-white text-opacity-60" />
+              <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">
                 Customer Experience
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-white leading-[0.85] mb-4 sm:mb-6"
+              className="text-white leading-[0.85] mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '-0.04em',
-                fontSize: 'clamp(2.5rem, 10vw, 6rem)',
+                fontSize: 'clamp(3rem, 10vw, 6rem)',
               }}
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -95,7 +95,7 @@ export default function AICRM() {
             </motion.h1>
 
             <motion.p
-              className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed"
+              className="text-xl text-white text-opacity-70 max-w-3xl leading-relaxed"
               initial={{ opacity: 0 }}
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -106,12 +106,12 @@ export default function AICRM() {
 
           <motion.div
             ref={benefitsRef}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-20"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
           >
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="relative border border-white border-opacity-10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden"
+                className="relative border border-white border-opacity-10 rounded-2xl p-8 text-center overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={benefitsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -124,7 +124,7 @@ export default function AICRM() {
                 />
                 <div className="relative z-10">
                   <motion.div
-                    className="text-3xl sm:text-5xl font-bold mb-1 sm:mb-2"
+                    className="text-5xl font-bold mb-2"
                     style={{
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       letterSpacing: '-0.03em',
@@ -135,7 +135,7 @@ export default function AICRM() {
                   >
                     {benefit.stat}
                   </motion.div>
-                  <p className="text-white text-opacity-60 text-sm sm:text-base">{benefit.label}</p>
+                  <p className="text-white text-opacity-60">{benefit.label}</p>
                 </div>
               </motion.div>
             ))}
@@ -177,13 +177,13 @@ function FeatureSection({ features }: { features: any[] }) {
   return (
     <motion.div
       ref={ref}
-      className="mb-10 sm:mb-20"
+      className="mb-20"
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6 }}
     >
       <motion.h2
-        className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-12"
+        className="text-4xl font-bold mb-12"
         style={{
           fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
           letterSpacing: '-0.03em',
@@ -195,7 +195,7 @@ function FeatureSection({ features }: { features: any[] }) {
         Key Features
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {features.map((feature, index) => {
           const Icon = feature.icon;
           return (
@@ -214,7 +214,7 @@ function FeatureCard({ feature, Icon, index }: any) {
   return (
     <motion.div
       ref={ref}
-      className="relative border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 overflow-hidden group"
+      className="relative border border-white border-opacity-10 rounded-2xl p-8 overflow-hidden group"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -226,15 +226,15 @@ function FeatureCard({ feature, Icon, index }: any) {
       />
       <div className="relative z-10">
         <motion.div
-          className="p-2.5 sm:p-3 bg-white bg-opacity-5 rounded-xl inline-flex mb-3 sm:mb-6"
+          className="p-3 bg-white bg-opacity-5 rounded-xl inline-flex mb-6"
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <Icon size={24} className="text-white sm:w-7 sm:h-7" />
+          <Icon size={28} className="text-white" />
         </motion.div>
 
-        <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
-        <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+        <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+        <p className="text-white text-opacity-60 leading-relaxed">
           {feature.description}
         </p>
       </div>
