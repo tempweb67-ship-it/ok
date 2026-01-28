@@ -248,7 +248,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
               letterSpacing: '-0.02em',
             }}
           >
-            Your Transformation Partner
+            Join Winners' Revolution
           </h2>
           <p className="text-lg md:text-xl text-white text-opacity-70 leading-relaxed max-w-3xl mx-auto mb-10">
             We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
