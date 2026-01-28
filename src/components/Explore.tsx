@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function Explore() {
   const menuItems = [
-    { name: "What's Different", path: "/difference" },
     { name: "Solutions", path: "/solutions" },
     { name: "Industries", path: "/industries" },
+    { name: "What's Different", path: "/difference" },
     { name: "Our Vision", path: "/vision" },
     { name: "Privacy Policy", path: "/privacy" }
   ];
