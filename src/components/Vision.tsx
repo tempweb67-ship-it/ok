@@ -86,7 +86,7 @@ export default function Vision() {
 
           <MissionSection />
 
-          <div className="mb-32">
+          <div className="mb-16">
             <SectionHeader
               title="Strategic Objectives"
               subtitle="How we drive transformation success for our clients"
@@ -98,7 +98,7 @@ export default function Vision() {
             </div>
           </div>
 
-          <div className="mb-32">
+          <div className="mb-16">
             <SectionHeader
               title="Core Values"
               subtitle="The principles that guide everything we do"
@@ -124,7 +124,7 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle: string })
   return (
     <motion.div
       ref={ref}
-      className="text-center mb-16"
+      className="text-center mb-12"
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
