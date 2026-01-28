@@ -1,86 +1,5 @@
-import { ArrowRight, Sparkles, Zap, Target, Bot, TrendingUp, Users, Clock, Rocket } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-function AnimatedCounter({ value, label }: { value: string; label: string }) {
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const counterRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (hasAnimated) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setHasAnimated(true);
-
-          // Handle 24/7 specially
-          if (value === '24/7') {
-            let current = 0;
-            const target = 24;
-            const duration = 1500;
-            const steps = 60;
-            const increment = target / steps;
-            const stepDuration = duration / steps;
-
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= target) {
-                setCount(target);
-                clearInterval(timer);
-              } else {
-                setCount(Math.floor(current));
-              }
-            }, stepDuration);
-
-            return () => clearInterval(timer);
-          } else {
-            // Handle percentage values
-            const numericValue = parseInt(value.replace('%', ''));
-            let current = 0;
-            const duration = 2000;
-            const steps = 60;
-            const increment = numericValue / steps;
-            const stepDuration = duration / steps;
-
-            const timer = setInterval(() => {
-              current += increment;
-              if (current >= numericValue) {
-                setCount(numericValue);
-                clearInterval(timer);
-              } else {
-                setCount(Math.floor(current));
-              }
-            }, stepDuration);
-
-            return () => clearInterval(timer);
-          }
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
-    }
-
-    return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
-      }
-    };
-  }, [value, hasAnimated]);
-
-  const displayValue = value === '24/7' ? `${count}/7` : `${count}%`;
-
-  return (
-    <div ref={counterRef} className="text-xl md:text-3xl font-bold mb-1">
-      {hasAnimated ? displayValue : value}
-    </div>
-  );
-}
 
 export default function Difference() {
   const differences = [
@@ -126,13 +45,6 @@ export default function Difference() {
     },
   ];
 
-  const stats = [
-    { icon: TrendingUp, value: '300%', label: 'Average ROI increase' },
-    { icon: Users, value: '100%', label: 'Integrity' },
-    { icon: Clock, value: '90%', label: 'Faster deployment' },
-    { icon: Rocket, value: '24/7', label: 'Always-on systems' },
-  ];
-
   return (
     <div className="bg-black min-h-screen text-white overflow-hidden">
 
@@ -162,28 +74,6 @@ export default function Difference() {
             <p className="text-base md:text-lg text-white text-opacity-60 max-w-2xl mx-auto">
               Why leading organizations choose Wexel as their transformation partner
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-16 md:mb-24 max-w-5xl mx-auto">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="relative group"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className="relative p-3 md:p-6 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl hover:border-opacity-20 transition-all duration-300 hover:bg-opacity-10">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white to-transparent opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300" />
-                    <Icon size={20} className="mb-2 md:mb-3 text-white text-opacity-60" />
-                    <AnimatedCounter value={stat.value} label={stat.label} />
-                    <div className="text-xs md:text-sm text-white text-opacity-50">{stat.label}</div>
-                  </div>
-                </motion.div>
-              );
-            })}
           </div>
 
           <div className="space-y-6 md:space-y-8 max-w-6xl mx-auto">
