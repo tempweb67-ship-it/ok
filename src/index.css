@@ -292,12 +292,12 @@ button:active::before {
 }
 
 /* Interactive elements */
-a:not([class*="button"]) {
+a:not([class*="button"]):not(.no-underline-link) {
   position: relative;
   text-decoration: none;
 }
 
-a:not([class*="button"])::after {
+a:not([class*="button"]):not(.no-underline-link)::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -308,7 +308,7 @@ a:not([class*="button"])::after {
   transition: width var(--transition-fast);
 }
 
-a:not([class*="button"]):hover::after {
+a:not([class*="button"]):not(.no-underline-link):hover::after {
   width: 100%;
 }
 
