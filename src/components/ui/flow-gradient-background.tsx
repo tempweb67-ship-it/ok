@@ -205,6 +205,9 @@ class App {
   gradientBackground: GradientBackground;
   animationId: number | null = null;
   container: HTMLElement;
+  mouseMoveHandler: any;
+  touchMoveHandler: any;
+  resizeHandler: any;
 
   constructor(container: HTMLElement) {
     this.container = container;
@@ -233,19 +236,19 @@ class App {
     this.gradientBackground.init();
     const c = this.container;
     const onMove = (x: number, y: number) => {
-      this.touchTexture.addTouch({ x: x / c.clientWidth, y: 1 - y / c.clientHeight });
+      this.touchTexture.addTouch({ x: x / window.innerWidth, y: 1 - y / window.innerHeight });
     };
-    c.addEventListener("mousemove", (e) => onMove(e.offsetX, e.offsetY));
-    c.addEventListener("touchmove", (e) => {
-      const rect = c.getBoundingClientRect();
-      onMove(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
-    });
-    window.addEventListener("resize", () => {
+    this.mouseMoveHandler = (e: MouseEvent) => onMove(e.clientX, e.clientY);
+    this.touchMoveHandler = (e: TouchEvent) => onMove(e.touches[0].clientX, e.touches[0].clientY);
+    this.resizeHandler = () => {
       this.camera.aspect = c.clientWidth / c.clientHeight;
       this.camera.updateProjectionMatrix();
       this.renderer.setSize(c.clientWidth, c.clientHeight);
       this.gradientBackground.onResize(c.clientWidth, c.clientHeight);
-    });
+    };
+    document.addEventListener("mousemove", this.mouseMoveHandler);
+    document.addEventListener("touchmove", this.touchMoveHandler);
+    window.addEventListener("resize", this.resizeHandler);
     this.tick();
   }
 
@@ -259,6 +262,9 @@ class App {
 
   cleanup() {
     if (this.animationId) cancelAnimationFrame(this.animationId);
+    document.removeEventListener("mousemove", this.mouseMoveHandler);
+    document.removeEventListener("touchmove", this.touchMoveHandler);
+    window.removeEventListener("resize", this.resizeHandler);
     this.renderer.dispose();
     if (this.container && this.renderer.domElement && this.container.contains(this.renderer.domElement)) {
       this.container.removeChild(this.renderer.domElement);
