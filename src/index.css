@@ -80,3 +80,9 @@
 .fixed.bottom-0 span {
   color: white !important;
 }
+
+.fixed.-z-10 canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -212,10 +212,14 @@ class App {
   constructor(container: HTMLElement) {
     this.container = container;
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-    this.renderer.setSize(container.clientWidth, container.clientHeight);
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    this.renderer.setSize(width, height, false);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.renderer.domElement.style.width = '100%';
+    this.renderer.domElement.style.height = '100%';
     container.appendChild(this.renderer.domElement);
-    this.camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 10000);
+    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0xf5f7ff);
@@ -245,12 +249,19 @@ class App {
       const height = window.innerHeight;
       this.camera.aspect = width / height;
       this.camera.updateProjectionMatrix();
-      this.renderer.setSize(width, height);
+      this.renderer.setSize(width, height, false);
+      this.renderer.domElement.style.width = '100%';
+      this.renderer.domElement.style.height = '100%';
       this.gradientBackground.onResize(width, height);
     };
     document.addEventListener("mousemove", this.mouseMoveHandler);
     document.addEventListener("touchmove", this.touchMoveHandler);
     window.addEventListener("resize", this.resizeHandler);
+    window.addEventListener("orientationchange", this.resizeHandler);
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", this.resizeHandler);
+    }
+    this.resizeHandler();
     this.tick();
   }
 
@@ -267,6 +278,10 @@ class App {
     document.removeEventListener("mousemove", this.mouseMoveHandler);
     document.removeEventListener("touchmove", this.touchMoveHandler);
     window.removeEventListener("resize", this.resizeHandler);
+    window.removeEventListener("orientationchange", this.resizeHandler);
+    if (window.visualViewport) {
+      window.visualViewport.removeEventListener("resize", this.resizeHandler);
+    }
     this.renderer.dispose();
     if (this.container && this.renderer.domElement && this.container.contains(this.renderer.domElement)) {
       this.container.removeChild(this.renderer.domElement);
@@ -294,7 +309,14 @@ export default function FlowGradientBackground() {
     <div
       ref={containerRef}
       className="fixed inset-0 w-full -z-10"
-      style={{ height: '100dvh' }}
+      style={{
+        height: '100dvh',
+        width: '100vw',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+      }}
     />
   );
 }
