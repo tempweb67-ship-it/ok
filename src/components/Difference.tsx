@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { About3 } from './ui/about-3';
 
 export default function Difference() {
   const differences = [
@@ -89,6 +90,63 @@ export default function Difference() {
               );
             })}
           </div>
+
+          <About3
+            title="Transforming Enterprises Globally"
+            description="We partner with forward-thinking organizations to unlock the full potential of AI automation. From startups to Fortune 500 companies, our solutions drive measurable impact across every industry."
+            mainImage={{
+              src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=80",
+              alt: "Team collaboration in modern office",
+            }}
+            secondaryImage={{
+              src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&auto=format&fit=crop&q=80",
+              alt: "Innovation and technology",
+            }}
+            breakout={{
+              src: "",
+              alt: "Wexel AI",
+              title: "Built for Scale, Designed for Impact",
+              description:
+                "Our AI-powered platform delivers enterprise transformation in weeks, not months. Experience the future of business automation with solutions that work 24/7.",
+              buttonText: "Explore Solutions",
+              buttonUrl: "/solutions",
+            }}
+            companiesTitle="Trusted by Industry Leaders"
+            companies={[
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-1.svg",
+                alt: "Enterprise Partner",
+              },
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-2.svg",
+                alt: "Tech Company",
+              },
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-3.svg",
+                alt: "Innovation Leader",
+              },
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-4.svg",
+                alt: "Global Corporation",
+              },
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-5.svg",
+                alt: "Digital Pioneer",
+              },
+              {
+                src: "https://shadcnblocks.com/images/block/logos/company/fictional-company-logo-6.svg",
+                alt: "Industry Leader",
+              },
+            ]}
+            achievementsTitle="Proven Results That Matter"
+            achievementsDescription="Real impact across hundreds of deployments. Our AI solutions deliver measurable outcomes that transform businesses and accelerate growth."
+            achievements={[
+              { label: "Enterprise Clients", value: "500+" },
+              { label: "Hours Saved Daily", value: "50K+" },
+              { label: "Average ROI", value: "300%" },
+              { label: "Global Deployments", value: "15+" },
+            ]}
+          />
 
           <div className="mt-16 md:mt-32 text-center">
             <div className="relative inline-block">
