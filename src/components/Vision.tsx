@@ -248,7 +248,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
               letterSpacing: '-0.02em',
             }}
           >
-            Join Winners' Revolution
+            Join Winners' Revolution AND Start Your Journey to Enter the Revolution
           </h2>
           <p className="text-lg md:text-xl text-white text-opacity-70 leading-relaxed max-w-3xl mx-auto mb-10">
             We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
@@ -259,7 +259,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Start Your Journey
+            Enter the Revolution
           </motion.button>
         </div>
       </div>
