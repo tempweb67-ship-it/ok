@@ -89,7 +89,7 @@ export default function Outreach() {
           "areaServed": "Worldwide"
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-black overflow-hidden" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -336,7 +336,7 @@ export default function Outreach() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <TrendingUp size={20} className="flex-shrink-0" />
                       Sales Teams
@@ -346,7 +346,7 @@ export default function Outreach() {
                       rates.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Target size={20} className="flex-shrink-0" />
                       Marketing Teams
@@ -355,7 +355,7 @@ export default function Outreach() {
                       Run sophisticated campaigns with personalized messaging at every touchpoint.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Users size={20} className="flex-shrink-0" />
                       Recruiters
@@ -365,7 +365,7 @@ export default function Outreach() {
                       opportunities.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Zap size={20} className="flex-shrink-0" />
                       Growth Teams

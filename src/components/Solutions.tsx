@@ -57,7 +57,7 @@ export default function Solutions() {
         canonical="https://wexel.com/solutions"
       />
       <div className="text-black" style={{ minHeight: '100dvh' }}>
-      <div className="pt-20 sm:pt-32 pb-8 sm:pb-20">
+      <div className="pt-16 sm:pt-32 pb-8 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-6 sm:mb-16">
             <h1
@@ -72,13 +72,13 @@ export default function Solutions() {
               Solutions
             </h1>
             <div className="max-w-2xl">
-              <p className="text-base sm:text-lg mt-1 sm:mt-2" style={{ color: '#000000' }}>
+              <p className="text-base sm:text-lg text-black mt-1 sm:mt-2">
                 Comprehensive digital transformation solutions with endless possibilities.
               </p>
               <p
                 className="text-sm sm:text-base mt-0.5"
                 style={{
-                  color: '#00cc6a',
+                  color: '#6ee7b7',
                   overflow: 'hidden',
                   whiteSpace: 'nowrap',
                   width: 'fit-content',
