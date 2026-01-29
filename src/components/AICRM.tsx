@@ -148,62 +148,7 @@ export default function AICRM() {
 
           <UseCasesSection useCases={useCases} />
 
-          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
-            <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
-                <BarChart3 size={40} className="text-white" />
-              </div>
-              <div className="flex-1 w-full">
-                <h2
-                  className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-4"
-                  style={{
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  Perfect For
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                      <Store size={20} className="flex-shrink-0" />
-                      E-commerce Businesses
-                    </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                      Manage customer relationships at scale, automate abandoned cart recovery, and personalize product recommendations.
-                    </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                      <Users size={20} className="flex-shrink-0" />
-                      Service Providers
-                    </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                      Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
-                    </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                      <Building2 size={20} className="flex-shrink-0" />
-                      B2B Sales Teams
-                    </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                      Accelerate complex sales cycles with intelligent pipeline management and automated outreach sequences.
-                    </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                      <Briefcase size={20} className="flex-shrink-0" />
-                      Anyone With Online Presence
-                    </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                      Whether you're a solopreneur, content creator, or consultant, manage leads and customers with enterprise-grade AI.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PerfectForSection />
 
           <HowItWorksSection
             steps={[
@@ -258,6 +203,67 @@ function UseCasesSection({ useCases }: { useCases: any[] }) {
             </p>
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function PerfectForSection() {
+  return (
+    <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
+      <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
+        <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
+          <BarChart3 size={40} className="text-white" />
+        </div>
+        <div className="flex-1 w-full">
+          <h2
+            className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-4"
+            style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Perfect For
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                <Store size={20} className="flex-shrink-0" />
+                E-commerce Businesses
+              </h3>
+              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                Manage customer relationships at scale, automate abandoned cart recovery, and personalize product recommendations.
+              </p>
+            </div>
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                <Users size={20} className="flex-shrink-0" />
+                Service Providers
+              </h3>
+              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
+              </p>
+            </div>
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                <Building2 size={20} className="flex-shrink-0" />
+                B2B Sales Teams
+              </h3>
+              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                Accelerate complex sales cycles with intelligent pipeline management and automated outreach sequences.
+              </p>
+            </div>
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
+                <Briefcase size={20} className="flex-shrink-0" />
+                Anyone With Online Presence
+              </h3>
+              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                Whether you're a solopreneur, content creator, or consultant, manage leads and customers with enterprise-grade AI.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
