@@ -81,7 +81,7 @@ export default function AICRM() {
           "areaServed": "Worldwide"
         }}
       />
-      <div className="text-black overflow-hidden" style={{ minHeight: '100dvh' }}>
+      <div className="text-black" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -231,7 +231,7 @@ function PerfectForSection() {
             Perfect For
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-            <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300">
+            <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0 sm:hover:border-0 sm:hover:bg-transparent">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                 <Users size={20} className="flex-shrink-0 text-blue-600" />
                 Service Providers
@@ -240,7 +240,7 @@ function PerfectForSection() {
                 Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
               </p>
             </div>
-            <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300">
+            <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0 sm:hover:border-0 sm:hover:bg-transparent">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                 <Briefcase size={20} className="flex-shrink-0 text-blue-600" />
                 Anyone With Online Presence

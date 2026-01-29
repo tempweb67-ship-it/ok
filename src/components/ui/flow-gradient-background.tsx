@@ -217,11 +217,18 @@ class App {
     const height = window.innerHeight;
     this.renderer.setSize(width, height, false);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    this.renderer.domElement.style.width = '100%';
-    this.renderer.domElement.style.height = '100%';
-    this.renderer.domElement.style.position = 'absolute';
+    this.renderer.domElement.style.position = 'fixed';
     this.renderer.domElement.style.top = '0';
     this.renderer.domElement.style.left = '0';
+    this.renderer.domElement.style.width = '100vw';
+    this.renderer.domElement.style.height = '100vh';
+    this.renderer.domElement.style.maxWidth = '100vw';
+    this.renderer.domElement.style.maxHeight = '100vh';
+    this.renderer.domElement.style.minWidth = '100vw';
+    this.renderer.domElement.style.minHeight = '100vh';
+    this.renderer.domElement.style.pointerEvents = 'none';
+    this.renderer.domElement.style.transform = 'translate3d(0, 0, 0)';
+    this.renderer.domElement.style.webkitTransform = 'translate3d(0, 0, 0)';
     container.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
@@ -255,8 +262,12 @@ class App {
       this.camera.aspect = width / height;
       this.camera.updateProjectionMatrix();
       this.renderer.setSize(width, height, false);
-      this.renderer.domElement.style.width = '100%';
-      this.renderer.domElement.style.height = '100%';
+      this.renderer.domElement.style.width = '100vw';
+      this.renderer.domElement.style.height = '100vh';
+      this.renderer.domElement.style.maxWidth = '100vw';
+      this.renderer.domElement.style.maxHeight = '100vh';
+      this.renderer.domElement.style.minWidth = '100vw';
+      this.renderer.domElement.style.minHeight = '100vh';
       this.gradientBackground.onResize(width, height);
     };
 
@@ -330,12 +341,21 @@ export default function FlowGradientBackground() {
       ref={containerRef}
       className="fixed inset-0 w-full -z-10"
       style={{
-        height: '100dvh',
+        position: 'fixed',
+        height: '100vh',
         width: '100vw',
+        maxHeight: '100vh',
+        maxWidth: '100vw',
+        minHeight: '100vh',
+        minWidth: '100vw',
         top: 0,
         left: 0,
         right: 0,
-        bottom: 0
+        bottom: 0,
+        pointerEvents: 'none',
+        transform: 'translate3d(0, 0, 0)',
+        WebkitTransform: 'translate3d(0, 0, 0)',
+        zIndex: -1
       }}
     />
   );

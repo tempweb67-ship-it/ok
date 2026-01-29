@@ -29,7 +29,7 @@ function AppContent() {
   }, [location.pathname]);
 
   return (
-    <div className="relative cursor-none" style={{ minHeight: '100dvh' }}>
+    <div className="relative cursor-none" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
       <FlowGradientBackground />
       <CustomCursor />
       <Header onContactClick={() => setIsContactOpen(true)} />

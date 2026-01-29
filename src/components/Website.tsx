@@ -89,7 +89,7 @@ export default function Website() {
           "areaServed": "Worldwide"
         }}
       />
-      <div className="text-black overflow-hidden" style={{ minHeight: '100dvh' }}>
+      <div className="text-black" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -213,7 +213,7 @@ export default function Website() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <TrendingUp size={20} className="flex-shrink-0" />
                       Growing Businesses
@@ -222,7 +222,7 @@ export default function Website() {
                       Establish credibility and scale operations with a professional web presence that converts visitors into customers.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Users size={20} className="flex-shrink-0" />
                       Enterprise Brands
@@ -231,7 +231,7 @@ export default function Website() {
                       Elevate brand perception and streamline digital operations with enterprise-grade web solutions.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Rocket size={20} className="flex-shrink-0" />
                       Startups
@@ -240,7 +240,7 @@ export default function Website() {
                       Launch quickly with MVP-focused websites that validate concepts and attract investors.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Globe size={20} className="flex-shrink-0" />
                       Digital Transformers
