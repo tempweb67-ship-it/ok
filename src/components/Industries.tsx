@@ -152,7 +152,7 @@ export default function Industries() {
                     (contactBtn as HTMLButtonElement).click();
                   }
                 }}
-                className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2"
+                className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Contact Us <ArrowRight size={18} />
               </Link>

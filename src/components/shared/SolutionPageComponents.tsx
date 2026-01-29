@@ -69,23 +69,23 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
   return (
     <motion.div
       ref={ref}
-      className="relative border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 overflow-hidden group"
+      className="relative border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 overflow-hidden group hover:border-blue-500 hover:border-opacity-30"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ borderColor: 'rgba(255, 255, 255, 0.2)', backgroundColor: 'rgba(255, 255, 255, 0.03)' }}
+      whileHover={{ borderColor: 'rgba(59, 130, 246, 0.3)', backgroundColor: 'rgba(59, 130, 246, 0.02)' }}
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100"
+        className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100"
         transition={{ duration: 0.3 }}
       />
       <div className="relative z-10">
         <motion.div
-          className="p-2.5 sm:p-3 bg-white bg-opacity-5 rounded-xl inline-flex mb-3 sm:mb-6"
+          className="p-2.5 sm:p-3 bg-blue-500 bg-opacity-10 rounded-xl inline-flex mb-3 sm:mb-6 group-hover:bg-opacity-20"
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <Icon size={24} className="text-white sm:w-7 sm:h-7" />
+          <Icon size={24} className="text-blue-400 sm:w-7 sm:h-7" />
         </motion.div>
 
         <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
@@ -116,7 +116,7 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
           {steps.map((step, index) => (
             <div key={index} className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center font-bold hover:bg-opacity-15 transition-colors duration-300">
+                <div className="w-10 h-10 rounded-full bg-blue-500 bg-opacity-20 flex items-center justify-center font-bold text-blue-300 hover:bg-opacity-30 transition-colors duration-300">
                   {index + 1}
                 </div>
               </div>
@@ -134,10 +134,10 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02]"
+              className="border border-white border-opacity-10 rounded-xl p-4 bg-white bg-opacity-[0.02] hover:border-blue-500 hover:border-opacity-30"
             >
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white bg-opacity-10 flex items-center justify-center text-sm font-bold">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-500 bg-opacity-20 flex items-center justify-center text-sm font-bold text-blue-300">
                   {index + 1}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -179,7 +179,7 @@ export function CTASection({ title, description }: { title: string; description:
               (contactBtn as HTMLButtonElement).click();
             }
           }}
-          className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap hover:scale-105 active:scale-95"
+          className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap hover:scale-105 active:scale-95"
         >
           Get Started
         </Link>
@@ -200,14 +200,14 @@ export function BenefitsGrid({ benefits }: { benefits: Benefit[] }) {
       {benefits.map((benefit, index) => (
         <motion.div
           key={index}
-          className="relative border border-white border-opacity-10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden"
+          className="relative border border-white border-opacity-10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden hover:border-blue-500 hover:border-opacity-30"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-          whileHover={{ borderColor: 'rgba(255, 255, 255, 0.2)', backgroundColor: 'rgba(255, 255, 255, 0.02)' }}
+          whileHover={{ borderColor: 'rgba(59, 130, 246, 0.3)', backgroundColor: 'rgba(59, 130, 246, 0.02)' }}
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0"
+            className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0"
             whileHover={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
           />

@@ -99,7 +99,7 @@ export default function Outreach() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -114,13 +114,13 @@ export default function Outreach() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white bg-opacity-5 rounded-full"
+              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Mail size={18} className="text-white text-opacity-60 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-white text-opacity-60 uppercase tracking-wider">
+              <Mail size={18} className="text-blue-300 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider">
                 Digital Marketing
               </span>
             </motion.div>

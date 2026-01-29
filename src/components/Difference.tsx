@@ -52,7 +52,7 @@ export default function Difference() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-12 md:mb-20 text-center">
             <div className="inline-block mb-6">
-              <span className="px-4 py-1.5 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-full text-sm font-medium">
+              <span className="px-4 py-1.5 bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-30 rounded-full text-sm font-medium text-blue-300">
                 The Winner's Advantage
               </span>
             </div>
@@ -115,7 +115,7 @@ export default function Difference() {
                         (contactBtn as HTMLButtonElement).click();
                       }
                     }}
-                    className="px-6 md:px-10 py-3 md:py-4 bg-white text-black font-semibold rounded-xl hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 text-sm md:text-base"
+                    className="px-6 md:px-10 py-3 md:py-4 bg-blue-500 text-white font-semibold rounded-xl hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 text-sm md:text-base"
                   >
                     Start Your Journey <ArrowRight size={16} className="md:size-5" />
                   </Link>

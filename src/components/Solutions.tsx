@@ -78,7 +78,7 @@ export default function Solutions() {
               <p
                 className="text-sm sm:text-base mt-0.5"
                 style={{
-                  color: '#86efac',
+                  color: '#6ee7b7',
                   overflow: 'hidden',
                   whiteSpace: 'nowrap',
                   width: 'fit-content',
@@ -182,7 +182,7 @@ export default function Solutions() {
                     (contactBtn as HTMLButtonElement).click();
                   }
                 }}
-                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white text-black font-semibold rounded-lg hover:bg-white hover:bg-opacity-90 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap text-sm sm:text-base"
+                className="px-6 sm:px-8 py-2.5 sm:py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap text-sm sm:text-base"
               >
                 Get in Touch <ArrowRight size={16} className="sm:w-[18px] sm:h-[18px]" />
               </Link>

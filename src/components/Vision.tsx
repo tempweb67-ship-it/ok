@@ -62,9 +62,9 @@ export default function Vision() {
             animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white bg-opacity-5 rounded-full mb-8">
-              <Rocket size={16} className="text-white text-opacity-60" />
-              <span className="text-sm text-white text-opacity-60 uppercase tracking-wider">Our Vision</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 bg-opacity-10 rounded-full mb-8 border border-blue-500 border-opacity-20">
+              <Rocket size={16} className="text-blue-300" />
+              <span className="text-sm text-blue-300 uppercase tracking-wider">Our Vision</span>
             </div>
 
             <h1
@@ -160,7 +160,7 @@ function MissionSection() {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative p-12 md:p-16 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white border-opacity-10">
+      <div className="relative p-12 md:p-16 rounded-3xl bg-gradient-to-br from-blue-500/5 to-blue-500/[0.01] border border-blue-500 border-opacity-20">
         <div className="text-sm text-white text-opacity-40 uppercase tracking-wider mb-4">Mission</div>
         <h3
           className="text-3xl md:text-4xl font-bold mb-6"
@@ -198,9 +198,9 @@ function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardP
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="relative p-8 rounded-2xl bg-white bg-opacity-[0.02] border border-white border-opacity-10 h-full transition-all duration-300 hover:border-opacity-20 hover:bg-opacity-[0.04]">
-        <div className="mb-6 p-3 bg-white bg-opacity-5 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110">
-          <Icon size={28} className="text-white" />
+      <div className="relative p-8 rounded-2xl bg-white bg-opacity-[0.02] border border-white border-opacity-10 h-full transition-all duration-300 hover:border-blue-500 hover:border-opacity-30 hover:bg-blue-500 hover:bg-opacity-5">
+        <div className="mb-6 p-3 bg-blue-500 bg-opacity-10 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110 group-hover:bg-opacity-20">
+          <Icon size={28} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
         </div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-white text-opacity-60 leading-relaxed">{description}</p>
@@ -228,10 +228,10 @@ function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
     >
-      <div className="relative p-8 rounded-2xl bg-white bg-opacity-[0.02] border border-white border-opacity-10 h-full transition-all duration-300 hover:border-opacity-20 hover:bg-opacity-[0.04]">
+      <div className="relative p-8 rounded-2xl bg-white bg-opacity-[0.02] border border-white border-opacity-10 h-full transition-all duration-300 hover:border-blue-500 hover:border-opacity-30 hover:bg-blue-500 hover:bg-opacity-5">
         <div className="flex items-start gap-4 mb-4">
-          <div className="p-3 bg-white bg-opacity-5 rounded-xl transition-transform duration-300 group-hover:scale-110">
-            <Icon size={24} className="text-white" />
+          <div className="p-3 bg-blue-500 bg-opacity-10 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:bg-opacity-20">
+            <Icon size={24} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
           </div>
           <h3 className="text-xl font-bold pt-2">{title}</h3>
         </div>
@@ -253,7 +253,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative p-12 md:p-20 rounded-3xl bg-gradient-to-br from-white/10 to-white/[0.02] border border-white border-opacity-20">
+      <div className="relative p-12 md:p-20 rounded-3xl bg-gradient-to-br from-blue-500/10 to-blue-500/[0.02] border border-blue-500 border-opacity-30">
         <div className="text-center">
           <h2
             className="text-3xl md:text-5xl font-bold mb-8"
@@ -269,7 +269,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
           </p>
           <motion.button
             onClick={onContactClick}
-            className="inline-flex items-center px-8 py-4 rounded-full bg-white text-black font-semibold transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-white/20 cursor-pointer"
+            className="inline-flex items-center px-8 py-4 rounded-full bg-blue-500 text-white font-semibold transition-all duration-300 hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/30 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

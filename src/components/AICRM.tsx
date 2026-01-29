@@ -91,7 +91,7 @@ export default function AICRM() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -106,13 +106,13 @@ export default function AICRM() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white bg-opacity-5 rounded-full"
+              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <BarChart3 size={18} className="text-white text-opacity-60 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-white text-opacity-60 uppercase tracking-wider">
+              <BarChart3 size={18} className="text-blue-300 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider">
                 Customer Experience
               </span>
             </motion.div>
@@ -200,9 +200,9 @@ function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
         {useCases.map((useCase, index) => (
           <div
             key={index}
-            className="border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 hover:border-opacity-30 hover:bg-white hover:bg-opacity-[0.02] transition-all duration-300"
+            className="border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 hover:border-blue-500 hover:border-opacity-30 hover:bg-blue-500 hover:bg-opacity-[0.02] transition-all duration-300"
           >
-            <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{useCase.title}</h3>
+            <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 hover:text-blue-300 transition-colors">{useCase.title}</h3>
             <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
               {useCase.description}
             </p>
@@ -215,10 +215,10 @@ function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
 
 function PerfectForSection() {
   return (
-    <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
+    <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20 hover:border-blue-500 hover:border-opacity-30 hover:bg-blue-500 hover:bg-opacity-[0.01] transition-all duration-300">
       <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
-        <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
-          <BarChart3 size={40} className="text-white" />
+        <div className="p-4 bg-blue-500 bg-opacity-10 rounded-lg hidden sm:block">
+          <BarChart3 size={40} className="text-blue-400" />
         </div>
         <div className="flex-1 w-full">
           <h2
@@ -231,18 +231,18 @@ function PerfectForSection() {
             Perfect For
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent hover:border-blue-500 hover:border-opacity-20 hover:bg-blue-500 hover:bg-opacity-[0.02] transition-all duration-300">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                <Users size={20} className="flex-shrink-0" />
+                <Users size={20} className="flex-shrink-0 text-blue-400" />
                 Service Providers
               </h3>
               <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                 Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
               </p>
             </div>
-            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent hover:border-blue-500 hover:border-opacity-20 hover:bg-blue-500 hover:bg-opacity-[0.02] transition-all duration-300">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                <Briefcase size={20} className="flex-shrink-0" />
+                <Briefcase size={20} className="flex-shrink-0 text-blue-400" />
                 Anyone With Online Presence
               </h3>
               <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">

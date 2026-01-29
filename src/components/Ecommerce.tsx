@@ -88,16 +88,16 @@ export default function Ecommerce() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <Link
             to="/solutions"
-            className="inline-flex items-center gap-2 text-white text-opacity-60 hover:text-opacity-100 transition-all duration-300 mb-4 sm:mb-8"
+            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 mb-4 sm:mb-8"
           >
             <ArrowLeft size={20} />
             Back to Solutions
           </Link>
 
           <div className="mb-8 sm:mb-16">
-            <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-white bg-opacity-5 rounded-full">
-              <ShoppingCart size={18} className="text-white text-opacity-60 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-white text-opacity-60 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20">
+              <ShoppingCart size={18} className="text-blue-300 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider">
                 Commerce Solutions
               </span>
             </div>
