@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Zap, Target, Bot } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Difference() {
@@ -109,7 +109,7 @@ export default function Difference() {
                 <div>
                   <Link
                     to="/"
-                    onClick={(e) => {
+                    onClick={() => {
                       const contactBtn = document.querySelector('[data-contact-btn]');
                       if (contactBtn) {
                         (contactBtn as HTMLButtonElement).click();
@@ -129,7 +129,18 @@ export default function Difference() {
   );
 }
 
-function DifferenceCard({ item, index, Icon }: { item: any; index: number; Icon: any }) {
+interface DifferenceItem {
+  id: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  oldWay: string;
+  newWay: string;
+  metric: string;
+  metricLabel: string;
+}
+
+function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: number; Icon: LucideIcon }) {
   return (
     <div className="group relative">
       <div className="relative p-5 md:p-8 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-[0.02] backdrop-blur-sm overflow-hidden hover:border-opacity-20 hover:bg-opacity-5 transition-all duration-300">

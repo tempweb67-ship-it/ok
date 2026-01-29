@@ -1,8 +1,5 @@
 import { ArrowLeft, ShoppingCart, TrendingUp, Brain, BarChart3, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
 
 export default function Ecommerce() {
@@ -506,7 +503,7 @@ export default function Ecommerce() {
               </div>
               <Link
                 to="/"
-                onClick={(e) => {
+                onClick={() => {
                   const contactBtn = document.querySelector('[data-contact-btn]');
                   if (contactBtn) {
                     (contactBtn as HTMLButtonElement).click();

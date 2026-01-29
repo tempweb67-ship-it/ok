@@ -97,7 +97,7 @@ export default function Solutions() {
           </div>
 
           <div className="space-y-0">
-            {features.map((feature, index) => {
+            {features.map((feature) => {
               const Icon = feature.icon;
               const linkProps = {
                 1: "/solutions/aicrm",
@@ -176,7 +176,7 @@ export default function Solutions() {
               </div>
               <Link
                 to="/"
-                onClick={(e) => {
+                onClick={() => {
                   const contactBtn = document.querySelector('[data-contact-btn]');
                   if (contactBtn) {
                     (contactBtn as HTMLButtonElement).click();

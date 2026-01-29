@@ -2,7 +2,7 @@ import { ArrowLeft, Mail, Target, Zap, Shield, TrendingUp, Users } from 'lucide-
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
+import { FeatureSection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
 
 export default function Outreach() {
@@ -397,7 +397,7 @@ export default function Outreach() {
               </div>
               <Link
                 to="/"
-                onClick={(e) => {
+                onClick={() => {
                   const contactBtn = document.querySelector('[data-contact-btn]');
                   if (contactBtn) {
                     (contactBtn as HTMLButtonElement).click();

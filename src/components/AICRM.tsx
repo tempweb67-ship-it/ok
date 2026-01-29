@@ -178,7 +178,12 @@ export default function AICRM() {
   );
 }
 
-function UseCasesSection({ useCases }: { useCases: any[] }) {
+interface UseCase {
+  title: string;
+  description: string;
+}
+
+function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
   return (
     <div className="mb-10 sm:mb-20">
       <h2

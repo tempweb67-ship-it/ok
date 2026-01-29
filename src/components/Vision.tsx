@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket } from 'lucide-react';
+import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon } from 'lucide-react';
 import Contact from './Contact';
 
 export default function Vision() {
@@ -179,7 +179,14 @@ function MissionSection() {
   );
 }
 
-function ObjectiveCard({ icon: Icon, title, description, index }: any) {
+interface ObjectiveCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  index: number;
+}
+
+function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -202,7 +209,14 @@ function ObjectiveCard({ icon: Icon, title, description, index }: any) {
   );
 }
 
-function ValueCard({ icon: Icon, title, description, index }: any) {
+interface ValueCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  index: number;
+}
+
+function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 

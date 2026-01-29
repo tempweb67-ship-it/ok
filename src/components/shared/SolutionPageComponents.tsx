@@ -1,8 +1,31 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { LucideIcon } from 'lucide-react';
 
-export function FeatureSection({ features }: { features: any[] }) {
+interface Feature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+interface Step {
+  title: string;
+  description: string;
+}
+
+interface Benefit {
+  stat: string;
+  label: string;
+}
+
+interface FeatureCardProps {
+  feature: Feature;
+  Icon: LucideIcon;
+  index: number;
+}
+
+export function FeatureSection({ features }: { features: Feature[] }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -39,7 +62,7 @@ export function FeatureSection({ features }: { features: any[] }) {
   );
 }
 
-export function FeatureCard({ feature, Icon, index }: any) {
+export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -74,7 +97,7 @@ export function FeatureCard({ feature, Icon, index }: any) {
   );
 }
 
-export function HowItWorksSection({ steps }: { steps: any[] }) {
+export function HowItWorksSection({ steps }: { steps: Step[] }) {
   return (
     <div className="relative border border-white border-opacity-10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-[0.02] rounded-full blur-3xl" />
@@ -150,7 +173,7 @@ export function CTASection({ title, description }: { title: string; description:
         </div>
         <Link
           to="/"
-          onClick={(e) => {
+          onClick={() => {
             const contactBtn = document.querySelector('[data-contact-btn]');
             if (contactBtn) {
               (contactBtn as HTMLButtonElement).click();
@@ -165,7 +188,7 @@ export function CTASection({ title, description }: { title: string; description:
   );
 }
 
-export function BenefitsGrid({ benefits }: { benefits: any[] }) {
+export function BenefitsGrid({ benefits }: { benefits: Benefit[] }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 

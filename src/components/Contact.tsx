@@ -7,23 +7,20 @@ interface ContactProps {
   onClose: () => void;
 }
 
-const GlitchText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
+const GlitchText = ({ text }: { text: string }) => {
   const [displayText, setDisplayText] = useState('');
-  const [isDecoding, setIsDecoding] = useState(true);
 
   useEffect(() => {
-    setIsDecoding(true);
     setDisplayText('');
 
     const chars = '01';
-    const iterations = 20;
     let iteration = 0;
 
     const interval = setInterval(() => {
       setDisplayText(
         text
           .split('')
-          .map((char, index) => {
+          .map((_, index) => {
             if (index < iteration) {
               return text[index];
             }
@@ -34,7 +31,6 @@ const GlitchText = ({ text, delay = 0 }: { text: string; delay?: number }) => {
 
       if (iteration >= text.length) {
         clearInterval(interval);
-        setIsDecoding(false);
       }
 
       iteration += 1 / 3;

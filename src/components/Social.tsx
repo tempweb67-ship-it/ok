@@ -1,7 +1,6 @@
 import { ArrowLeft, Share2, Calendar, TrendingUp, Target, Zap, BarChart3, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import SEO from './SEO';
 
 export default function Social() {
@@ -453,7 +452,7 @@ export default function Social() {
               </div>
               <Link
                 to="/"
-                onClick={(e) => {
+                onClick={() => {
                   const contactBtn = document.querySelector('[data-contact-btn]');
                   if (contactBtn) {
                     (contactBtn as HTMLButtonElement).click();

@@ -146,7 +146,7 @@ export default function Industries() {
               </p>
               <Link
                 to="/"
-                onClick={(e) => {
+                onClick={() => {
                   const contactBtn = document.querySelector('[data-contact-btn]');
                   if (contactBtn) {
                     (contactBtn as HTMLButtonElement).click();
