@@ -11,7 +11,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-white border-opacity-10">
           <Link
             to="/"
-            className="uppercase text-white leading-[0.85] hover:text-blue-400 transition-colors inline-block"
+            className="uppercase text-white leading-[0.85] inline-block"
             style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: 'clamp(0.875rem, 1.5vw, 1.25rem)' }}
           >
             Wexel
