@@ -7,7 +7,7 @@ interface HeaderProps {
 export default function Header({ onContactClick }: HeaderProps) {
   const location = useLocation();
   const isPrivacyPage = location.pathname === '/privacy';
-  const wexelColor = isPrivacyPage ? '#FFFFFF' : '#7D7D7D';
+  const wexelColor = isPrivacyPage ? '#FFFFFF' : '#4D4D4D';
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-black/10">
