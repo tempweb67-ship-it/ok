@@ -1,5 +1,4 @@
-import { ArrowRight, Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
 
 export default function Difference() {
   const differences = [
@@ -88,40 +87,6 @@ export default function Difference() {
                 />
               );
             })}
-          </div>
-
-          <div className="mt-16 md:mt-32 text-center">
-            <div className="relative inline-block">
-              <div className="absolute inset-0 bg-white rounded-3xl blur-xl opacity-10" />
-              <div className="relative bg-white bg-opacity-5 border border-white border-opacity-10 rounded-3xl p-6 md:p-12 backdrop-blur-sm">
-                <h2
-                  className="text-2xl md:text-4xl font-bold mb-3 md:mb-4"
-                  style={{
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  Ready to Transform?
-                </h2>
-                <p className="text-sm md:text-base text-white text-opacity-60 mb-6 md:mb-8 max-w-xl mx-auto">
-                  Join hundreds of enterprises already experiencing the future of business transformation
-                </p>
-                <div>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      const contactBtn = document.querySelector('[data-contact-btn]');
-                      if (contactBtn) {
-                        (contactBtn as HTMLButtonElement).click();
-                      }
-                    }}
-                    className="px-6 md:px-10 py-3 md:py-4 bg-blue-500 text-white font-semibold rounded-xl hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 text-sm md:text-base"
-                  >
-                    Start Your Journey <ArrowRight size={16} className="md:size-5" />
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
