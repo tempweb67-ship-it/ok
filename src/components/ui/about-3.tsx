@@ -133,7 +133,7 @@ export const About3 = ({
             />
           </div>
         </div>
-        <div className="py-32 bg-black">
+        <div className="py-16 bg-black">
           <p className="text-center text-white font-semibold text-lg">{companiesTitle} </p>
           <div className="mt-8 flex flex-wrap justify-center gap-8">
             {companies.map((company, idx) => (
