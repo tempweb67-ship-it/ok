@@ -29,7 +29,7 @@ function AppContent() {
   }, [location.pathname]);
 
   return (
-    <div className="relative bg-black cursor-none">
+    <div className="relative cursor-none">
       <FlowGradientBackground />
       <CustomCursor />
       <Header onContactClick={() => setIsContactOpen(true)} />
