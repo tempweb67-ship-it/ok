@@ -137,14 +137,6 @@ export default function Difference() {
                 alt: "Industry Leader",
               },
             ]}
-            achievementsTitle="Proven Results That Matter"
-            achievementsDescription="Real impact across hundreds of deployments. Our AI solutions deliver measurable outcomes that transform businesses and accelerate growth."
-            achievements={[
-              { label: "Enterprise Clients", value: "500+" },
-              { label: "Hours Saved Daily", value: "50K+" },
-              { label: "Average ROI", value: "300%" },
-              { label: "Global Deployments", value: "15+" },
-            ]}
           />
         </div>
       </div>
@@ -168,16 +160,11 @@ function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: nu
     <div className="group relative">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="relative p-6 md:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-sm overflow-hidden hover:border-white/20 transition-all duration-500">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
         <div className="relative z-10">
           <div className="flex items-start gap-6 md:gap-8 mb-6">
             <div className="flex-shrink-0">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-                <div className="relative p-5 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-500">
-                  <Icon size={28} className="text-white" />
-                </div>
+              <div className="p-5 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-500">
+                <Icon size={28} className="text-white" />
               </div>
             </div>
 
