@@ -261,8 +261,6 @@ function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: nu
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
       </div>
     </div>
   );
