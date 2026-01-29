@@ -1,8 +1,13 @@
 import { ArrowLeft, ShoppingCart, TrendingUp, Brain, BarChart3, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 import SEO from './SEO';
 
 export default function Ecommerce() {
+  const heroRef = useRef(null);
+  const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
+
   const features = [
     {
       icon: Brain,
@@ -86,23 +91,40 @@ export default function Ecommerce() {
       <div className="bg-black min-h-screen text-white">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <Link
-            to="/solutions"
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 mb-4 sm:mb-8"
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            <ArrowLeft size={20} />
-            Back to Solutions
-          </Link>
+            <Link
+              to="/solutions"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 mb-4 sm:mb-8"
+            >
+              <ArrowLeft size={20} />
+              Back to Solutions
+            </Link>
+          </motion.div>
 
-          <div className="mb-8 sm:mb-16">
-            <div className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20">
+          <motion.div
+            ref={heroRef}
+            className="mb-8 sm:mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <ShoppingCart size={18} className="text-blue-300 sm:w-5 sm:h-5" />
               <span className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider">
                 Commerce Solutions
               </span>
-            </div>
+            </motion.div>
 
-            <h1
+            <motion.h1
               className="text-white leading-[0.85] mb-4 sm:mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -110,19 +132,31 @@ export default function Ecommerce() {
                 letterSpacing: '-0.04em',
                 fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               E-Commerce Intelligence
-            </h1>
+            </motion.h1>
 
-            <p className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed">
+            <motion.p
+              className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
               Transform your online business from transactional to exceptional with AI-driven intelligence that maximizes every interaction. Deploy predictive merchandising, dynamic optimization, and real-time insights that turn browsers into buyers and transactions into lasting relationships. Every product discovery becomes personalized, every price point optimized, and every customer experience elevated to drive sustainable growth.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-20">
             {benefits.map((benefit, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.3 }}
                 className="border border-white border-opacity-10 rounded-lg p-6 sm:p-8 text-center"
               >
                 <div
@@ -135,7 +169,7 @@ export default function Ecommerce() {
                   {benefit.stat}
                 </div>
                 <p className="text-white text-opacity-60 text-sm sm:text-base">{benefit.label}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -154,8 +188,12 @@ export default function Ecommerce() {
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true, amount: 0.3 }}
                     className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8 hover:border-opacity-30 hover:bg-white hover:bg-opacity-5 transition-all duration-500"
                   >
                     <div className="p-2.5 sm:p-3 bg-white bg-opacity-5 rounded-lg inline-flex mb-3 sm:mb-6">
@@ -166,7 +204,7 @@ export default function Ecommerce() {
                     <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                       {feature.description}
                     </p>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -185,15 +223,19 @@ export default function Ecommerce() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {capabilities.map((capability, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true, amount: 0.3 }}
                   className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
                 >
                   <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{capability.title}</h3>
                   <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                     {capability.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -339,7 +381,13 @@ export default function Ecommerce() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-20">
-            <div className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
+            >
               <div className="p-3 sm:p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-4 sm:mb-6">
                 <BarChart3 size={24} className="text-white sm:w-8 sm:h-8" />
               </div>
@@ -380,9 +428,15 @@ export default function Ecommerce() {
                   <span className="text-white text-opacity-60">Inventory-based optimization</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border border-white border-opacity-10 rounded-lg p-5 sm:p-8"
+            >
               <div className="p-3 sm:p-4 bg-white bg-opacity-5 rounded-lg inline-flex mb-4 sm:mb-6">
                 <Brain size={24} className="text-white sm:w-8 sm:h-8" />
               </div>
@@ -421,10 +475,16 @@ export default function Ecommerce() {
                   <span className="text-white text-opacity-60">Trend-based suggestions</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12"
+          >
             <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
               <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
                 <ShoppingCart size={40} className="text-white" />
@@ -440,7 +500,13 @@ export default function Ecommerce() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent"
+                  >
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <ShoppingCart size={20} className="flex-shrink-0" />
                       Online Retailers
@@ -449,8 +515,14 @@ export default function Ecommerce() {
                       Maximize revenue and customer lifetime value with intelligent product
                       recommendations and pricing.
                     </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                    className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent"
+                  >
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <TrendingUp size={20} className="flex-shrink-0" />
                       Marketplaces
@@ -459,8 +531,14 @@ export default function Ecommerce() {
                       Optimize seller performance and buyer experience with smart matching and
                       pricing algorithms.
                     </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent"
+                  >
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Users size={20} className="flex-shrink-0" />
                       Subscription Services
@@ -469,8 +547,14 @@ export default function Ecommerce() {
                       Reduce churn and increase upsells with personalized product suggestions and
                       pricing tiers.
                     </p>
-                  </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent"
+                  >
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Brain size={20} className="flex-shrink-0" />
                       Direct-to-Consumer Brands
@@ -479,11 +563,11 @@ export default function Ecommerce() {
                       Build stronger customer relationships with tailored experiences and strategic
                       pricing.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           <div className="mt-20 pt-12 border-t border-white border-opacity-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
