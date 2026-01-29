@@ -25,7 +25,7 @@ export default function Hero() {
         keywords="AI automation, voice automation, AI voice agents, AI CRM, conversational AI, mass outreach automation, email automation, e-commerce AI, social media automation, AI marketing, digital transformation, business automation"
         canonical="https://wexel.com/"
       />
-      <section className="flex items-center justify-center px-6 pt-12 relative overflow-hidden" style={{ minHeight: '100dvh' }}>
+      <section className="flex items-center justify-center px-6 pt-12 relative" style={{ minHeight: '100dvh' }}>
       <div className="w-full max-w-[1800px] relative z-10 text-center">
         <h1
           className="text-black font-bold leading-[0.85] tracking-[0.08em] uppercase"
