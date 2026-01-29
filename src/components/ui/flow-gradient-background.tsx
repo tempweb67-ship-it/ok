@@ -219,9 +219,12 @@ class App {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.domElement.style.width = '100%';
     this.renderer.domElement.style.height = '100%';
+    this.renderer.domElement.style.minWidth = '100vw';
+    this.renderer.domElement.style.minHeight = '100vh';
     this.renderer.domElement.style.position = 'absolute';
     this.renderer.domElement.style.top = '0';
     this.renderer.domElement.style.left = '0';
+    this.renderer.domElement.style.transform = 'translateZ(0)';
     container.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
@@ -250,13 +253,15 @@ class App {
     this.touchMoveHandler = (e: TouchEvent) => onMove(e.touches[0].clientX, e.touches[0].clientY);
 
     const updateSize = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
+      const width = Math.max(window.innerWidth, document.documentElement.clientWidth);
+      const height = Math.max(window.innerHeight, document.documentElement.clientHeight);
       this.camera.aspect = width / height;
       this.camera.updateProjectionMatrix();
       this.renderer.setSize(width, height, false);
       this.renderer.domElement.style.width = '100%';
       this.renderer.domElement.style.height = '100%';
+      this.renderer.domElement.style.minWidth = '100vw';
+      this.renderer.domElement.style.minHeight = '100vh';
       this.gradientBackground.onResize(width, height);
     };
 
@@ -332,10 +337,15 @@ export default function FlowGradientBackground() {
       style={{
         height: '100dvh',
         width: '100vw',
+        minHeight: '100dvh',
+        minWidth: '100vw',
         top: 0,
         left: 0,
         right: 0,
-        bottom: 0
+        bottom: 0,
+        transform: 'translateZ(0)',
+        willChange: 'transform',
+        backfaceVisibility: 'hidden'
       }}
     />
   );
