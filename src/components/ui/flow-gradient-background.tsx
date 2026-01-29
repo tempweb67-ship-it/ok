@@ -1,20 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-interface TrailPoint {
-  x: number;
-  y: number;
-  age: number;
-  force: number;
-  vx: number;
-  vy: number;
-}
-
-interface TouchPoint {
-  x: number;
-  y: number;
-}
-
 class TouchTexture {
   size = 64;
   width = 64;
@@ -22,11 +8,11 @@ class TouchTexture {
   maxAge = 64;
   radius = 0.1;
   speed = 1/64;
-  trail: TrailPoint[] = [];
-  last: TouchPoint | null = null;
+  trail: any[] = [];
+  last: any = null;
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
-  texture: THREE.Texture;
+  texture: any;
 
   constructor() {
     this.canvas = document.createElement("canvas");
@@ -56,7 +42,7 @@ class TouchTexture {
     this.texture.needsUpdate = true;
   }
 
-  addTouch(point: TouchPoint) {
+  addTouch(point: any) {
     let force = 0, vx = 0, vy = 0;
     if (this.last) {
       const dx = point.x - this.last.x;
@@ -71,7 +57,7 @@ class TouchTexture {
     this.trail.push({ x: point.x, y: point.y, age: 0, force, vx, vy });
   }
 
-  drawPoint(p: TrailPoint) {
+  drawPoint(p: any) {
     const pos = { x: p.x * this.width, y: (1 - p.y) * this.height };
     let intensity = p.age < this.maxAge * 0.3
       ? Math.sin((p.age / (this.maxAge * 0.3)) * (Math.PI / 2))
@@ -91,12 +77,12 @@ class TouchTexture {
 }
 
 class GradientBackground {
-  mesh: THREE.Mesh | null = null;
-  uniforms: Record<string, THREE.IUniform>;
-  sceneManager: App;
+  mesh: any = null;
+  uniforms: any;
+  sceneManager: any;
   isPaused = false;
 
-  constructor(sceneManager: App) {
+  constructor(sceneManager: any) {
     this.sceneManager = sceneManager;
     this.uniforms = {
       uTime: { value: 0 },
@@ -211,18 +197,18 @@ class GradientBackground {
 }
 
 class App {
-  renderer: THREE.WebGLRenderer;
-  camera: THREE.PerspectiveCamera;
-  scene: THREE.Scene;
-  clock: THREE.Clock;
+  renderer: any;
+  camera: any;
+  scene: any;
+  clock: any;
   touchTexture: TouchTexture;
   gradientBackground: GradientBackground;
   animationId: number | null = null;
   container: HTMLElement;
-  mouseMoveHandler!: (e: MouseEvent) => void;
-  touchMoveHandler!: (e: TouchEvent) => void;
-  resizeHandler!: () => void;
-  resizeTimeout: NodeJS.Timeout | null = null;
+  mouseMoveHandler: any;
+  touchMoveHandler: any;
+  resizeHandler: any;
+  resizeTimeout: any;
 
   constructor(container: HTMLElement) {
     this.container = container;
@@ -243,8 +229,6 @@ class App {
     this.renderer.domElement.style.pointerEvents = 'none';
     this.renderer.domElement.style.transform = 'translate3d(0, 0, 0)';
     this.renderer.domElement.style.webkitTransform = 'translate3d(0, 0, 0)';
-    this.renderer.domElement.style.contain = 'strict';
-    this.renderer.domElement.style.willChange = 'contents';
     container.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
@@ -265,6 +249,7 @@ class App {
 
   init() {
     this.gradientBackground.init();
+    const c = this.container;
     const onMove = (x: number, y: number) => {
       this.touchTexture.addTouch({ x: x / window.innerWidth, y: 1 - y / window.innerHeight });
     };
@@ -287,7 +272,7 @@ class App {
     };
 
     this.resizeHandler = () => {
-      if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+      clearTimeout(this.resizeTimeout);
       updateSize();
       this.resizeTimeout = setTimeout(() => {
         updateSize();
@@ -298,6 +283,11 @@ class App {
     document.addEventListener("touchmove", this.touchMoveHandler);
     window.addEventListener("resize", this.resizeHandler);
     window.addEventListener("orientationchange", this.resizeHandler);
+    window.addEventListener("scroll", this.resizeHandler, { passive: true });
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", this.resizeHandler);
+      window.visualViewport.addEventListener("scroll", this.resizeHandler);
+    }
     updateSize();
     setTimeout(() => updateSize(), 500);
     this.tick();
@@ -312,12 +302,17 @@ class App {
   }
 
   cleanup() {
-    if (this.animationId !== null) cancelAnimationFrame(this.animationId);
-    if (this.resizeTimeout !== null) clearTimeout(this.resizeTimeout);
+    if (this.animationId) cancelAnimationFrame(this.animationId);
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
     document.removeEventListener("mousemove", this.mouseMoveHandler);
     document.removeEventListener("touchmove", this.touchMoveHandler);
     window.removeEventListener("resize", this.resizeHandler);
     window.removeEventListener("orientationchange", this.resizeHandler);
+    window.removeEventListener("scroll", this.resizeHandler);
+    if (window.visualViewport) {
+      window.visualViewport.removeEventListener("resize", this.resizeHandler);
+      window.visualViewport.removeEventListener("scroll", this.resizeHandler);
+    }
     this.renderer.dispose();
     if (this.container && this.renderer.domElement && this.container.contains(this.renderer.domElement)) {
       this.container.removeChild(this.renderer.domElement);
@@ -327,7 +322,7 @@ class App {
 
 export default function FlowGradientBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const appRef = useRef<App | null>(null);
+  const appRef = useRef<any>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -360,9 +355,7 @@ export default function FlowGradientBackground() {
         pointerEvents: 'none',
         transform: 'translate3d(0, 0, 0)',
         WebkitTransform: 'translate3d(0, 0, 0)',
-        zIndex: -1,
-        contain: 'strict',
-        contentVisibility: 'auto'
+        zIndex: -1
       }}
     />
   );
