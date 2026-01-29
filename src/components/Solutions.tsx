@@ -57,7 +57,7 @@ export default function Solutions() {
         canonical="https://wexel.com/solutions"
       />
       <div className="text-black" style={{ minHeight: '100dvh' }}>
-      <div className="pt-28 sm:pt-32 pb-8 sm:pb-20">
+      <div className="pt-20 sm:pt-32 pb-8 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-6 sm:mb-16">
             <h1
