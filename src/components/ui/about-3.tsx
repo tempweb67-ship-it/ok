@@ -90,9 +90,9 @@ export const About3 = ({
   },
   companiesTitle = "Valued by clients worldwide",
   companies = defaultCompanies,
-  achievementsTitle = "Our Achievements in Numbers",
-  achievementsDescription = "Providing businesses with effective tools to improve workflows, boost efficiency, and encourage growth.",
-  achievements = defaultAchievements,
+  achievementsTitle,
+  achievementsDescription,
+  achievements,
 }: About3Props = {}) => {
   return (
     <section className="py-32">
@@ -147,25 +147,27 @@ export const About3 = ({
             ))}
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-xl bg-muted p-10 md:p-16">
-          <div className="flex flex-col gap-4 text-center md:text-left">
-            <h2 className="text-4xl font-semibold">{achievementsTitle}</h2>
-            <p className="max-w-screen-sm text-muted-foreground">
-              {achievementsDescription}
-            </p>
+        {achievements && achievements.length > 0 && (
+          <div className="relative overflow-hidden rounded-xl bg-muted p-10 md:p-16">
+            <div className="flex flex-col gap-4 text-center md:text-left">
+              <h2 className="text-4xl font-semibold">{achievementsTitle}</h2>
+              <p className="max-w-screen-sm text-muted-foreground">
+                {achievementsDescription}
+              </p>
+            </div>
+            <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
+              {achievements.map((item, idx) => (
+                <div className="flex flex-col gap-4" key={item.label + idx}>
+                  <p>{item.label}</p>
+                  <span className="text-4xl font-semibold md:text-5xl">
+                    {item.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="pointer-events-none absolute -top-1 right-1 z-10 hidden h-full w-full bg-[linear-gradient(to_right,hsl(var(--muted-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--muted-foreground))_1px,transparent_1px)] bg-[size:80px_80px] opacity-15 [mask-image:linear-gradient(to_bottom_right,#000,transparent,transparent)] md:block"></div>
           </div>
-          <div className="mt-10 flex flex-wrap justify-between gap-10 text-center">
-            {achievements.map((item, idx) => (
-              <div className="flex flex-col gap-4" key={item.label + idx}>
-                <p>{item.label}</p>
-                <span className="text-4xl font-semibold md:text-5xl">
-                  {item.value}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="pointer-events-none absolute -top-1 right-1 z-10 hidden h-full w-full bg-[linear-gradient(to_right,hsl(var(--muted-foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--muted-foreground))_1px,transparent_1px)] bg-[size:80px_80px] opacity-15 [mask-image:linear-gradient(to_bottom_right,#000,transparent,transparent)] md:block"></div>
-        </div>
+        )}
       </div>
     </section>
   );
