@@ -85,7 +85,7 @@ export default function VoiceAgent() {
           }
         }}
       />
-      <div className="bg-black min-h-screen text-white overflow-hidden">
+      <div className="min-h-screen text-black overflow-hidden">
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -95,7 +95,7 @@ export default function VoiceAgent() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white hover:text-white transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-black hover:text-black/70 transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -110,19 +110,19 @@ export default function VoiceAgent() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-blue-500 bg-opacity-10 rounded-full border border-blue-500 border-opacity-20"
+              className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 backdrop-blur-md bg-blue-500/20 rounded-full border border-blue-500/30"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <PhoneCall size={18} className="text-blue-300 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-blue-300 uppercase tracking-wider">
+              <PhoneCall size={18} className="text-blue-700 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-700 uppercase tracking-wider">
                 Conversational AI
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-white leading-[0.85] mb-4 sm:mb-6"
+              className="text-black leading-[0.85] mb-4 sm:mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -137,7 +137,7 @@ export default function VoiceAgent() {
             </motion.h1>
 
             <motion.p
-              className="text-base sm:text-xl text-white text-opacity-70 max-w-3xl leading-relaxed"
+              className="text-base sm:text-xl text-black/70 max-w-3xl leading-relaxed"
               initial={{ opacity: 0 }}
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -152,10 +152,10 @@ export default function VoiceAgent() {
 
           <UseCasesSection useCases={useCases} />
 
-          <div className="border border-white border-opacity-10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
+          <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
             <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
-              <div className="p-4 bg-white bg-opacity-5 rounded-lg hidden sm:block">
-                <PhoneCall size={40} className="text-white" />
+              <div className="p-4 backdrop-blur-md bg-white/20 rounded-lg hidden sm:block">
+                <PhoneCall size={40} className="text-blue-600" />
               </div>
               <div className="flex-1 w-full">
                 <h2
@@ -168,39 +168,39 @@ export default function VoiceAgent() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Headphones size={20} className="flex-shrink-0" />
                       Call Centers
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
                       Handle high call volumes efficiently while maintaining quality customer interactions and reducing wait times.
                     </p>
                   </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Stethoscope size={20} className="flex-shrink-0" />
                       Healthcare Providers
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
                       Automate appointment scheduling, reminders, and patient inquiries while maintaining HIPAA compliance.
                     </p>
                   </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Home size={20} className="flex-shrink-0" />
                       Real Estate Agencies
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
                       Qualify leads, schedule property viewings, and follow up with prospects around the clock.
                     </p>
                   </div>
-                  <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
+                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:p-0 sm:border-0 sm:bg-transparent">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Building2 size={20} className="flex-shrink-0" />
                       Service Businesses
                     </h3>
-                    <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
                       Manage bookings, answer common questions, and provide 24/7 customer support without additional staffing.
                     </p>
                   </div>
@@ -259,10 +259,10 @@ function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
         {useCases.map((useCase, index) => (
           <div
             key={index}
-            className="border border-white border-opacity-10 rounded-2xl p-5 sm:p-8 hover:border-opacity-30 hover:bg-white hover:bg-opacity-[0.02] transition-all duration-300"
+            className="backdrop-blur-md bg-white/20 border border-black/10 rounded-2xl p-5 sm:p-8 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
           >
             <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{useCase.title}</h3>
-            <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
+            <p className="text-black/60 leading-relaxed text-sm sm:text-base">
               {useCase.description}
             </p>
           </div>

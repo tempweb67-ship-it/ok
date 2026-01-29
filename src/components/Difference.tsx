@@ -45,19 +45,19 @@ export default function Difference() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white overflow-hidden">
+    <div className="min-h-screen text-black overflow-hidden">
 
       <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-12 md:mb-20 text-center">
             <div className="inline-block mb-6">
-              <span className="px-4 py-1.5 bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-30 rounded-full text-sm font-medium text-blue-300">
+              <span className="px-4 py-1.5 backdrop-blur-md bg-blue-500/20 border border-blue-500/30 rounded-full text-sm font-medium text-blue-700">
                 The Winner's Advantage
               </span>
             </div>
 
             <h1
-              className="text-white leading-[0.9] mb-4 md:mb-6 max-w-4xl mx-auto"
+              className="text-black leading-[0.9] mb-4 md:mb-6 max-w-4xl mx-auto"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -67,10 +67,10 @@ export default function Difference() {
             >
               Built for the AI Era.
               <br />
-              <span className="text-white text-opacity-50">Powered by Innovation.</span>
+              <span className="text-black/50">Powered by Innovation.</span>
             </h1>
 
-            <p className="text-base md:text-lg text-white text-opacity-60 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-black/60 max-w-2xl mx-auto">
               Why leading organizations choose Wexel as their transformation partner
             </p>
           </div>
@@ -108,19 +108,19 @@ interface DifferenceItem {
 function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: number; Icon: LucideIcon }) {
   return (
     <div className="group relative">
-      <div className="relative p-5 md:p-8 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-[0.02] backdrop-blur-sm overflow-hidden hover:border-opacity-20 hover:bg-opacity-5 transition-all duration-300">
+      <div className="relative p-5 md:p-8 rounded-3xl border border-black/10 backdrop-blur-md bg-white/20 overflow-hidden hover:border-black/20 hover:bg-white/30 transition-all duration-300">
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row gap-4 md:gap-8">
             <div className="flex-shrink-0">
-              <div className="p-4 bg-white bg-opacity-5 rounded-2xl inline-block group-hover:bg-opacity-10 transition-all duration-300">
-                <Icon size={32} className="text-white" />
+              <div className="p-4 bg-white/30 rounded-2xl inline-block group-hover:bg-white/40 transition-all duration-300">
+                <Icon size={32} className="text-black" />
               </div>
             </div>
 
             <div className="flex-1">
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div>
-                  <span className="text-white text-opacity-30 font-mono text-xs mb-2 block">
+                  <span className="text-black/30 font-mono text-xs mb-2 block">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <h3
@@ -135,33 +135,33 @@ function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: nu
                 </div>
 
                 <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl md:text-4xl font-bold text-white">
+                  <div className="text-3xl md:text-4xl font-bold text-black">
                     {item.metric}
                   </div>
-                  <div className="text-xs text-white text-opacity-50 mt-1 leading-tight">
+                  <div className="text-xs text-black/50 mt-1 leading-tight">
                     {item.metricLabel}
                   </div>
                 </div>
               </div>
 
-              <p className="text-white text-opacity-70 leading-relaxed mb-6 text-sm md:text-base">
+              <p className="text-black/70 leading-relaxed mb-6 text-sm md:text-base">
                 {item.description}
               </p>
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-red-500 bg-opacity-30 rounded-full" />
+                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-red-500/30 rounded-full" />
                   <div className="pl-4">
-                    <div className="text-xs text-white text-opacity-40 mb-1 uppercase tracking-wider">Traditional Approach</div>
-                    <div className="text-white text-opacity-50 line-through text-sm">{item.oldWay}</div>
+                    <div className="text-xs text-black/40 mb-1 uppercase tracking-wider">Traditional Approach</div>
+                    <div className="text-black/50 line-through text-sm">{item.oldWay}</div>
                   </div>
                 </div>
 
                 <div className="relative">
-                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-white bg-opacity-50 rounded-full" />
+                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-black/50 rounded-full" />
                   <div className="pl-4">
-                    <div className="text-xs text-white text-opacity-40 mb-1 uppercase tracking-wider">Wexel Way</div>
-                    <div className="text-white font-medium text-sm">{item.newWay}</div>
+                    <div className="text-xs text-black/40 mb-1 uppercase tracking-wider">Wexel Way</div>
+                    <div className="text-black font-medium text-sm">{item.newWay}</div>
                   </div>
                 </div>
               </div>
@@ -169,7 +169,7 @@ function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: nu
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-black to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
       </div>
     </div>
   );
