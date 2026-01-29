@@ -11,15 +11,24 @@
     @apply antialiased;
   }
 
-  html, body {
+  html {
     overflow-x: hidden;
     position: relative;
+    height: 100%;
   }
 
   body {
     @apply bg-black text-white;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     cursor: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #root {
+    position: relative;
     min-height: 100vh;
     min-height: 100dvh;
   }
@@ -81,8 +90,23 @@
   color: white !important;
 }
 
+.fixed.-z-10 {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  overflow: hidden !important;
+}
+
 .fixed.-z-10 canvas {
   display: block;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100% !important;
   height: 100% !important;
 }

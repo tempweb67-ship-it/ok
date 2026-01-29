@@ -208,6 +208,7 @@ class App {
   mouseMoveHandler: any;
   touchMoveHandler: any;
   resizeHandler: any;
+  resizeTimeout: any;
 
   constructor(container: HTMLElement) {
     this.container = container;
@@ -218,6 +219,9 @@ class App {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.domElement.style.width = '100%';
     this.renderer.domElement.style.height = '100%';
+    this.renderer.domElement.style.position = 'absolute';
+    this.renderer.domElement.style.top = '0';
+    this.renderer.domElement.style.left = '0';
     container.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
@@ -244,7 +248,8 @@ class App {
     };
     this.mouseMoveHandler = (e: MouseEvent) => onMove(e.clientX, e.clientY);
     this.touchMoveHandler = (e: TouchEvent) => onMove(e.touches[0].clientX, e.touches[0].clientY);
-    this.resizeHandler = () => {
+
+    const updateSize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       this.camera.aspect = width / height;
@@ -254,14 +259,26 @@ class App {
       this.renderer.domElement.style.height = '100%';
       this.gradientBackground.onResize(width, height);
     };
+
+    this.resizeHandler = () => {
+      clearTimeout(this.resizeTimeout);
+      updateSize();
+      this.resizeTimeout = setTimeout(() => {
+        updateSize();
+      }, 100);
+    };
+
     document.addEventListener("mousemove", this.mouseMoveHandler);
     document.addEventListener("touchmove", this.touchMoveHandler);
     window.addEventListener("resize", this.resizeHandler);
     window.addEventListener("orientationchange", this.resizeHandler);
+    window.addEventListener("scroll", this.resizeHandler, { passive: true });
     if (window.visualViewport) {
       window.visualViewport.addEventListener("resize", this.resizeHandler);
+      window.visualViewport.addEventListener("scroll", this.resizeHandler);
     }
-    this.resizeHandler();
+    updateSize();
+    setTimeout(() => updateSize(), 500);
     this.tick();
   }
 
@@ -275,12 +292,15 @@ class App {
 
   cleanup() {
     if (this.animationId) cancelAnimationFrame(this.animationId);
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
     document.removeEventListener("mousemove", this.mouseMoveHandler);
     document.removeEventListener("touchmove", this.touchMoveHandler);
     window.removeEventListener("resize", this.resizeHandler);
     window.removeEventListener("orientationchange", this.resizeHandler);
+    window.removeEventListener("scroll", this.resizeHandler);
     if (window.visualViewport) {
       window.visualViewport.removeEventListener("resize", this.resizeHandler);
+      window.visualViewport.removeEventListener("scroll", this.resizeHandler);
     }
     this.renderer.dispose();
     if (this.container && this.renderer.domElement && this.container.contains(this.renderer.domElement)) {
