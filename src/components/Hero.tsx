@@ -28,13 +28,18 @@ export default function Hero() {
       />
       <section className="min-h-screen bg-black flex items-center justify-center px-6 pt-12 relative overflow-hidden">
       <LavaLamp />
-      <div className="w-full max-w-5xl relative z-10 text-center">
-        <h1 className="text-white font-bold tracking-tight mix-blend-exclusion text-7xl md:text-8xl lg:text-9xl">
+      <div className="w-full max-w-[1800px] relative z-10 text-center">
+        <h1
+          className="text-white font-bold leading-[0.85] tracking-[0.08em] uppercase mix-blend-exclusion"
+          style={{ fontSize: 'clamp(5.5rem, 10vw, 12rem)', fontFamily: 'Blanka, sans-serif', fontWeight: 900, color: '#ffffff' }}
+        >
           {displayedText}
         </h1>
-        <p className="text-white text-lg md:text-2xl lg:text-3xl text-center mix-blend-exclusion max-w-4xl mx-auto leading-relaxed mt-8">
-          AI-First Automation Agency.
-        </p>
+        <div className="mt-6 md:mt-12">
+          <p className="text-white text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap mix-blend-exclusion">
+            AI-First Automation Agency.
+          </p>
+        </div>
       </div>
     </section>
     </>
