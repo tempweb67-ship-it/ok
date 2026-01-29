@@ -29,12 +29,12 @@ function AppContent() {
   }, [location.pathname]);
 
   return (
-    <div className="relative cursor-none">
+    <div className="relative cursor-none" style={{ minHeight: '100dvh' }}>
       <FlowGradientBackground />
       <CustomCursor />
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
-      <main>
+      <main style={{ minHeight: '100dvh' }}>
         <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/explore" element={<Explore />} />

@@ -56,7 +56,7 @@ export default function Solutions() {
         keywords="AI automation solutions, AI voice solutions, AI CRM, email automation, e-commerce automation, social media automation, web development, business automation, digital transformation solutions"
         canonical="https://wexel.com/solutions"
       />
-      <div className="min-h-screen text-black">
+      <div className="text-black" style={{ minHeight: '100dvh' }}>
       <div className="pt-16 sm:pt-32 pb-8 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-6 sm:mb-16">

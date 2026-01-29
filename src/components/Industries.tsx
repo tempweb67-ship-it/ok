@@ -42,7 +42,7 @@ export default function Industries() {
   ];
 
   return (
-    <div className="min-h-screen text-black">
+    <div className="text-black" style={{ minHeight: '100dvh' }}>
       <div className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-16">

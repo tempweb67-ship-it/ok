@@ -11,10 +11,17 @@
     @apply antialiased;
   }
 
+  html, body {
+    overflow-x: hidden;
+    position: relative;
+  }
+
   body {
-    @apply bg-black text-white overflow-x-hidden;
+    @apply bg-black text-white;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     cursor: none;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   html {

@@ -89,7 +89,7 @@ export default function Outreach() {
           "areaServed": "Worldwide"
         }}
       />
-      <div className="min-h-screen text-black overflow-hidden">
+      <div className="text-black overflow-hidden" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div

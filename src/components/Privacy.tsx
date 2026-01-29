@@ -80,7 +80,7 @@ export default function Privacy() {
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-black text-white" style={{ minHeight: '100dvh' }}>
       <div className="pt-32 pb-20">
         <div className="max-w-5xl mx-auto px-4 md:px-8">
           {/* Hero Section */}

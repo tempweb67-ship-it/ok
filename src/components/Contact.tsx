@@ -62,8 +62,9 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
       exit={{ y: '100%' }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-0 z-[100] backdrop-blur-xl bg-white/30"
+      style={{ height: '100dvh' }}
     >
-      <div className="h-full w-full overflow-y-auto scrollbar-hide">
+      <div className="w-full overflow-y-auto scrollbar-hide" style={{ height: '100dvh' }}>
         <button
           onClick={onClose}
           className="fixed top-8 right-8 z-10 text-black hover:rotate-90 transition-transform duration-300"
@@ -71,7 +72,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
           <X size={32} strokeWidth={1.5} />
         </button>
 
-        <div className="min-h-full flex items-center justify-center px-6 py-20">
+        <div className="flex items-center justify-center px-6 py-20" style={{ minHeight: '100dvh' }}>
           <div className="max-w-3xl w-full">
             <div>
               <div className="space-y-8">

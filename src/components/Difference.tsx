@@ -45,7 +45,7 @@ export default function Difference() {
   ];
 
   return (
-    <div className="min-h-screen text-black overflow-hidden">
+    <div className="text-black overflow-hidden" style={{ minHeight: '100dvh' }}>
 
       <div className="relative z-10 pt-20 md:pt-32 pb-12 md:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">

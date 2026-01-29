@@ -241,10 +241,12 @@ class App {
     this.mouseMoveHandler = (e: MouseEvent) => onMove(e.clientX, e.clientY);
     this.touchMoveHandler = (e: TouchEvent) => onMove(e.touches[0].clientX, e.touches[0].clientY);
     this.resizeHandler = () => {
-      this.camera.aspect = c.clientWidth / c.clientHeight;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      this.camera.aspect = width / height;
       this.camera.updateProjectionMatrix();
-      this.renderer.setSize(c.clientWidth, c.clientHeight);
-      this.gradientBackground.onResize(c.clientWidth, c.clientHeight);
+      this.renderer.setSize(width, height);
+      this.gradientBackground.onResize(width, height);
     };
     document.addEventListener("mousemove", this.mouseMoveHandler);
     document.addEventListener("touchmove", this.touchMoveHandler);
@@ -291,7 +293,8 @@ export default function FlowGradientBackground() {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 w-full h-full -z-10"
+      className="fixed inset-0 w-full -z-10"
+      style={{ height: '100dvh' }}
     />
   );
 }
