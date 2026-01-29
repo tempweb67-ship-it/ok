@@ -1,6 +1,20 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
+interface TrailPoint {
+  x: number;
+  y: number;
+  age: number;
+  force: number;
+  vx: number;
+  vy: number;
+}
+
+interface TouchPoint {
+  x: number;
+  y: number;
+}
+
 class TouchTexture {
   size = 64;
   width = 64;
@@ -8,11 +22,11 @@ class TouchTexture {
   maxAge = 64;
   radius = 0.1;
   speed = 1/64;
-  trail: any[] = [];
-  last: any = null;
+  trail: TrailPoint[] = [];
+  last: TouchPoint | null = null;
   canvas: HTMLCanvasElement;
   ctx: CanvasRenderingContext2D;
-  texture: any;
+  texture: THREE.Texture;
 
   constructor() {
     this.canvas = document.createElement("canvas");
@@ -42,7 +56,7 @@ class TouchTexture {
     this.texture.needsUpdate = true;
   }
 
-  addTouch(point: any) {
+  addTouch(point: TouchPoint) {
     let force = 0, vx = 0, vy = 0;
     if (this.last) {
       const dx = point.x - this.last.x;
@@ -57,7 +71,7 @@ class TouchTexture {
     this.trail.push({ x: point.x, y: point.y, age: 0, force, vx, vy });
   }
 
-  drawPoint(p: any) {
+  drawPoint(p: TrailPoint) {
     const pos = { x: p.x * this.width, y: (1 - p.y) * this.height };
     let intensity = p.age < this.maxAge * 0.3
       ? Math.sin((p.age / (this.maxAge * 0.3)) * (Math.PI / 2))
@@ -77,12 +91,12 @@ class TouchTexture {
 }
 
 class GradientBackground {
-  mesh: any = null;
-  uniforms: any;
-  sceneManager: any;
+  mesh: THREE.Mesh | null = null;
+  uniforms: Record<string, THREE.IUniform>;
+  sceneManager: App;
   isPaused = false;
 
-  constructor(sceneManager: any) {
+  constructor(sceneManager: App) {
     this.sceneManager = sceneManager;
     this.uniforms = {
       uTime: { value: 0 },
@@ -197,18 +211,18 @@ class GradientBackground {
 }
 
 class App {
-  renderer: any;
-  camera: any;
-  scene: any;
-  clock: any;
+  renderer: THREE.WebGLRenderer;
+  camera: THREE.PerspectiveCamera;
+  scene: THREE.Scene;
+  clock: THREE.Clock;
   touchTexture: TouchTexture;
   gradientBackground: GradientBackground;
   animationId: number | null = null;
   container: HTMLElement;
-  mouseMoveHandler: any;
-  touchMoveHandler: any;
-  resizeHandler: any;
-  resizeTimeout: any;
+  mouseMoveHandler!: (e: MouseEvent) => void;
+  touchMoveHandler!: (e: TouchEvent) => void;
+  resizeHandler!: () => void;
+  resizeTimeout: NodeJS.Timeout | null = null;
 
   constructor(container: HTMLElement) {
     this.container = container;
@@ -251,7 +265,6 @@ class App {
 
   init() {
     this.gradientBackground.init();
-    const c = this.container;
     const onMove = (x: number, y: number) => {
       this.touchTexture.addTouch({ x: x / window.innerWidth, y: 1 - y / window.innerHeight });
     };
@@ -274,7 +287,7 @@ class App {
     };
 
     this.resizeHandler = () => {
-      clearTimeout(this.resizeTimeout);
+      if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
       updateSize();
       this.resizeTimeout = setTimeout(() => {
         updateSize();
@@ -299,8 +312,8 @@ class App {
   }
 
   cleanup() {
-    if (this.animationId) cancelAnimationFrame(this.animationId);
-    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+    if (this.animationId !== null) cancelAnimationFrame(this.animationId);
+    if (this.resizeTimeout !== null) clearTimeout(this.resizeTimeout);
     document.removeEventListener("mousemove", this.mouseMoveHandler);
     document.removeEventListener("touchmove", this.touchMoveHandler);
     window.removeEventListener("resize", this.resizeHandler);
@@ -314,7 +327,7 @@ class App {
 
 export default function FlowGradientBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const appRef = useRef<any>(null);
+  const appRef = useRef<App | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
