@@ -78,7 +78,7 @@ export default function Solutions() {
               <p
                 className="text-sm sm:text-base mt-0.5"
                 style={{
-                  color: '#10b981',
+                  color: '#00ff88',
                   overflow: 'hidden',
                   whiteSpace: 'nowrap',
                   width: 'fit-content',
