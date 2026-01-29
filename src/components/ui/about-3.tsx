@@ -133,7 +133,7 @@ export const About3 = ({
             />
           </div>
         </div>
-        <div className="py-32">
+        <div className="py-32 bg-black">
           <p className="text-center text-white font-semibold text-lg">{companiesTitle} </p>
           <div className="mt-8 flex flex-wrap justify-center gap-8">
             {companies.map((company, idx) => (
@@ -141,7 +141,7 @@ export const About3 = ({
                 <img
                   src={company.src}
                   alt={company.alt}
-                  className="h-6 w-auto md:h-8"
+                  className="h-6 w-auto md:h-8 invert"
                 />
               </div>
             ))}
