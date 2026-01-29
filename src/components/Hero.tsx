@@ -29,16 +29,50 @@ export default function Hero() {
       <section className="min-h-screen bg-black flex items-center justify-center px-6 pt-12 relative overflow-hidden">
       <LavaLamp />
       <div className="w-full max-w-[1800px] relative z-10 text-center">
-        <h1
-          className="text-white font-bold leading-[0.85] tracking-[0.08em] uppercase mix-blend-exclusion"
-          style={{ fontSize: 'clamp(5.5rem, 10vw, 12rem)', fontFamily: 'Blanka, sans-serif', fontWeight: 900, color: '#ffffff' }}
+        <svg
+          viewBox="0 0 1000 200"
+          className="w-full h-auto mix-blend-exclusion"
+          style={{ maxWidth: '1800px', margin: '0 auto' }}
         >
-          {displayedText}
-        </h1>
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className="uppercase"
+            style={{
+              fontFamily: 'Blanka, sans-serif',
+              fontSize: '140px',
+              fontWeight: 900,
+              fill: '#ffffff',
+              letterSpacing: '0.08em'
+            }}
+          >
+            {displayedText}
+          </text>
+        </svg>
         <div className="mt-6 md:mt-12">
-          <p className="text-white text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap mix-blend-exclusion">
-            AI-First Automation Agency.
-          </p>
+          <svg
+            viewBox="0 0 1000 60"
+            className="w-full h-auto mix-blend-exclusion"
+            style={{ maxWidth: '1200px', margin: '0 auto' }}
+          >
+            <text
+              x="50%"
+              y="50%"
+              textAnchor="middle"
+              dominantBaseline="middle"
+              style={{
+                fontFamily: 'system-ui, -apple-system, sans-serif',
+                fontSize: '32px',
+                fontWeight: 600,
+                fill: '#ffffff',
+                letterSpacing: '0.05em'
+              }}
+            >
+              AI-First Automation Agency.
+            </text>
+          </svg>
         </div>
       </div>
     </section>
