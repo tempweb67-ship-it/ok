@@ -166,62 +166,75 @@ interface DifferenceItem {
 function DifferenceCard({ item, index, Icon }: { item: DifferenceItem; index: number; Icon: LucideIcon }) {
   return (
     <div className="group relative">
-      <div className="relative p-5 md:p-8 rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-[0.02] backdrop-blur-sm overflow-hidden hover:border-opacity-20 hover:bg-opacity-5 transition-all duration-300">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative p-6 md:p-10 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] to-white/[0.01] backdrop-blur-sm overflow-hidden hover:border-white/20 transition-all duration-500">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
         <div className="relative z-10">
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8">
+          <div className="flex items-start gap-6 md:gap-8 mb-6">
             <div className="flex-shrink-0">
-              <div className="p-4 bg-white bg-opacity-5 rounded-2xl inline-block group-hover:bg-opacity-10 transition-all duration-300">
-                <Icon size={32} className="text-white" />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="relative p-5 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl border border-white/10 group-hover:border-white/20 transition-all duration-500">
+                  <Icon size={28} className="text-white" />
+                </div>
               </div>
             </div>
 
-            <div className="flex-1">
-              <div className="flex items-start justify-between gap-4 mb-4">
-                <div>
-                  <span className="text-white text-opacity-30 font-mono text-xs mb-2 block">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <h3
-                    className="text-2xl md:text-3xl font-bold leading-tight mb-3"
-                    style={{
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                      letterSpacing: '-0.02em',
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-                </div>
-
-                <div className="flex-shrink-0 text-right">
-                  <div className="text-3xl md:text-4xl font-bold text-white">
-                    {item.metric}
-                  </div>
-                  <div className="text-xs text-white text-opacity-50 mt-1 leading-tight">
-                    {item.metricLabel}
-                  </div>
-                </div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-white/20 to-white/5 bg-clip-text text-transparent leading-none">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
               </div>
 
-              <p className="text-white text-opacity-70 leading-relaxed mb-6 text-sm md:text-base">
-                {item.description}
-              </p>
+              <h3
+                className="text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-br from-white to-white/80 bg-clip-text text-transparent"
+                style={{
+                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                {item.title}
+              </h3>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="relative">
-                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-red-500 bg-opacity-30 rounded-full" />
-                  <div className="pl-4">
-                    <div className="text-xs text-white text-opacity-40 mb-1 uppercase tracking-wider">Traditional Approach</div>
-                    <div className="text-white text-opacity-50 line-through text-sm">{item.oldWay}</div>
-                  </div>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-white/10 mb-6">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  {item.metric}
                 </div>
+                <div className="h-4 w-px bg-white/20" />
+                <div className="text-xs text-white/60 uppercase tracking-wider">
+                  {item.metricLabel}
+                </div>
+              </div>
+            </div>
+          </div>
 
-                <div className="relative">
-                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-white bg-opacity-50 rounded-full" />
-                  <div className="pl-4">
-                    <div className="text-xs text-white text-opacity-40 mb-1 uppercase tracking-wider">Wexel Way</div>
-                    <div className="text-white font-medium text-sm">{item.newWay}</div>
-                  </div>
+          <p className="text-white/70 leading-relaxed mb-8 text-base">
+            {item.description}
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative group/card">
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5 rounded-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+              <div className="relative p-5 rounded-xl border border-red-500/20 bg-black/20 backdrop-blur-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 rounded-full bg-red-500" />
+                  <div className="text-xs text-white/50 uppercase tracking-wider font-medium">Old Way</div>
                 </div>
+                <div className="text-white/40 line-through text-sm leading-relaxed">{item.oldWay}</div>
+              </div>
+            </div>
+
+            <div className="relative group/card">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+              <div className="relative p-5 rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-500/5 to-cyan-500/5 backdrop-blur-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
+                  <div className="text-xs text-blue-300/80 uppercase tracking-wider font-medium">Wexel Way</div>
+                </div>
+                <div className="text-white font-medium text-sm leading-relaxed">{item.newWay}</div>
               </div>
             </div>
           </div>
