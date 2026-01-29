@@ -16,6 +16,9 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 
   body {
@@ -28,6 +31,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: env(safe-area-inset-bottom);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   #root {
@@ -37,18 +43,18 @@
     width: 100%;
   }
 
-  html {
-    scroll-behavior: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
   html::-webkit-scrollbar {
     display: none;
   }
 
   body::-webkit-scrollbar {
     display: none;
+  }
+
+  .main-container {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    padding-bottom: 20px;
   }
 }
 
