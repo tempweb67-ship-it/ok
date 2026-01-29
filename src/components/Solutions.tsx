@@ -72,7 +72,7 @@ export default function Solutions() {
               Solutions
             </h1>
             <div className="max-w-2xl">
-              <p className="text-base sm:text-lg text-black mt-1 sm:mt-2">
+              <p className="text-base sm:text-lg mt-1 sm:mt-2" style={{ color: '#000000' }}>
                 Comprehensive digital transformation solutions with endless possibilities.
               </p>
               <p
