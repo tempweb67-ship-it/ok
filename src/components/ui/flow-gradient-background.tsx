@@ -229,6 +229,8 @@ class App {
     this.renderer.domElement.style.pointerEvents = 'none';
     this.renderer.domElement.style.transform = 'translate3d(0, 0, 0)';
     this.renderer.domElement.style.webkitTransform = 'translate3d(0, 0, 0)';
+    this.renderer.domElement.style.contain = 'strict';
+    this.renderer.domElement.style.willChange = 'contents';
     container.appendChild(this.renderer.domElement);
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
@@ -283,11 +285,6 @@ class App {
     document.addEventListener("touchmove", this.touchMoveHandler);
     window.addEventListener("resize", this.resizeHandler);
     window.addEventListener("orientationchange", this.resizeHandler);
-    window.addEventListener("scroll", this.resizeHandler, { passive: true });
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize", this.resizeHandler);
-      window.visualViewport.addEventListener("scroll", this.resizeHandler);
-    }
     updateSize();
     setTimeout(() => updateSize(), 500);
     this.tick();
@@ -308,11 +305,6 @@ class App {
     document.removeEventListener("touchmove", this.touchMoveHandler);
     window.removeEventListener("resize", this.resizeHandler);
     window.removeEventListener("orientationchange", this.resizeHandler);
-    window.removeEventListener("scroll", this.resizeHandler);
-    if (window.visualViewport) {
-      window.visualViewport.removeEventListener("resize", this.resizeHandler);
-      window.visualViewport.removeEventListener("scroll", this.resizeHandler);
-    }
     this.renderer.dispose();
     if (this.container && this.renderer.domElement && this.container.contains(this.renderer.domElement)) {
       this.container.removeChild(this.renderer.domElement);
@@ -355,7 +347,9 @@ export default function FlowGradientBackground() {
         pointerEvents: 'none',
         transform: 'translate3d(0, 0, 0)',
         WebkitTransform: 'translate3d(0, 0, 0)',
-        zIndex: -1
+        zIndex: -1,
+        contain: 'strict',
+        contentVisibility: 'auto'
       }}
     />
   );
