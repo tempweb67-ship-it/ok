@@ -1,4 +1,4 @@
-import { ArrowLeft, BarChart3, Brain, Zap, TrendingUp, Store, Users, Building2, Briefcase } from 'lucide-react';
+import { ArrowLeft, BarChart3, Brain, Zap, TrendingUp, Users, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -228,29 +228,11 @@ function PerfectForSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
             <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                <Store size={20} className="flex-shrink-0" />
-                E-commerce Businesses
-              </h3>
-              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                Manage customer relationships at scale, automate abandoned cart recovery, and personalize product recommendations.
-              </p>
-            </div>
-            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                 <Users size={20} className="flex-shrink-0" />
                 Service Providers
               </h3>
               <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
                 Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
-              </p>
-            </div>
-            <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
-                <Building2 size={20} className="flex-shrink-0" />
-                B2B Sales Teams
-              </h3>
-              <p className="text-white text-opacity-60 leading-relaxed text-sm sm:text-base">
-                Accelerate complex sales cycles with intelligent pipeline management and automated outreach sequences.
               </p>
             </div>
             <div className="border border-white border-opacity-10 rounded-xl p-5 sm:p-0 sm:border-0 bg-white bg-opacity-[0.02] sm:bg-transparent">
