@@ -7,7 +7,6 @@ export default function Explore() {
     { name: "Industries", path: "/industries" },
     { name: "What's Different", path: "/difference" },
     { name: "Our Vision", path: "/vision" },
-    { name: "Fluid Blob Demo", path: "/demo/fluid-blob" },
     { name: "Privacy Policy", path: "/privacy" }
   ];
 

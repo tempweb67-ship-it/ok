@@ -17,7 +17,6 @@ import Outreach from './components/Outreach';
 import Ecommerce from './components/Ecommerce';
 import Social from './components/Social';
 import Website from './components/Website';
-import FluidBlobDemo from './components/FluidBlobDemo';
 
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -48,7 +47,6 @@ function AppContent() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="/demo/fluid-blob" element={<FluidBlobDemo />} />
       </Routes>
       </main>
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
