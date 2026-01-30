@@ -38,9 +38,13 @@
   }
 
   html {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+
+  body {
+    scroll-behavior: auto !important;
   }
 
   html::-webkit-scrollbar {
