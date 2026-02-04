@@ -41,12 +41,12 @@ export default function Difference() {
   ];
 
   return (
-    <div className="text-black bg-white" style={{ minHeight: '100dvh' }}>
-      <div className="relative z-10 py-32 md:py-40">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="mb-40 md:mb-48 text-center">
+    <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="relative z-10 pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="mb-16 text-center">
             <h1
-              className="text-black leading-[0.95] mb-8"
+              className="text-black leading-[0.95] mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -58,9 +58,9 @@ export default function Difference() {
             </h1>
 
             <p
-              className="text-black/40 max-w-2xl mx-auto"
+              className="text-black/60 max-w-2xl mx-auto"
               style={{
-                fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
+                fontSize: 'clamp(1rem, 2vw, 1.25rem)',
                 lineHeight: '1.5',
                 fontWeight: 400,
               }}
@@ -69,7 +69,7 @@ export default function Difference() {
             </p>
           </div>
 
-          <div className="space-y-48 md:space-y-56">
+          <div className="space-y-8">
             {features.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -98,34 +98,28 @@ interface FeatureItem {
   tagline: string;
 }
 
-function FeatureCard({ item, Icon }: { item: FeatureItem; index: number; Icon: LucideIcon }) {
+function FeatureCard({ item }: { item: FeatureItem; index: number; Icon: LucideIcon }) {
   return (
-    <div className="group">
-      <div className="text-center max-w-4xl mx-auto">
-        <div className="mb-12 flex justify-center">
-          <div className="w-24 h-24 flex items-center justify-center bg-black/[0.03] rounded-[2rem] transition-all duration-500 group-hover:bg-black/[0.06]">
-            <Icon size={40} className="text-black" strokeWidth={1.75} />
-          </div>
-        </div>
-
+    <div className="group relative rounded-2xl p-8 backdrop-blur-md bg-white/20 border border-black/10 hover:bg-white/30 hover:border-black/20 transition-all duration-500">
+      <div className="text-center">
         <h2
-          className="text-black leading-[0.95] mb-12"
+          className="text-black leading-[0.95] mb-6"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             fontWeight: 700,
             letterSpacing: '-0.04em',
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
           }}
         >
           {item.title}
         </h2>
 
-        <div className="mb-16">
+        <div className="mb-8">
           <div
-            className="text-black mb-3"
+            className="text-black mb-2"
             style={{
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              fontSize: 'clamp(5rem, 12vw, 8rem)',
+              fontSize: 'clamp(3rem, 8vw, 5rem)',
               fontWeight: 600,
               letterSpacing: '-0.04em',
               lineHeight: '0.9',
@@ -136,7 +130,7 @@ function FeatureCard({ item, Icon }: { item: FeatureItem; index: number; Icon: L
           <div
             className="text-black/30"
             style={{
-              fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
+              fontSize: 'clamp(0.75rem, 1.25vw, 0.875rem)',
               fontWeight: 500,
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
@@ -147,9 +141,9 @@ function FeatureCard({ item, Icon }: { item: FeatureItem; index: number; Icon: L
         </div>
 
         <p
-          className="text-black/50 leading-[1.6] mb-6 max-w-2xl mx-auto"
+          className="text-black/70 leading-[1.6] mb-4"
           style={{
-            fontSize: 'clamp(1.125rem, 2vw, 1.375rem)',
+            fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
             fontWeight: 400,
           }}
         >
@@ -159,7 +153,7 @@ function FeatureCard({ item, Icon }: { item: FeatureItem; index: number; Icon: L
         <p
           className="text-black font-medium"
           style={{
-            fontSize: 'clamp(1rem, 1.75vw, 1.125rem)',
+            fontSize: 'clamp(0.875rem, 1.25vw, 1rem)',
           }}
         >
           {item.tagline}
