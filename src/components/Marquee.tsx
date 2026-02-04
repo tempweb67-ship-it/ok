@@ -5,9 +5,9 @@ export default function BottomMarquee() {
     <div className="fixed bottom-0 left-0 w-full z-50 backdrop-blur-md bg-white/20 py-1 border-t border-black/10">
       <Marquee speed={50} autoFill>
         <span className="text-xs font-bold uppercase tracking-wider mx-4">
-          <span className="text-black">WHERE AI MEETS </span>
-          <span className="text-black">BUSINESS EXCELLENCE</span>
-          <span className="text-black">.</span>
+          <span className="text-gray-600">WHERE AI MEETS </span>
+          <span className="text-gray-600">BUSINESS EXCELLENCE</span>
+          <span className="text-gray-600">.</span>
         </span>
       </Marquee>
     </div>
