@@ -42,27 +42,34 @@ export default function Difference() {
 
   return (
     <div className="text-black bg-white" style={{ minHeight: '100dvh' }}>
-      <div className="relative z-10 pt-20 md:pt-32 pb-20 md:pb-32">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-20 md:mb-32 text-center">
+      <div className="relative z-10 py-32 md:py-40">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <div className="mb-40 md:mb-48 text-center">
             <h1
-              className="text-black leading-[0.95] mb-6 md:mb-8"
+              className="text-black leading-[0.95] mb-8"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
-                letterSpacing: '-0.04em',
-                fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+                letterSpacing: '-0.05em',
+                fontSize: 'clamp(3rem, 9vw, 7rem)',
               }}
             >
               Built for the AI Era
             </h1>
 
-            <p className="text-xl md:text-2xl text-black/50 max-w-3xl mx-auto leading-relaxed">
+            <p
+              className="text-black/40 max-w-2xl mx-auto"
+              style={{
+                fontSize: 'clamp(1.125rem, 2.5vw, 1.5rem)',
+                lineHeight: '1.5',
+                fontWeight: 400,
+              }}
+            >
               Transforming enterprise operations with intelligent automation and measurable results.
             </p>
           </div>
 
-          <div className="space-y-24 md:space-y-32 max-w-5xl mx-auto">
+          <div className="space-y-48 md:space-y-56">
             {features.map((item, index) => {
               const Icon = item.icon;
               return (
@@ -94,46 +101,67 @@ interface FeatureItem {
 function FeatureCard({ item, Icon }: { item: FeatureItem; index: number; Icon: LucideIcon }) {
   return (
     <div className="group">
-      <div className="text-center max-w-3xl mx-auto">
-        <div className="mb-8 flex justify-center">
-          <div className="p-6 bg-black/5 rounded-3xl inline-block">
-            <Icon size={48} className="text-black" strokeWidth={1.5} />
+      <div className="text-center max-w-4xl mx-auto">
+        <div className="mb-12 flex justify-center">
+          <div className="w-24 h-24 flex items-center justify-center bg-black/[0.03] rounded-[2rem] transition-all duration-500 group-hover:bg-black/[0.06]">
+            <Icon size={40} className="text-black" strokeWidth={1.75} />
           </div>
         </div>
 
         <h2
-          className="text-black leading-tight mb-6"
+          className="text-black leading-[0.95] mb-12"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             fontWeight: 700,
-            letterSpacing: '-0.03em',
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+            letterSpacing: '-0.04em',
+            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
           }}
         >
           {item.title}
         </h2>
 
-        <div className="mb-8">
+        <div className="mb-16">
           <div
-            className="text-black font-semibold mb-2"
+            className="text-black mb-3"
             style={{
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              fontSize: 'clamp(3rem, 8vw, 5rem)',
-              letterSpacing: '-0.02em',
+              fontSize: 'clamp(5rem, 12vw, 8rem)',
+              fontWeight: 600,
+              letterSpacing: '-0.04em',
+              lineHeight: '0.9',
             }}
           >
             {item.metric}
           </div>
-          <div className="text-black/40 text-sm uppercase tracking-wider font-medium">
+          <div
+            className="text-black/30"
+            style={{
+              fontSize: 'clamp(0.875rem, 1.5vw, 1rem)',
+              fontWeight: 500,
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+            }}
+          >
             {item.metricLabel}
           </div>
         </div>
 
-        <p className="text-lg md:text-xl text-black/60 leading-relaxed mb-4 max-w-2xl mx-auto">
+        <p
+          className="text-black/50 leading-[1.6] mb-6 max-w-2xl mx-auto"
+          style={{
+            fontSize: 'clamp(1.125rem, 2vw, 1.375rem)',
+            fontWeight: 400,
+          }}
+        >
           {item.description}
         </p>
 
-        <p className="text-base md:text-lg text-black/90 font-medium">
+        <p
+          className="text-black font-medium"
+          style={{
+            fontSize: 'clamp(1rem, 1.75vw, 1.125rem)',
+          }}
+        >
           {item.tagline}
         </p>
       </div>
