@@ -51,7 +51,7 @@ export default function Difference() {
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
                 letterSpacing: '-0.05em',
-                fontSize: 'clamp(3rem, 9vw, 7rem)',
+                fontSize: 'clamp(2.25rem, 9vw, 7rem)',
               }}
             >
               Built for the AI Era
