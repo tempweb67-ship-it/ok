@@ -1,4 +1,6 @@
 import { Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
+import SEO from './SEO';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function Difference() {
   const features = [
@@ -41,9 +43,28 @@ export default function Difference() {
   ];
 
   return (
-    <div className="text-black" style={{ minHeight: '100dvh' }}>
-      <div className="relative z-10 pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <>
+      <SEO
+        title="What Makes Wexel Different - AI Automation That Transforms Business | Wexel"
+        description="Discover why leading businesses choose Wexel for AI automation. Experience transformation-first mindset, rapid deployment, measurable impact, and always-on intelligence. See how our approach delivers 300% ROI and 5x faster time to market."
+        keywords="AI transformation, rapid AI deployment, AI ROI, business automation benefits, AI consulting, digital transformation agency, AI implementation, automation ROI, enterprise AI"
+        canonical="https://wexel.com/difference"
+        breadcrumbs={[
+          { name: "What Makes Us Different", url: "https://wexel.com/difference" }
+        ]}
+        articleData={{
+          headline: "What Makes Wexel Different - Built for the AI Era",
+          datePublished: "2024-01-01T00:00:00Z",
+          dateModified: new Date().toISOString(),
+          author: "Wexel"
+        }}
+      />
+      <div className="text-black" style={{ minHeight: '100dvh' }}>
+        <div className="relative z-10 pt-24 pb-20">
+          <Breadcrumbs items={[
+            { name: "What Makes Us Different", url: "/difference" }
+          ]} />
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-16 text-center">
             <h1
               className="text-black leading-[0.95] mb-6"
@@ -85,6 +106,7 @@ export default function Difference() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

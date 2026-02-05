@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import SEO from './SEO';
+import FAQ from './FAQ';
 
 export default function Hero() {
   const fullText = "Wexel";
@@ -25,21 +26,24 @@ export default function Hero() {
         keywords="AI automation, voice automation, AI voice agents, AI CRM, conversational AI, mass outreach automation, email automation, e-commerce AI, social media automation, AI marketing, digital transformation, business automation"
         canonical="https://wexel.com/"
       />
-      <section className="flex items-center justify-center px-6 pt-12 relative" style={{ minHeight: '100dvh' }}>
-      <div className="w-full max-w-[1800px] relative z-10 text-center">
-        <h1
-          className="text-black font-bold leading-[0.85] tracking-[0.08em] uppercase"
-          style={{ fontSize: 'clamp(5.5rem, 10vw, 12rem)', fontFamily: 'Blanka, sans-serif', fontWeight: 900, color: '#000000' }}
-        >
-          {displayedText}
-        </h1>
-        <div className="mt-6 md:mt-12">
-          <p className="text-black text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap">
-            AI-First Automation Agency.
-          </p>
-        </div>
+      <div>
+        <section className="flex items-center justify-center px-6 pt-12 relative" style={{ minHeight: '100dvh' }}>
+          <div className="w-full max-w-[1800px] relative z-10 text-center">
+            <h1
+              className="text-black font-bold leading-[0.85] tracking-[0.08em] uppercase"
+              style={{ fontSize: 'clamp(5.5rem, 10vw, 12rem)', fontFamily: 'Blanka, sans-serif', fontWeight: 900, color: '#000000' }}
+            >
+              {displayedText}
+            </h1>
+            <div className="mt-6 md:mt-12">
+              <p className="text-black text-base sm:text-xl md:text-2xl leading-relaxed font-semibold tracking-wide whitespace-nowrap">
+                AI-First Automation Agency.
+              </p>
+            </div>
+          </div>
+        </section>
+        <FAQ />
       </div>
-    </section>
     </>
   );
 }

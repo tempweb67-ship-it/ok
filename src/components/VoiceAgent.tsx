@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
+import Breadcrumbs from './Breadcrumbs';
 
 export default function VoiceAgent() {
   const features = [
@@ -68,6 +69,16 @@ export default function VoiceAgent() {
         description="Transform customer interactions with AI voice agents that work 24/7. Deploy autonomous voice automation for appointment scheduling, lead qualification, and customer support. Scale conversations infinitely with human-quality AI voice technology."
         keywords="AI voice agents, voice automation, AI phone agents, conversational AI, voice AI, automated phone calls, AI call center, voice bots, speech AI, customer service automation, AI receptionist, voice assistant"
         canonical="https://wexel.com/solutions/voice"
+        breadcrumbs={[
+          { name: "Solutions", url: "https://wexel.com/solutions" },
+          { name: "AI Voice Solutions", url: "https://wexel.com/solutions/voice" }
+        ]}
+        articleData={{
+          headline: "AI Voice Solutions - Transform Customer Interactions with Voice Automation",
+          datePublished: "2024-01-01T00:00:00Z",
+          dateModified: new Date().toISOString(),
+          author: "Wexel"
+        }}
         schema={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -86,7 +97,11 @@ export default function VoiceAgent() {
         }}
       />
       <div className="text-black" style={{ minHeight: '100dvh' }}>
-      <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
+      <div className="pt-20 sm:pt-24 pb-12 sm:pb-20">
+        <Breadcrumbs items={[
+          { name: "Solutions", url: "/solutions" },
+          { name: "AI Voice Solutions", url: "/solutions/voice" }
+        ]} />
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
