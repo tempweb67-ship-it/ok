@@ -33,12 +33,28 @@ function AppContent() {
   return (
     <div className="relative" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
       <Grainient
-        color1="#0d2868"
-        color2="#3a1fb0"
-        color3="#1a2847"
-        timeSpeed={1.2}
-        contrast={1.2}
-        saturation={0.7}
+        color1="#1322ec"
+        color2="#0e1b5d"
+        color3="#3048c0"
+        timeSpeed={0.55}
+        colorBalance={0}
+        warpStrength={1}
+        warpFrequency={5}
+        warpSpeed={2}
+        warpAmplitude={50}
+        blendAngle={0}
+        blendSoftness={0.05}
+        rotationAmount={500}
+        noiseScale={2}
+        grainAmount={0.1}
+        grainScale={2}
+        grainAnimated={false}
+        contrast={1.5}
+        gamma={1}
+        saturation={1}
+        centerX={0}
+        centerY={0}
+        zoom={0.9}
       />
       <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
