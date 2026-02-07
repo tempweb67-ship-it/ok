@@ -201,7 +201,7 @@ function MissionSection() {
           Automation That Runs Without You
         </h3>
         <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-          We build AI systems that handle the work your team should not be doing manually. Systems that wont go out when there's an outage like recent one. Every system ships fast, gets measured, and improves over time.
+          We build AI Systems that wont go out when there's an outage like recent one. Every system ships fast, gets measured, and improves over time.
         </p>
       </div>
     </motion.div>
