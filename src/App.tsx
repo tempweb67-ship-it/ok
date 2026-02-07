@@ -36,7 +36,7 @@ function AppContent() {
         color1="#0d2868"
         color2="#3a1fb0"
         color3="#1a2847"
-        timeSpeed={0.8}
+        timeSpeed={1.2}
         contrast={1.2}
         saturation={0.7}
       />
