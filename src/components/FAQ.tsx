@@ -90,7 +90,7 @@ export default function FAQ() {
     <section className="py-20 px-4 md:px-8" aria-label="Frequently asked questions">
       <div className="max-w-4xl mx-auto">
         <h2
-          className="text-black text-center mb-4"
+          className="text-white text-center mb-4"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             fontWeight: 700,
@@ -101,7 +101,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </h2>
         <p
-          className="text-black/60 text-center mb-12 max-w-2xl mx-auto"
+          className="text-white/60 text-center mb-12 max-w-2xl mx-auto"
           style={{
             fontSize: 'clamp(1rem, 2vw, 1.25rem)',
             lineHeight: '1.6',
@@ -114,7 +114,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl overflow-hidden transition-all duration-300 hover:bg-white/30"
+              className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300 hover:bg-white/10"
               itemScope
               itemProp="mainEntity"
               itemType="https://schema.org/Question"
@@ -125,7 +125,7 @@ export default function FAQ() {
                 aria-expanded={openIndex === index}
               >
                 <h3
-                  className="text-black font-semibold pr-4"
+                  className="text-white font-semibold pr-4"
                   style={{
                     fontSize: 'clamp(1rem, 2vw, 1.125rem)',
                   }}
@@ -142,7 +142,7 @@ export default function FAQ() {
               </button>
               {openIndex === index && (
                 <div
-                  className="px-6 pb-5 text-black/70"
+                  className="px-6 pb-5 text-white/70"
                   style={{
                     fontSize: 'clamp(0.9375rem, 1.5vw, 1.0625rem)',
                     lineHeight: '1.7',

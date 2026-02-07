@@ -69,7 +69,7 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
   return (
     <motion.div
       ref={ref}
-      className="relative backdrop-blur-md bg-white/20 border border-black/10 rounded-2xl p-5 sm:p-8 overflow-hidden group hover:border-blue-500/30 hover:bg-blue-500/10"
+      className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 overflow-hidden group hover:border-blue-500/30 hover:bg-blue-500/10"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -84,11 +84,11 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
-          <Icon size={24} className="text-blue-600 sm:w-7 sm:h-7" />
+          <Icon size={24} className="text-blue-400 sm:w-7 sm:h-7" />
         </motion.div>
 
         <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{feature.title}</h3>
-        <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+        <p className="text-white/60 leading-relaxed text-sm sm:text-base">
           {feature.description}
         </p>
       </div>
@@ -98,7 +98,7 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
 
 export function HowItWorksSection({ steps }: { steps: Step[] }) {
   return (
-    <div className="relative backdrop-blur-md bg-white/20 border border-black/10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
+    <div className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       <div className="max-w-3xl relative z-10">
         <h2
@@ -115,13 +115,13 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
           {steps.map((step, index) => (
             <div key={index} className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-blue-700 hover:bg-blue-500/30 transition-colors duration-300">
+                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-blue-400 hover:bg-blue-500/30 transition-colors duration-300">
                   {index + 1}
                 </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-black/60 leading-relaxed">
+                <p className="text-white/60 leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -133,15 +133,15 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-4 hover:border-blue-500/30"
+              className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4 hover:border-blue-500/30"
             >
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-700">
+                <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-400">
                   {index + 1}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-base font-bold mb-1">{step.title}</h3>
-                  <p className="text-black/60 text-sm leading-snug">
+                  <p className="text-white/60 text-sm leading-snug">
                     {step.description}
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
 
 export function CTASection({ title, description }: { title: string; description: string }) {
   return (
-    <div className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-black/10">
+    <div className="mt-10 sm:mt-20 pt-8 sm:pt-12 border-t border-white/10">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
         <div>
           <h2
@@ -168,7 +168,7 @@ export function CTASection({ title, description }: { title: string; description:
           >
             {title}
           </h2>
-          <p className="text-black/60 text-sm sm:text-base">{description}</p>
+          <p className="text-white/60 text-sm sm:text-base">{description}</p>
         </div>
         <Link
           to="/"
@@ -199,7 +199,7 @@ export function BenefitsGrid({ benefits }: { benefits: Benefit[] }) {
       {benefits.map((benefit, index) => (
         <motion.div
           key={index}
-          className="relative backdrop-blur-md bg-white/20 border border-black/10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden hover:border-blue-500/30 hover:bg-blue-500/10"
+          className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden hover:border-blue-500/30 hover:bg-blue-500/10"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -222,7 +222,7 @@ export function BenefitsGrid({ benefits }: { benefits: Benefit[] }) {
             >
               {benefit.stat}
             </motion.div>
-            <p className="text-black/60 text-sm sm:text-base">{benefit.label}</p>
+            <p className="text-white/60 text-sm sm:text-base">{benefit.label}</p>
           </div>
         </motion.div>
       ))}

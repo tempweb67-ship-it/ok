@@ -7,12 +7,12 @@ interface HeaderProps {
 export default function Header({ onContactClick }: HeaderProps) {
   const location = useLocation();
   const isPrivacyPage = location.pathname === '/privacy';
-  const wexelColor = isPrivacyPage ? '#FFFFFF' : '#4D4D4D';
+  const wexelColor = isPrivacyPage ? '#4D4D4D' : '#B2B2B2';
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-black/10" role="banner">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/10" role="banner">
       <nav aria-label="Main navigation" className="grid grid-cols-12 gap-0">
-        <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-black/10">
+        <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-white/10">
           <Link
             to="/"
             className="uppercase leading-[0.85] inline-block"
@@ -21,11 +21,11 @@ export default function Header({ onContactClick }: HeaderProps) {
             Wexel
           </Link>
         </div>
-        <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-black/10">
+        <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-white/10">
           <button
             onClick={onContactClick}
             className={`text-[11px] uppercase tracking-wide font-medium transition-colors ${
-              isPrivacyPage ? 'text-white hover:text-blue-300' : 'text-black hover:text-blue-600'
+              isPrivacyPage ? 'text-black hover:text-blue-600' : 'text-white hover:text-blue-400'
             }`}
             data-contact-btn
           >
@@ -36,7 +36,7 @@ export default function Header({ onContactClick }: HeaderProps) {
           <Link
             to="/explore"
             className={`text-[11px] uppercase tracking-wide font-medium transition-colors ${
-              isPrivacyPage ? 'text-white hover:text-emerald-300' : 'text-black hover:text-emerald-600'
+              isPrivacyPage ? 'text-black hover:text-emerald-600' : 'text-white hover:text-emerald-400'
             }`}
           >
             [ Explore ]

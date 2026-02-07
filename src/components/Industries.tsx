@@ -78,12 +78,12 @@ export default function Industries() {
           }
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
         <div className="pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-16">
               <h1
-              className="text-black leading-[0.85] mb-4"
+              className="text-white leading-[0.85] mb-4"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -94,10 +94,10 @@ export default function Industries() {
               Industries
             </h1>
             <div className="max-w-2xl">
-              <p className="text-lg text-black/60 mt-3">
+              <p className="text-lg text-white/60 mt-3">
                 Industry-specific digital transformation solutions with endless potential.
               </p>
-              <p className="text-base text-black/60 mt-0.5">
+              <p className="text-base text-white/60 mt-0.5">
                 We architect transformation strategies that address your sector's unique challenges and unlock new opportunities.
               </p>
             </div>
@@ -111,11 +111,11 @@ export default function Industries() {
                   key={industry.id}
                   className="group relative"
                 >
-                  <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/20 border border-black/10 hover:bg-white/30 hover:border-black/20 transition-all duration-500">
+                  <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
                     <div className="relative z-10">
                       <div className="mb-6">
-                        <div className="inline-flex p-4 rounded-xl backdrop-blur-md bg-white/30 transition-all duration-500">
-                          <Icon size={32} className="text-black" />
+                        <div className="inline-flex p-4 rounded-xl backdrop-blur-md bg-white/10 transition-all duration-500">
+                          <Icon size={32} className="text-white" />
                         </div>
                       </div>
 
@@ -129,7 +129,7 @@ export default function Industries() {
                         {industry.title}
                       </h3>
 
-                      <p className="text-black/70 leading-relaxed">
+                      <p className="text-white/70 leading-relaxed">
                         {industry.description}
                       </p>
                     </div>
@@ -139,7 +139,7 @@ export default function Industries() {
             })}
           </div>
 
-          <div className="mt-20 pt-12 border-t border-black/10">
+          <div className="mt-20 pt-12 border-t border-white/10">
             <div className="text-center max-w-3xl mx-auto">
               <h2
                 className="text-3xl md:text-4xl font-bold mb-4"
@@ -150,7 +150,7 @@ export default function Industries() {
               >
                 Don't see your industry?
               </h2>
-              <p className="text-black/60 mb-8">
+              <p className="text-white/60 mb-8">
                 We transform businesses across all sectors. Our solutions adapt to your industry's unique requirements, unlocking possibilities you haven't imagined.
               </p>
               <Link

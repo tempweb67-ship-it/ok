@@ -27,14 +27,14 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         >
           <Link
             to="/"
-            className="flex items-center gap-1 text-black/60 hover:text-black transition-colors"
+            className="flex items-center gap-1 text-white/60 hover:text-white transition-colors"
             itemProp="item"
           >
             <Home size={16} />
             <span itemProp="name">Home</span>
           </Link>
           <meta itemProp="position" content="1" />
-          <ChevronRight size={16} className="ml-2 text-black/30" />
+          <ChevronRight size={16} className="ml-2 text-white/30" />
         </li>
         {items.map((item, index) => (
           <li
@@ -46,7 +46,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           >
             {index === items.length - 1 ? (
               <span
-                className="text-black font-medium"
+                className="text-white font-medium"
                 itemProp="name"
                 aria-current="page"
               >
@@ -56,12 +56,12 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
               <>
                 <Link
                   to={item.url}
-                  className="text-black/60 hover:text-black transition-colors"
+                  className="text-white/60 hover:text-white transition-colors"
                   itemProp="item"
                 >
                   <span itemProp="name">{item.name}</span>
                 </Link>
-                <ChevronRight size={16} className="ml-2 text-black/30" />
+                <ChevronRight size={16} className="ml-2 text-white/30" />
               </>
             )}
             <meta itemProp="position" content={String(index + 2)} />

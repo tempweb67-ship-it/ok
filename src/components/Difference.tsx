@@ -59,7 +59,7 @@ export default function Difference() {
           author: "Wexel"
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
         <div className="relative z-10 pt-24 pb-20">
           <Breadcrumbs items={[
             { name: "What Makes Us Different", url: "/difference" }
@@ -67,7 +67,7 @@ export default function Difference() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="mb-16 text-center">
             <h1
-              className="text-black leading-[0.95] mb-6"
+              className="text-white leading-[0.95] mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -79,7 +79,7 @@ export default function Difference() {
             </h1>
 
             <p
-              className="text-black/60 max-w-2xl mx-auto"
+              className="text-white/60 max-w-2xl mx-auto"
               style={{
                 fontSize: 'clamp(1rem, 2vw, 1.25rem)',
                 lineHeight: '1.5',
@@ -113,10 +113,10 @@ interface FeatureItem {
 
 function FeatureCard({ item }: { item: FeatureItem }) {
   return (
-    <div className="group relative rounded-2xl p-8 backdrop-blur-md bg-white/20 border border-black/10 hover:bg-white/30 hover:border-black/20 transition-all duration-500">
+    <div className="group relative rounded-2xl p-8 backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
       <div className="text-center">
         <h2
-          className="text-black leading-[0.95] mb-6"
+          className="text-white leading-[0.95] mb-6"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             fontWeight: 700,
@@ -129,7 +129,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
 
         <div className="mb-8">
           <div
-            className="text-black mb-2"
+            className="text-white mb-2"
             style={{
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               fontSize: 'clamp(3rem, 8vw, 5rem)',
@@ -141,7 +141,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
             {item.metric}
           </div>
           <div
-            className="text-black/30"
+            className="text-white/30"
             style={{
               fontSize: 'clamp(0.75rem, 1.25vw, 0.875rem)',
               fontWeight: 500,
@@ -154,7 +154,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
         </div>
 
         <p
-          className="text-black/70 leading-[1.6] mb-4"
+          className="text-white/70 leading-[1.6] mb-4"
           style={{
             fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
             fontWeight: 400,
@@ -164,7 +164,7 @@ function FeatureCard({ item }: { item: FeatureItem }) {
         </p>
 
         <p
-          className="text-black font-medium"
+          className="text-white font-medium"
           style={{
             fontSize: 'clamp(0.875rem, 1.25vw, 1rem)',
           }}

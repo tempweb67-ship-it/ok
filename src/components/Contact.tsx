@@ -61,13 +61,13 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
       animate={{ y: 0 }}
       exit={{ y: '100%' }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed inset-0 z-[100] backdrop-blur-xl bg-white/30"
+      className="fixed inset-0 z-[100] backdrop-blur-xl bg-black/80"
       style={{ height: '100dvh' }}
     >
       <div className="w-full overflow-y-auto scrollbar-hide" style={{ height: '100dvh' }}>
         <button
           onClick={onClose}
-          className="fixed top-8 right-8 z-10 text-black hover:rotate-90 transition-transform duration-300"
+          className="fixed top-8 right-8 z-10 text-white hover:rotate-90 transition-transform duration-300"
         >
           <X size={32} strokeWidth={1.5} />
         </button>
@@ -82,7 +82,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   transition={{ delay: 0.3, duration: 0.8 }}
                 >
                   <h1
-                    className="text-black leading-[0.85] mb-6"
+                    className="text-white leading-[0.85] mb-6"
                     style={{
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       fontWeight: 700,
@@ -94,7 +94,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                     <br />
                     TALK
                   </h1>
-                  <p className="text-black/60 text-lg leading-relaxed max-w-md">
+                  <p className="text-white/60 text-lg leading-relaxed max-w-md">
                     We usually contact you first. But here are the official channels used for communications.
                   </p>
                 </motion.div>
@@ -106,12 +106,12 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   className="space-y-6"
                 >
                   <div className="flex items-start gap-4 group">
-                    <Mail className="text-black/40 mt-1 group-hover:text-black transition-colors" size={28} />
+                    <Mail className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
                     <div>
-                      <p className="text-black/40 text-sm uppercase tracking-wider mb-2">Email</p>
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Email</p>
                       <a
                         href="mailto:business@wexel.ai"
-                        className="text-black text-2xl hover:text-black/60 transition-colors inline-block font-mono"
+                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
                       >
                         {startAnimation && <GlitchText text="business@wexel.ai" />}
                       </a>
@@ -119,27 +119,27 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <Phone className="text-black/40 mt-1 group-hover:text-black transition-colors" size={28} />
+                    <Phone className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
                     <div>
-                      <p className="text-black/40 text-sm uppercase tracking-wider mb-2">Phone</p>
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Phone</p>
                       <a
                         href="tel:+918910949074"
-                        className="text-black text-2xl hover:text-black/60 transition-colors inline-block font-mono"
+                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
                       >
                         {startAnimation && <GlitchText text="+91 8910949074" />}
                       </a>
-                      <p className="text-green-600/80 text-sm mt-2 flex items-center gap-2">
-                        <span className="inline-block w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      <p className="text-green-400/80 text-sm mt-2 flex items-center gap-2">
+                        <span className="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                         WhatsApp Available
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <MapPin className="text-black/40 mt-1 group-hover:text-black transition-colors" size={28} />
+                    <MapPin className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
                     <div>
-                      <p className="text-black/40 text-sm uppercase tracking-wider mb-2">Location</p>
-                      <div className="text-black text-2xl font-mono">
+                      <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Location</p>
+                      <div className="text-white text-2xl font-mono">
                         {startAnimation && (
                           <>
                             <GlitchText text="Kolkata, WB" />

@@ -81,7 +81,7 @@ export default function Vision() {
         }}
       />
       <Contact isOpen={contactOpen} onClose={() => setContactOpen(false)} />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
         <div className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -92,12 +92,12 @@ export default function Vision() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-blue-500/20 rounded-full mb-8 border border-blue-500/30">
-              <Rocket size={16} className="text-blue-600" />
-              <span className="text-sm text-blue-700 uppercase tracking-wider">Our Vision</span>
+              <Rocket size={16} className="text-blue-400" />
+              <span className="text-sm text-blue-400 uppercase tracking-wider">Our Vision</span>
             </div>
 
             <h1
-              className="text-black leading-[0.9] mb-8"
+              className="text-white leading-[0.9] mb-8"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -108,11 +108,11 @@ export default function Vision() {
               Transforming Businesses for Tomorrow
             </h1>
 
-            <p className="text-xl md:text-2xl text-black/70 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
               We're pioneering digital transformation solutions that unlock endless possibilities for businesses ready to evolve, scale, and thrive in the AI era.
             </p>
 
-            <p className="text-sm text-black/40 mt-6">
+            <p className="text-sm text-white/40 mt-6">
               [Scroll Down]
             </p>
           </motion.div>
@@ -172,7 +172,7 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle: string })
       >
         {title}
       </h2>
-      <p className="text-lg text-black/60">{subtitle}</p>
+      <p className="text-lg text-white/60">{subtitle}</p>
     </motion.div>
   );
 }
@@ -189,8 +189,8 @@ function MissionSection() {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-md bg-white/20 border border-black/10">
-        <div className="text-sm text-black/40 uppercase tracking-wider mb-4">Mission</div>
+      <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10">
+        <div className="text-sm text-white/40 uppercase tracking-wider mb-4">Mission</div>
         <h3
           className="text-3xl md:text-4xl font-bold mb-6"
           style={{
@@ -200,7 +200,7 @@ function MissionSection() {
         >
           Enabling Digital Transformation at Scale
         </h3>
-        <p className="text-lg md:text-xl text-black/70 leading-relaxed">
+        <p className="text-lg md:text-xl text-white/70 leading-relaxed">
           We deliver transformative solutions that modernize operations, unlock new revenue streams, and position businesses for sustainable growth. From AI-powered automation to intelligent workflows, we architect the future of how organizations operate and compete.
         </p>
       </div>
@@ -227,12 +227,12 @@ function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardP
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/20 border border-black/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
+      <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
         <div className="mb-6 p-3 bg-blue-500/20 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/30">
-          <Icon size={28} className="text-blue-600 group-hover:text-blue-700 transition-colors" />
+          <Icon size={28} className="text-blue-400 group-hover:text-blue-400 transition-colors" />
         </div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
-        <p className="text-black/60 leading-relaxed">{description}</p>
+        <p className="text-white/60 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -257,14 +257,14 @@ function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
     >
-      <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/20 border border-black/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
+      <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
         <div className="flex items-start gap-4 mb-4">
           <div className="p-3 bg-blue-500/20 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/30">
-            <Icon size={24} className="text-blue-600 group-hover:text-blue-700 transition-colors" />
+            <Icon size={24} className="text-blue-400 group-hover:text-blue-400 transition-colors" />
           </div>
           <h3 className="text-xl font-bold pt-2">{title}</h3>
         </div>
-        <p className="text-black/60 leading-relaxed">{description}</p>
+        <p className="text-white/60 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -293,7 +293,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
           >
             Join The Winner's Revolution
           </h2>
-          <p className="text-lg md:text-xl text-black/70 leading-relaxed max-w-3xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10">
             We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
           </p>
           <motion.button
@@ -306,7 +306,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
           </motion.button>
         </div>
       </div>
-      <div className="mt-16 text-center text-black/30 text-sm">
+      <div className="mt-16 text-center text-white/30 text-sm">
         <p>Ready to transform? Let's build the future together.</p>
       </div>
     </motion.div>

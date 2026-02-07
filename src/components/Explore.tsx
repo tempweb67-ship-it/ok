@@ -41,12 +41,12 @@ export default function Explore() {
           }
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
         <div className="pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="mb-8">
               <h1
-              className="text-black leading-[0.85] mb-4"
+              className="text-white leading-[0.85] mb-4"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -56,7 +56,7 @@ export default function Explore() {
             >
               Explore
             </h1>
-            <p className="text-lg text-black/60 max-w-2xl mt-6">
+            <p className="text-lg text-white/60 max-w-2xl mt-6">
               Discover how we drive digital transformation and unlock endless possibilities for forward-thinking organizations
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function Explore() {
               const content = (
                 <div className="flex items-center justify-between">
                   <h3
-                    className="text-3xl md:text-4xl font-bold group-hover:text-blue-600 transition-colors"
+                    className="text-3xl md:text-4xl font-bold group-hover:text-blue-400 transition-colors"
                     style={{
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       letterSpacing: '-0.02em',
@@ -74,7 +74,7 @@ export default function Explore() {
                   >
                     {item.name}
                   </h3>
-                  <div className="text-black group-hover:text-blue-600 transition-colors">
+                  <div className="text-white group-hover:text-blue-400 transition-colors">
                     <Plus size={32} />
                   </div>
                 </div>
@@ -84,14 +84,14 @@ export default function Explore() {
                 <Link
                   key={index}
                   to={item.path}
-                  className="group cursor-pointer border-b border-black/10 pb-4 hover:border-blue-500/50 transition-all duration-300 block"
+                  className="group cursor-pointer border-b border-white/10 pb-4 hover:border-blue-500/50 transition-all duration-300 block"
                 >
                   {content}
                 </Link>
               ) : (
                 <div
                   key={index}
-                  className="group cursor-pointer border-b border-black/10 pb-4 hover:border-blue-500/50 transition-all duration-300"
+                  className="group cursor-pointer border-b border-white/10 pb-4 hover:border-blue-500/50 transition-all duration-300"
                 >
                   {content}
                 </div>

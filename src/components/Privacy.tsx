@@ -92,15 +92,15 @@ export default function Privacy() {
           { name: 'Privacy Policy', url: 'https://wexel.com/privacy' }
         ]}
       />
-      <div className="bg-black text-white" style={{ minHeight: '100dvh' }}>
+      <div className="bg-[#f2f2f2] text-black" style={{ minHeight: '100dvh' }}>
         <div className="pt-32 pb-20">
           <div className="max-w-5xl mx-auto px-4 md:px-8">
             <div className="mb-24">
             <div className="flex items-center gap-3 mb-6">
-              <Shield size={32} className="text-white" />
+              <Shield size={32} className="text-black" />
             </div>
             <h1
-              className="text-white leading-[0.85] mb-6"
+              className="text-black leading-[0.85] mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -111,7 +111,7 @@ export default function Privacy() {
               Privacy Policy
             </h1>
             <p
-              className="text-xl md:text-2xl text-white text-opacity-70 max-w-3xl leading-snug"
+              className="text-xl md:text-2xl text-black text-opacity-70 max-w-3xl leading-snug"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 letterSpacing: '-0.02em',
@@ -119,7 +119,7 @@ export default function Privacy() {
             >
               Your privacy is important to us. This policy outlines how we collect, use, and protect your personal information.
             </p>
-            <p className="text-white text-opacity-50 mt-4">
+            <p className="text-black text-opacity-50 mt-4">
               Last updated: December 30, 2025
             </p>
           </div>
@@ -129,10 +129,10 @@ export default function Privacy() {
             {sections.map((section, index) => {
               const Icon = section.icon;
               return (
-                <div key={index} className="border-l-2 border-white border-opacity-10 pl-8">
+                <div key={index} className="border-l-2 border-black border-opacity-10 pl-8">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="p-2 bg-white bg-opacity-5 rounded-lg">
-                      <Icon size={24} className="text-white" />
+                    <div className="p-2 bg-black/5 rounded-lg">
+                      <Icon size={24} className="text-black" />
                     </div>
                     <h2
                       className="text-3xl font-bold"
@@ -148,10 +148,10 @@ export default function Privacy() {
                   <div className="space-y-6">
                     {section.content.map((item, idx) => (
                       <div key={idx}>
-                        <h3 className="text-lg font-semibold mb-2 text-white text-opacity-90">
+                        <h3 className="text-lg font-semibold mb-2 text-black text-opacity-90">
                           {item.subtitle}
                         </h3>
-                        <p className="text-white text-opacity-60 leading-relaxed">
+                        <p className="text-black text-opacity-60 leading-relaxed">
                           {item.text}
                         </p>
                       </div>
@@ -163,7 +163,7 @@ export default function Privacy() {
           </div>
 
           {/* Your Rights Section */}
-          <div className="border-t border-white border-opacity-10 pt-16 mb-24">
+          <div className="border-t border-black border-opacity-10 pt-16 mb-24">
             <h2
               className="text-3xl md:text-4xl font-bold mb-8"
               style={{
@@ -173,7 +173,7 @@ export default function Privacy() {
             >
               Your Rights
             </h2>
-            <p className="text-white text-opacity-60 mb-8 leading-relaxed">
+            <p className="text-black text-opacity-60 mb-8 leading-relaxed">
               You have certain rights regarding your personal information. We are committed to honoring these rights and providing you with control over your data.
             </p>
 
@@ -181,10 +181,10 @@ export default function Privacy() {
               {rights.map((right, index) => (
                 <div
                   key={index}
-                  className="border border-white border-opacity-10 rounded-lg p-6 hover:border-opacity-20 transition-all duration-300"
+                  className="border border-black border-opacity-10 rounded-lg p-6 hover:border-opacity-20 transition-all duration-300"
                 >
                   <h3 className="text-xl font-semibold mb-2">{right.title}</h3>
-                  <p className="text-white text-opacity-60 leading-relaxed">
+                  <p className="text-black text-opacity-60 leading-relaxed">
                     {right.description}
                   </p>
                 </div>
@@ -193,10 +193,10 @@ export default function Privacy() {
           </div>
 
           {/* Cookies Section */}
-          <div className="border-t border-white border-opacity-10 pt-16 mb-24">
+          <div className="border-t border-black border-opacity-10 pt-16 mb-24">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-2 bg-white bg-opacity-5 rounded-lg">
-                <Bell size={24} className="text-white" />
+              <div className="p-2 bg-black/5 rounded-lg">
+                <Bell size={24} className="text-black" />
               </div>
               <h2
                 className="text-3xl font-bold"
@@ -208,20 +208,20 @@ export default function Privacy() {
                 Cookies and Tracking
               </h2>
             </div>
-            <p className="text-white text-opacity-60 leading-relaxed mb-4">
+            <p className="text-black text-opacity-60 leading-relaxed mb-4">
               We use cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors are coming from. You can control cookies through your browser settings.
             </p>
-            <p className="text-white text-opacity-60 leading-relaxed">
+            <p className="text-black text-opacity-60 leading-relaxed">
               Essential cookies are necessary for the website to function properly, while analytics cookies help us improve our services. You may disable non-essential cookies without affecting core functionality.
             </p>
           </div>
 
           {/* Contact Section */}
-          <div className="border-t border-white border-opacity-10 pt-16">
-            <div className="bg-white bg-opacity-5 rounded-lg p-8 md:p-12">
+          <div className="border-t border-black border-opacity-10 pt-16">
+            <div className="bg-black/5 rounded-lg p-8 md:p-12">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-white bg-opacity-10 rounded-lg">
-                  <Mail size={28} className="text-white" />
+                <div className="p-3 bg-black/10 rounded-lg">
+                  <Mail size={28} className="text-black" />
                 </div>
                 <h2
                   className="text-3xl font-bold"
@@ -233,10 +233,10 @@ export default function Privacy() {
                   Questions or Concerns?
                 </h2>
               </div>
-              <p className="text-white text-opacity-70 leading-relaxed mb-6">
+              <p className="text-black text-opacity-70 leading-relaxed mb-6">
                 If you have any questions about this Privacy Policy or how we handle your personal information, please don't hesitate to contact us. We're here to help and ensure your privacy is protected.
               </p>
-              <div className="space-y-2 text-white text-opacity-60">
+              <div className="space-y-2 text-black text-opacity-60">
                 <p>Email: business@wexel.ai</p>
                 <p>Don't feel concerned! We are here for you. :)</p>
               </div>
@@ -245,7 +245,7 @@ export default function Privacy() {
 
           {/* Changes to Policy */}
           <div className="mt-16 text-center">
-            <p className="text-white text-opacity-50 text-sm leading-relaxed max-w-3xl mx-auto">
+            <p className="text-black text-opacity-50 text-sm leading-relaxed max-w-3xl mx-auto">
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.
             </p>
           </div>

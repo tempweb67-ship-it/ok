@@ -89,7 +89,7 @@ export default function Outreach() {
           "areaServed": "Worldwide"
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
@@ -99,7 +99,7 @@ export default function Outreach() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-black hover:text-black/70 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-white hover:text-white/70 transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -119,14 +119,14 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Mail size={18} className="text-blue-700 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-blue-700 uppercase tracking-wider">
+              <Mail size={18} className="text-blue-400 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-400 uppercase tracking-wider">
                 Digital Marketing
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-black leading-[0.85] mb-4 sm:mb-6"
+              className="text-white leading-[0.85] mb-4 sm:mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -141,7 +141,7 @@ export default function Outreach() {
             </motion.h1>
 
             <motion.p
-              className="text-base sm:text-xl text-black/70 max-w-3xl leading-relaxed"
+              className="text-base sm:text-xl text-white/70 max-w-3xl leading-relaxed"
               initial={{ opacity: 0 }}
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -169,10 +169,10 @@ export default function Outreach() {
               {capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="backdrop-blur-md bg-white/20 border border-black/10 rounded-lg p-5 sm:p-8"
+                  className="backdrop-blur-md bg-white/5 border border-white/10 rounded-lg p-5 sm:p-8"
                 >
                   <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{capability.title}</h3>
-                  <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                  <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                     {capability.description}
                   </p>
                 </div>
@@ -180,7 +180,7 @@ export default function Outreach() {
             </div>
           </div>
 
-          <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
             <div className="max-w-3xl">
               <h2
                 className="text-2xl sm:text-4xl font-bold mb-6"
@@ -196,13 +196,13 @@ export default function Outreach() {
               <div className="hidden sm:block space-y-8">
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center font-bold">
                       1
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Data Enrichment</h3>
-                    <p className="text-black/60 leading-relaxed">
+                    <p className="text-white/60 leading-relaxed">
                       Our AI gathers and analyzes data about each prospect from multiple sources to
                       build comprehensive profiles.
                     </p>
@@ -211,13 +211,13 @@ export default function Outreach() {
 
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center font-bold">
                       2
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Personalized Generation</h3>
-                    <p className="text-black/60 leading-relaxed">
+                    <p className="text-white/60 leading-relaxed">
                       Advanced language models craft unique email content for each recipient,
                       incorporating relevant details and context.
                     </p>
@@ -226,13 +226,13 @@ export default function Outreach() {
 
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center font-bold">
                       3
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Optimized Delivery</h3>
-                    <p className="text-black/60 leading-relaxed">
+                    <p className="text-white/60 leading-relaxed">
                       Emails are sent at the optimal time using best practices to ensure maximum
                       deliverability and engagement.
                     </p>
@@ -241,13 +241,13 @@ export default function Outreach() {
 
                 <div className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center font-bold">
                       4
                     </div>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Continuous Optimization</h3>
-                    <p className="text-black/60 leading-relaxed">
+                    <p className="text-white/60 leading-relaxed">
                       Track performance metrics and continuously refine messaging based on what
                       resonates with your audience.
                     </p>
@@ -257,14 +257,14 @@ export default function Outreach() {
 
               {/* Mobile: Compact cards */}
               <div className="sm:hidden grid gap-3">
-                <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-4">
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center text-sm font-bold">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center text-sm font-bold">
                       1
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base font-bold mb-1">Data Enrichment</h3>
-                      <p className="text-black/60 text-sm leading-snug">
+                      <p className="text-white/60 text-sm leading-snug">
                         Our AI gathers and analyzes data about each prospect from multiple sources to
                         build comprehensive profiles.
                       </p>
@@ -272,14 +272,14 @@ export default function Outreach() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-4">
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center text-sm font-bold">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center text-sm font-bold">
                       2
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base font-bold mb-1">Personalized Generation</h3>
-                      <p className="text-black/60 text-sm leading-snug">
+                      <p className="text-white/60 text-sm leading-snug">
                         Advanced language models craft unique email content for each recipient,
                         incorporating relevant details and context.
                       </p>
@@ -287,14 +287,14 @@ export default function Outreach() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-4">
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center text-sm font-bold">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center text-sm font-bold">
                       3
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base font-bold mb-1">Optimized Delivery</h3>
-                      <p className="text-black/60 text-sm leading-snug">
+                      <p className="text-white/60 text-sm leading-snug">
                         Emails are sent at the optimal time using best practices to ensure maximum
                         deliverability and engagement.
                       </p>
@@ -302,14 +302,14 @@ export default function Outreach() {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-4">
+                <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4">
                   <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/20 flex items-center justify-center text-sm font-bold">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full backdrop-blur-md bg-white/5 flex items-center justify-center text-sm font-bold">
                       4
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-base font-bold mb-1">Continuous Optimization</h3>
-                      <p className="text-black/60 text-sm leading-snug">
+                      <p className="text-white/60 text-sm leading-snug">
                         Track performance metrics and continuously refine messaging based on what
                         resonates with your audience.
                       </p>
@@ -320,10 +320,10 @@ export default function Outreach() {
             </div>
           </div>
 
-          <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-lg p-6 sm:p-12">
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-lg p-6 sm:p-12">
             <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
-              <div className="p-4 backdrop-blur-md bg-white/20 rounded-lg hidden sm:block">
-                <Users size={40} className="text-blue-600" />
+              <div className="p-4 backdrop-blur-md bg-white/5 rounded-lg hidden sm:block">
+                <Users size={40} className="text-blue-400" />
               </div>
               <div className="flex-1 w-full">
                 <h2
@@ -336,41 +336,41 @@ export default function Outreach() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <TrendingUp size={20} className="flex-shrink-0" />
                       Sales Teams
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Scale outbound prospecting while maintaining personal touch and high response
                       rates.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Target size={20} className="flex-shrink-0" />
                       Marketing Teams
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Run sophisticated campaigns with personalized messaging at every touchpoint.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Users size={20} className="flex-shrink-0" />
                       Recruiters
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Engage candidates with tailored messaging that highlights relevant
                       opportunities.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Zap size={20} className="flex-shrink-0" />
                       Growth Teams
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Drive user acquisition and engagement with data-driven, personalized outreach.
                     </p>
                   </div>
@@ -379,7 +379,7 @@ export default function Outreach() {
             </div>
           </div>
 
-          <div className="mt-20 pt-12 border-t border-black/10">
+          <div className="mt-20 pt-12 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
               <div>
                 <h2
@@ -391,7 +391,7 @@ export default function Outreach() {
                 >
                   Ready to scale your outreach intelligently?
                 </h2>
-                <p className="text-black/60">
+                <p className="text-white/60">
                   Discover how automated mass outreach at scale transforms your pipeline with personalized intelligence
                 </p>
               </div>

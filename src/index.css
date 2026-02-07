@@ -16,12 +16,12 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: #f2f2f2;
+    background-color: #0d0d0d;
   }
 
   body {
     @apply text-white;
-    background-color: #f2f2f2;
+    background-color: #0d0d0d;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     position: fixed;
     width: 100%;
@@ -90,6 +90,6 @@
 }
 
 .fixed.bottom-0 span {
-  color: white !important;
+  color: black !important;
 }
 

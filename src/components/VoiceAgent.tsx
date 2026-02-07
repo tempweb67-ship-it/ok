@@ -96,7 +96,7 @@ export default function VoiceAgent() {
           }
         }}
       />
-      <div className="text-black" style={{ minHeight: '100dvh' }}>
+      <div className="text-white" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-24 pb-12 sm:pb-20">
         <Breadcrumbs items={[
           { name: "Solutions", url: "/solutions" },
@@ -110,7 +110,7 @@ export default function VoiceAgent() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-black hover:text-black/70 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-white hover:text-white/70 transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -130,14 +130,14 @@ export default function VoiceAgent() {
               animate={heroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <PhoneCall size={18} className="text-blue-700 sm:w-5 sm:h-5" />
-              <span className="text-xs sm:text-sm text-blue-700 uppercase tracking-wider">
+              <PhoneCall size={18} className="text-blue-400 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm text-blue-400 uppercase tracking-wider">
                 Conversational AI
               </span>
             </motion.div>
 
             <motion.h1
-              className="text-black leading-[0.85] mb-4 sm:mb-6"
+              className="text-white leading-[0.85] mb-4 sm:mb-6"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                 fontWeight: 700,
@@ -152,7 +152,7 @@ export default function VoiceAgent() {
             </motion.h1>
 
             <motion.p
-              className="text-base sm:text-xl text-black/70 max-w-3xl leading-relaxed"
+              className="text-base sm:text-xl text-white/70 max-w-3xl leading-relaxed"
               initial={{ opacity: 0 }}
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -167,10 +167,10 @@ export default function VoiceAgent() {
 
           <UseCasesSection useCases={useCases} />
 
-          <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-lg p-6 sm:p-12 mb-10 sm:mb-20">
             <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8">
-              <div className="p-4 backdrop-blur-md bg-white/20 rounded-lg hidden sm:block">
-                <PhoneCall size={40} className="text-blue-600" />
+              <div className="p-4 backdrop-blur-md bg-white/5 rounded-lg hidden sm:block">
+                <PhoneCall size={40} className="text-blue-400" />
               </div>
               <div className="flex-1 w-full">
                 <h2
@@ -183,39 +183,39 @@ export default function VoiceAgent() {
                   Perfect For
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Headphones size={20} className="flex-shrink-0" />
                       Call Centers
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Handle high call volumes efficiently while maintaining quality customer interactions and reducing wait times.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Stethoscope size={20} className="flex-shrink-0" />
                       Healthcare Providers
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Automate appointment scheduling, reminders, and patient inquiries while maintaining HIPAA compliance.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Home size={20} className="flex-shrink-0" />
                       Real Estate Agencies
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Qualify leads, schedule property viewings, and follow up with prospects around the clock.
                     </p>
                   </div>
-                  <div className="backdrop-blur-md bg-white/20 border border-black/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
+                  <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Building2 size={20} className="flex-shrink-0" />
                       Service Businesses
                     </h3>
-                    <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white/60 leading-relaxed text-sm sm:text-base">
                       Manage bookings, answer common questions, and provide 24/7 customer support without additional staffing.
                     </p>
                   </div>
@@ -274,10 +274,10 @@ function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
         {useCases.map((useCase, index) => (
           <div
             key={index}
-            className="backdrop-blur-md bg-white/20 border border-black/10 rounded-2xl p-5 sm:p-8 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
+            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
           >
             <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{useCase.title}</h3>
-            <p className="text-black/60 leading-relaxed text-sm sm:text-base">
+            <p className="text-white/60 leading-relaxed text-sm sm:text-base">
               {useCase.description}
             </p>
           </div>
