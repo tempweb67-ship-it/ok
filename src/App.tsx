@@ -17,7 +17,7 @@ import Outreach from './components/Outreach';
 import Ecommerce from './components/Ecommerce';
 import Social from './components/Social';
 import Website from './components/Website';
-import FlowGradientBackground from './components/ui/flow-gradient-background';
+
 
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -32,7 +32,6 @@ function AppContent() {
 
   return (
     <div className="relative cursor-none" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
-      <FlowGradientBackground />
       <CustomCursor />
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
