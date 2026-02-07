@@ -69,7 +69,7 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
   return (
     <motion.div
       ref={ref}
-      className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 overflow-hidden group hover:border-blue-500/30 hover:bg-blue-500/10"
+      className="relative backdrop-blur-xl bg-white/[0.06] border border-white/[0.12] rounded-2xl p-5 sm:p-8 overflow-hidden group hover:border-blue-500/30 hover:bg-white/[0.10]"
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -98,7 +98,7 @@ export function FeatureCard({ feature, Icon, index }: FeatureCardProps) {
 
 export function HowItWorksSection({ steps }: { steps: Step[] }) {
   return (
-    <div className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
+    <div className="relative backdrop-blur-xl bg-white/[0.06] border border-white/[0.12] rounded-3xl p-6 sm:p-12 mb-10 sm:mb-20 overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
       <div className="max-w-3xl relative z-10">
         <h2
@@ -133,7 +133,7 @@ export function HowItWorksSection({ steps }: { steps: Step[] }) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-4 hover:border-blue-500/30"
+              className="backdrop-blur-xl bg-white/[0.06] border border-white/[0.12] rounded-xl p-4 hover:border-blue-500/30"
             >
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-7 h-7 rounded-full bg-blue-500/20 flex items-center justify-center text-sm font-bold text-blue-400">
@@ -199,7 +199,7 @@ export function BenefitsGrid({ benefits }: { benefits: Benefit[] }) {
       {benefits.map((benefit, index) => (
         <motion.div
           key={index}
-          className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 text-center overflow-hidden hover:border-blue-500/30 hover:bg-blue-500/10"
+          className="relative backdrop-blur-xl bg-white/[0.06] border border-white/[0.12] rounded-2xl p-6 sm:p-8 text-center overflow-hidden hover:border-blue-500/30 hover:bg-white/[0.10]"
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
