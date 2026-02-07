@@ -91,7 +91,7 @@ export default function SEO({
           "name": "Wexel",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://wexel.com/wexel.png"
+            "url": "https://wexel.com/wexel.jpg"
           }
         },
         "mainEntityOfPage": {
