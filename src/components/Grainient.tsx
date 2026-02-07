@@ -197,15 +197,17 @@ export default function Grainient({
     const mesh = new Mesh(gl, { geometry, program });
 
     const setSize = () => {
-      const width = Math.max(1, window.innerWidth);
-      const height = Math.max(1, window.innerHeight);
+      const rect = container.getBoundingClientRect();
+      const width = Math.max(1, Math.floor(rect.width));
+      const height = Math.max(1, Math.floor(rect.height));
       renderer.setSize(width, height);
       const res = program.uniforms.iResolution.value as Float32Array;
       res[0] = gl.drawingBufferWidth;
       res[1] = gl.drawingBufferHeight;
     };
 
-    window.addEventListener('resize', setSize);
+    const ro = new ResizeObserver(setSize);
+    ro.observe(container);
     setSize();
 
     let raf = 0;
@@ -219,7 +221,7 @@ export default function Grainient({
 
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener('resize', setSize);
+      ro.disconnect();
       try {
         container.removeChild(canvas);
       } catch {
@@ -236,8 +238,8 @@ export default function Grainient({
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 w-full h-full"
-      style={{ zIndex: 0 }}
+      className="fixed w-full overflow-hidden"
+      style={{ zIndex: 0, top: '-60px', left: 0, right: 0, bottom: '-60px' }}
     />
   );
 }
