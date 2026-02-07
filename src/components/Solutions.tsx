@@ -94,7 +94,7 @@ export default function Solutions() {
               }[feature.id];
 
               const content = (
-                <div className="group cursor-pointer h-full rounded-2xl border border-white/[0.05] bg-white/[0.01] hover:border-white/[0.12] hover:bg-white/[0.03] transition-all duration-300 p-5 sm:p-7 lg:p-8 flex flex-col">
+                <div className="group cursor-pointer h-full rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-blue-500/30 hover:bg-white/[0.05] transition-all duration-300 p-5 sm:p-7 lg:p-8 flex flex-col">
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                     <div className="flex-shrink-0 p-2.5 sm:p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
                       <Icon size={20} className="text-blue-400 sm:w-6 sm:h-6" />

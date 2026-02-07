@@ -33,10 +33,12 @@ function AppContent() {
   return (
     <div className="relative" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
       <Grainient
-        color1="#0d2868"
-        color2="#5227FF"
-        color3="#1a2847"
-        timeSpeed={1.3}
+        color1="#091a3d"
+        color2="#2a1580"
+        color3="#111e38"
+        timeSpeed={0.5}
+        contrast={1.1}
+        saturation={0.55}
       />
       <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
