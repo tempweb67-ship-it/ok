@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BottomMarquee from './components/Marquee';
+import Grainient from './components/Grainient';
 import Contact from './components/Contact';
 import Explore from './components/Explore';
 import Solutions from './components/Solutions';
@@ -31,6 +32,8 @@ function AppContent() {
 
   return (
     <div className="relative" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
+      <Grainient />
+      <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
       <main style={{ minHeight: '100dvh' }}>
@@ -51,6 +54,7 @@ function AppContent() {
       </Routes>
       </main>
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      </div>
     </div>
   );
 }
