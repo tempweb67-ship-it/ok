@@ -302,7 +302,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Enter the Revolution
+            Join the Revolution
           </motion.button>
         </div>
       </div>
