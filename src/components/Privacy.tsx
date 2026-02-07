@@ -234,7 +234,7 @@ export default function Privacy() {
                 </p>
                 <div className="space-y-2 text-white/60">
                   <p>Email: business@wexel.ai</p>
-                  <p>Don't feel concerned! We are here for you. :)</p>
+                  <p>We are here for you. :)</p>
                 </div>
               </div>
             </div>
