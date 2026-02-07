@@ -81,7 +81,7 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div className="space-y-2 sm:space-y-3">
+          <div className="space-y-2 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-4 lg:gap-5">
             {features.map((feature) => {
               const Icon = feature.icon;
               const linkProps = {
@@ -94,46 +94,43 @@ export default function Solutions() {
               }[feature.id];
 
               const content = (
-                <div className="group cursor-pointer py-5 sm:py-8 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/[0.03] transition-all duration-300">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 sm:gap-6 md:gap-8">
-                    <div className="flex items-start gap-3 sm:gap-6 flex-1">
-                      <div className="flex-shrink-0 p-2 sm:p-3 rounded-xl bg-white/5 border border-white/10">
-                        <Icon size={20} className="text-blue-400 sm:w-6 sm:h-6" />
-                      </div>
-
-                      <div className="flex-1">
-                        <p className="text-xs text-white/40 mb-1 sm:mb-3 uppercase tracking-[0.2em] font-semibold">
-                          {feature.category}
-                        </p>
-
-                        <h3
-                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-1 sm:mb-4"
-                          style={{
-                            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                            letterSpacing: '-0.02em',
-                          }}
-                        >
-                          {feature.title}
-                        </h3>
-
-                        <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-                          {feature.description}
-                        </p>
-                      </div>
+                <div className="group cursor-pointer h-full rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-blue-500/30 hover:bg-white/[0.05] transition-all duration-300 p-5 sm:p-7 lg:p-8 flex flex-col">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                    <div className="flex-shrink-0 p-2.5 sm:p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                      <Icon size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                     </div>
+                    <p className="text-xs text-white/40 uppercase tracking-[0.2em] font-semibold">
+                      {feature.category}
+                    </p>
+                  </div>
 
-                    <div className="flex items-center md:self-center ml-auto md:ml-0">
-                      <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 whitespace-nowrap">
-                        Learn more
-                        <ArrowRight size={16} />
-                      </span>
+                  <h3
+                    className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-2 sm:mb-3"
+                    style={{
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-white/50 text-sm sm:text-base leading-relaxed mb-5 sm:mb-8 flex-1">
+                    {feature.description}
+                  </p>
+
+                  <div className="flex items-center justify-between pt-4 sm:pt-5 border-t border-white/[0.06]">
+                    <span className="text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                      Learn more
+                    </span>
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+                      <ArrowRight size={14} className="text-blue-400 group-hover:translate-x-0.5 transition-transform duration-300 sm:w-4 sm:h-4" />
                     </div>
                   </div>
                 </div>
               );
 
               return linkProps ? (
-                <Link key={feature.id} to={linkProps}>
+                <Link key={feature.id} to={linkProps} className="block">
                   {content}
                 </Link>
               ) : (
