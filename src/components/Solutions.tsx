@@ -73,7 +73,7 @@ export default function Solutions() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-base sm:text-lg mt-1 sm:mt-2" style={{ color: '#ffffff' }}>
-                Always built from ground up on demand.
+                Always built from the ground up on demand.
               </p>
               <p className="text-sm sm:text-base mt-0.5 text-white/40">
                 Select a solution below to learn more.
