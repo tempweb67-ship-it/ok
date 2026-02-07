@@ -109,7 +109,7 @@ export default function Vision() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-              Every system we build is made in mind with security & backup plan. custom built everytime. Highly Scalable.
+              Every system we build is made in mind with security & backup plan. Custom built everytime. Highly Scalable.
             </p>
 
             <p className="text-sm text-white/40 mt-6">
