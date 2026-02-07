@@ -12,7 +12,7 @@ export default function Header({ onContactClick }: HeaderProps) {
           <Link
             to="/"
             className="uppercase leading-[0.85] inline-block"
-            style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: 'clamp(0.875rem, 1.5vw, 1.25rem)', color: '#B2B2B2' }}
+            style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: 'clamp(0.875rem, 1.5vw, 1.25rem)', color: '#ffffff' }}
           >
             Wexel
           </Link>
