@@ -201,7 +201,7 @@ function MissionSection() {
           Automation That Runs Without You
         </h3>
         <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-          We build AI Systems that wont go offline when there's an outage like recent one. System ships fast, gets measured, and improves over time.
+          We build AI Systems that wont go offline when there's an outage like recent one. System ships fast, gets measured, and is improved over time.
         </p>
       </div>
     </motion.div>
