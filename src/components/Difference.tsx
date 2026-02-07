@@ -1,4 +1,4 @@
-import { Sparkles, Zap, Target, Bot, LucideIcon } from 'lucide-react';
+import { Sparkles, Zap, Target, Bot } from 'lucide-react';
 import SEO from './SEO';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -91,17 +91,9 @@ export default function Difference() {
           </div>
 
           <div className="space-y-8">
-            {features.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <FeatureCard
-                  key={item.id}
-                  item={item}
-                  index={index}
-                  Icon={Icon}
-                />
-              );
-            })}
+            {features.map((item) => (
+              <FeatureCard key={item.id} item={item} />
+            ))}
           </div>
         </div>
       </div>
@@ -114,13 +106,12 @@ interface FeatureItem {
   id: number;
   title: string;
   description: string;
-  icon: LucideIcon;
   metric: string;
   metricLabel: string;
   tagline: string;
 }
 
-function FeatureCard({ item }: { item: FeatureItem; index: number; Icon: LucideIcon }) {
+function FeatureCard({ item }: { item: FeatureItem }) {
   return (
     <div className="group relative rounded-2xl p-8 backdrop-blur-md bg-white/20 border border-black/10 hover:bg-white/30 hover:border-black/20 transition-all duration-500">
       <div className="text-center">

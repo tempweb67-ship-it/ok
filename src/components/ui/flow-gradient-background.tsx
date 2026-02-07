@@ -249,7 +249,6 @@ class App {
 
   init() {
     this.gradientBackground.init();
-    const c = this.container;
     const onMove = (x: number, y: number) => {
       this.touchTexture.addTouch({ x: x / window.innerWidth, y: 1 - y / window.innerHeight });
     };
