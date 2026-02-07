@@ -148,7 +148,8 @@ export default function Grainient({
 
     const renderer = new Renderer({
       webgl: 2,
-      alpha: true,
+      alpha: false,
+      premultipliedAlpha: false,
       antialias: false,
       dpr: Math.min(window.devicePixelRatio || 1, 2),
     });
