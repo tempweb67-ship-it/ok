@@ -291,7 +291,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
               letterSpacing: '-0.02em',
             }}
           >
-            Join The Winner's Revolution
+            Join The Winners’ Revolution
           </h2>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10">
             Because winners automate and move with blazing speeds.
