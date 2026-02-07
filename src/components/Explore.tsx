@@ -66,7 +66,7 @@ export default function Explore() {
               const content = (
                 <div className="flex items-center justify-between">
                   <h3
-                    className="text-3xl md:text-4xl font-bold group-hover:text-blue-400 transition-colors"
+                    className="text-3xl md:text-4xl font-bold"
                     style={{
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       letterSpacing: '-0.02em',
@@ -74,7 +74,7 @@ export default function Explore() {
                   >
                     {item.name}
                   </h3>
-                  <div className="text-white group-hover:text-blue-400 transition-colors">
+                  <div className="text-white">
                     <Plus size={32} />
                   </div>
                 </div>

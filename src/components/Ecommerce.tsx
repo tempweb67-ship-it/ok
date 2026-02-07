@@ -98,7 +98,7 @@ export default function Ecommerce() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white hover:text-white/70 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-white transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions

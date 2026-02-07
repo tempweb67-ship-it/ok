@@ -113,7 +113,7 @@ export default function Solutions() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 sm:gap-6 md:gap-8">
                     <div className="flex items-start gap-3 sm:gap-6 flex-1">
                       <div className="flex-shrink-0">
-                        <Icon size={24} className="text-white/40 group-hover:text-white transition-all duration-500 sm:w-8 sm:h-8" />
+                        <Icon size={24} className="text-white/40 transition-all duration-500 sm:w-8 sm:h-8" />
                       </div>
 
                       <div className="flex-1">
@@ -122,7 +122,7 @@ export default function Solutions() {
                         </p>
 
                         <h3
-                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-1 sm:mb-4 group-hover:text-white/90 transition-all duration-300"
+                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-1 sm:mb-4 transition-all duration-300"
                           style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                             letterSpacing: '-0.02em',
@@ -131,14 +131,14 @@ export default function Solutions() {
                           {feature.title}
                         </h3>
 
-                        <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl group-hover:text-white/70 transition-all duration-300">
+                        <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl transition-all duration-300">
                           {feature.description}
                         </p>
                       </div>
                     </div>
 
                     <div className="flex items-center justify-end md:justify-start">
-                      <div className="text-white/0 group-hover:text-white group-hover:translate-x-2 transition-all duration-300">
+                      <div className="text-white/40 group-hover:translate-x-2 transition-all duration-300">
                         <ArrowRight size={20} className="sm:w-7 sm:h-7" />
                       </div>
                     </div>

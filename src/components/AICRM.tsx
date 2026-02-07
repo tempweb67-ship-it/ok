@@ -91,7 +91,7 @@ export default function AICRM() {
           >
             <Link
               to="/solutions"
-              className="inline-flex items-center gap-2 text-white hover:text-white/70 transition-all duration-300 mb-4 sm:mb-8"
+              className="inline-flex items-center gap-2 text-white transition-all duration-300 mb-4 sm:mb-8"
             >
               <ArrowLeft size={20} />
               Back to Solutions
@@ -202,7 +202,7 @@ function UseCasesSection({ useCases }: { useCases: UseCase[] }) {
             key={index}
             className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-8 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
           >
-            <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 hover:text-blue-400 transition-colors">{useCase.title}</h3>
+            <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4">{useCase.title}</h3>
             <p className="text-white/60 leading-relaxed text-sm sm:text-base">
               {useCase.description}
             </p>

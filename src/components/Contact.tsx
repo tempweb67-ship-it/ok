@@ -106,12 +106,12 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   className="space-y-6"
                 >
                   <div className="flex items-start gap-4 group">
-                    <Mail className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <Mail className="text-white/40 mt-1" size={28} />
                     <div>
                       <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Email</p>
                       <a
                         href="mailto:business@wexel.ai"
-                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
+                        className="text-white text-2xl inline-block font-mono"
                       >
                         {startAnimation && <GlitchText text="business@wexel.ai" />}
                       </a>
@@ -119,12 +119,12 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <Phone className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <Phone className="text-white/40 mt-1" size={28} />
                     <div>
                       <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Phone</p>
                       <a
                         href="tel:+918910949074"
-                        className="text-white text-2xl hover:text-white/60 transition-colors inline-block font-mono"
+                        className="text-white text-2xl inline-block font-mono"
                       >
                         {startAnimation && <GlitchText text="+91 8910949074" />}
                       </a>
@@ -136,7 +136,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                   </div>
 
                   <div className="flex items-start gap-4 group">
-                    <MapPin className="text-white/40 mt-1 group-hover:text-white transition-colors" size={28} />
+                    <MapPin className="text-white/40 mt-1" size={28} />
                     <div>
                       <p className="text-white/40 text-sm uppercase tracking-wider mb-2">Location</p>
                       <div className="text-white text-2xl font-mono">

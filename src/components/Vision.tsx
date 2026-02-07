@@ -229,7 +229,7 @@ function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardP
     >
       <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
         <div className="mb-6 p-3 bg-blue-500/20 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/30">
-          <Icon size={28} className="text-blue-400 group-hover:text-blue-400 transition-colors" />
+          <Icon size={28} className="text-blue-400" />
         </div>
         <h3 className="text-xl font-bold mb-3">{title}</h3>
         <p className="text-white/60 leading-relaxed">{description}</p>
@@ -260,7 +260,7 @@ function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
       <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
         <div className="flex items-start gap-4 mb-4">
           <div className="p-3 bg-blue-500/20 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/30">
-            <Icon size={24} className="text-blue-400 group-hover:text-blue-400 transition-colors" />
+            <Icon size={24} className="text-blue-400" />
           </div>
           <h3 className="text-xl font-bold pt-2">{title}</h3>
         </div>

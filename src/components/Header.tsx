@@ -20,7 +20,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-white/10">
           <button
             onClick={onContactClick}
-            className="text-[11px] uppercase tracking-wide font-medium transition-colors text-white hover:text-blue-400"
+            className="text-[11px] uppercase tracking-wide font-medium text-white"
             data-contact-btn
           >
             Contact ↓
@@ -29,7 +29,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         <div className="col-span-4 md:col-span-6 px-4 md:px-6 py-4">
           <Link
             to="/explore"
-            className="text-[11px] uppercase tracking-wide font-medium transition-colors text-white hover:text-emerald-400"
+            className="text-[11px] uppercase tracking-wide font-medium text-white"
           >
             [ Explore ]
           </Link>

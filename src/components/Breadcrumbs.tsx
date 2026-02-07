@@ -27,7 +27,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         >
           <Link
             to="/"
-            className="flex items-center gap-1 text-white/60 hover:text-white transition-colors"
+            className="flex items-center gap-1 text-white/60"
             itemProp="item"
           >
             <Home size={16} />
@@ -56,7 +56,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
               <>
                 <Link
                   to={item.url}
-                  className="text-white/60 hover:text-white transition-colors"
+                  className="text-white/60"
                   itemProp="item"
                 >
                   <span itemProp="name">{item.name}</span>
