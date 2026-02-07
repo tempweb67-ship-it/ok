@@ -1,4 +1,5 @@
 import { Shield, Lock, Eye, Database, Bell, Mail } from 'lucide-react';
+import SEO from './SEO';
 
 export default function Privacy() {
   const sections = [
@@ -80,11 +81,21 @@ export default function Privacy() {
   ];
 
   return (
-    <div className="bg-black text-white" style={{ minHeight: '100dvh' }}>
-      <div className="pt-32 pb-20">
-        <div className="max-w-5xl mx-auto px-4 md:px-8">
-          {/* Hero Section */}
-          <div className="mb-24">
+    <>
+      <SEO
+        title="Privacy Policy - How Wexel Protects Your Data | Wexel"
+        description="Read Wexel's privacy policy to understand how we collect, use, and protect your personal information. We implement enterprise-grade security measures including SSL/TLS encryption and comply with GDPR regulations."
+        keywords="Wexel privacy policy, data protection, GDPR compliance, data security, personal information protection, cookie policy, data privacy rights"
+        canonical="https://wexel.com/privacy"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://wexel.com/' },
+          { name: 'Privacy Policy', url: 'https://wexel.com/privacy' }
+        ]}
+      />
+      <div className="bg-black text-white" style={{ minHeight: '100dvh' }}>
+        <div className="pt-32 pb-20">
+          <div className="max-w-5xl mx-auto px-4 md:px-8">
+            <div className="mb-24">
             <div className="flex items-center gap-3 mb-6">
               <Shield size={32} className="text-white" />
             </div>
@@ -238,8 +249,9 @@ export default function Privacy() {
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.
             </p>
           </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

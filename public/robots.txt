@@ -5,9 +5,40 @@ Allow: /
 # Sitemap location
 Sitemap: https://wexel.com/sitemap.xml
 
-# Block common problematic bots (optional)
+# Allow AI answer engines and assistants
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Crawl delay for aggressive SEO bots
 User-agent: AhrefsBot
+Crawl-delay: 10
+
 User-agent: SemrushBot
 Crawl-delay: 10
 
-# Disallow specific paths if needed (none at the moment)
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10

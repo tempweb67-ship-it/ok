@@ -1,5 +1,6 @@
 import { Building2, ShoppingCart, Heart, Briefcase, Factory, GraduationCap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from './SEO';
 
 export default function Industries() {
   const industries = [
@@ -42,11 +43,46 @@ export default function Industries() {
   ];
 
   return (
-    <div className="text-black" style={{ minHeight: '100dvh' }}>
-      <div className="pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-16">
-            <h1
+    <>
+      <SEO
+        title="Industries We Serve - AI Automation for Healthcare, Retail, Real Estate & More | Wexel"
+        description="Wexel delivers industry-specific AI automation solutions for e-commerce, healthcare, professional services, real estate, manufacturing, and education. Custom digital transformation strategies for your sector."
+        keywords="AI automation industries, healthcare AI, e-commerce automation, real estate AI, manufacturing AI, education technology, professional services automation, industry-specific AI solutions"
+        canonical="https://wexel.com/industries"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://wexel.com/' },
+          { name: 'Industries', url: 'https://wexel.com/industries' }
+        ]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Industries We Serve",
+          "description": "Industry-specific AI automation and digital transformation solutions",
+          "url": "https://wexel.com/industries",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", ".hero-description"]
+          },
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Industries Served by Wexel",
+            "numberOfItems": 6,
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "E-Commerce & Retail", "description": "AI-powered personalization, intelligent inventory optimization, and omnichannel experiences" },
+              { "@type": "ListItem", "position": 2, "name": "Healthcare", "description": "Intelligent automation, predictive analytics, and secure platforms for care delivery" },
+              { "@type": "ListItem", "position": 3, "name": "Professional Services", "description": "AI-driven insights, automated workflows, and intelligent systems for service delivery" },
+              { "@type": "ListItem", "position": 4, "name": "Real Estate", "description": "Automated lead nurturing, intelligent matching, and predictive market intelligence" },
+              { "@type": "ListItem", "position": 5, "name": "Manufacturing", "description": "Smart factory solutions, predictive maintenance, and supply chain intelligence" },
+              { "@type": "ListItem", "position": 6, "name": "Education", "description": "Adaptive learning platforms, personalized experiences, and data-driven insights" }
+            ]
+          }
+        }}
+      />
+      <div className="text-black" style={{ minHeight: '100dvh' }}>
+        <div className="pt-32 pb-20">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="mb-16">
+              <h1
               className="text-black leading-[0.85] mb-4"
               style={{
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -71,7 +107,7 @@ export default function Industries() {
             {industries.map((industry) => {
               const Icon = industry.icon;
               return (
-                <div
+                <article
                   key={industry.id}
                   className="group relative"
                 >
@@ -98,7 +134,7 @@ export default function Industries() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </article>
               );
             })}
           </div>
@@ -131,8 +167,9 @@ export default function Industries() {
               </Link>
             </div>
           </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

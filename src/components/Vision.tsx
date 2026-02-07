@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon } from 'lucide-react';
 import Contact from './Contact';
+import SEO from './SEO';
 
 export default function Vision() {
   const [contactOpen, setContactOpen] = useState(false);
@@ -51,6 +52,34 @@ export default function Vision() {
 
   return (
     <>
+      <SEO
+        title="Our Vision - Transforming Businesses for Tomorrow with AI | Wexel"
+        description="Discover Wexel's vision for the future of business automation. We pioneer AI-driven digital transformation with innovation, human-centered design, and end-to-end solutions that empower organizations to thrive."
+        keywords="Wexel vision, AI transformation vision, digital transformation strategy, AI innovation, business automation future, human-centered AI design, enterprise AI solutions"
+        canonical="https://wexel.com/vision"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://wexel.com/' },
+          { name: 'Our Vision', url: 'https://wexel.com/vision' }
+        ]}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Our Vision - Wexel",
+          "description": "Wexel's vision for AI-driven digital transformation and business automation",
+          "url": "https://wexel.com/vision",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Wexel",
+            "description": "AI-First Automation Agency enabling digital transformation at scale",
+            "knowsAbout": ["Innovation-Driven Transformation", "End-to-End Solutions", "Human-Centered Design"],
+            "slogan": "Transforming Businesses for Tomorrow"
+          },
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "h2"]
+          }
+        }}
+      />
       <Contact isOpen={contactOpen} onClose={() => setContactOpen(false)} />
       <div className="text-black" style={{ minHeight: '100dvh' }}>
         <div className="pt-32 pb-20">

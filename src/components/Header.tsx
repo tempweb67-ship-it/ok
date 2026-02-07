@@ -10,8 +10,8 @@ export default function Header({ onContactClick }: HeaderProps) {
   const wexelColor = isPrivacyPage ? '#FFFFFF' : '#4D4D4D';
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-black/10">
-      <div className="grid grid-cols-12 gap-0">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/20 border-b border-black/10" role="banner">
+      <nav aria-label="Main navigation" className="grid grid-cols-12 gap-0">
         <div className="col-span-4 md:col-span-3 px-4 md:px-6 py-4 border-r border-black/10">
           <Link
             to="/"
@@ -42,7 +42,7 @@ export default function Header({ onContactClick }: HeaderProps) {
             [ Explore ]
           </Link>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }
