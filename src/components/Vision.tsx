@@ -93,7 +93,7 @@ export default function Vision() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-blue-500/20 rounded-full mb-8 border border-blue-500/30">
               <Rocket size={16} className="text-blue-400" />
-              <span className="text-sm text-blue-400 uppercase tracking-wider">Our Vision</span>
+              <span className="text-sm text-blue-400 uppercase tracking-wider">Full Speed</span>
             </div>
 
             <h1
