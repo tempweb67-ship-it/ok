@@ -75,28 +75,13 @@ export default function Solutions() {
               <p className="text-base sm:text-lg mt-1 sm:mt-2" style={{ color: '#ffffff' }}>
                 Comprehensive digital transformation solutions with endless possibilities.
               </p>
-              <p
-                className="text-sm sm:text-base mt-0.5"
-                style={{
-                  color: '#00cc6a',
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                  width: 'fit-content',
-                  animation: 'typing 2s steps(30) 0.5s forwards'
-                }}
-              >
-                Click on them to learn more.
+              <p className="text-sm sm:text-base mt-0.5 text-white/40">
+                Select a solution below to learn more.
               </p>
-              <style>{`
-                @keyframes typing {
-                  from { width: 0; }
-                  to { width: 100%; }
-                }
-              `}</style>
             </div>
           </div>
 
-          <div className="space-y-0">
+          <div className="space-y-2 sm:space-y-3">
             {features.map((feature) => {
               const Icon = feature.icon;
               const linkProps = {
@@ -109,11 +94,11 @@ export default function Solutions() {
               }[feature.id];
 
               const content = (
-                <div className="py-4 sm:py-12 border-t border-white/10 group cursor-pointer transition-all duration-500">
+                <div className="group cursor-pointer py-5 sm:py-8 px-4 sm:px-8 -mx-4 sm:-mx-8 rounded-2xl border border-transparent hover:border-white/10 hover:bg-white/[0.03] transition-all duration-300">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 sm:gap-6 md:gap-8">
                     <div className="flex items-start gap-3 sm:gap-6 flex-1">
-                      <div className="flex-shrink-0">
-                        <Icon size={24} className="text-white/40 transition-all duration-500 sm:w-8 sm:h-8" />
+                      <div className="flex-shrink-0 p-2 sm:p-3 rounded-xl bg-white/5 border border-white/10">
+                        <Icon size={20} className="text-blue-400 sm:w-6 sm:h-6" />
                       </div>
 
                       <div className="flex-1">
@@ -122,7 +107,7 @@ export default function Solutions() {
                         </p>
 
                         <h3
-                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-1 sm:mb-4 transition-all duration-300"
+                          className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-1 sm:mb-4"
                           style={{
                             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                             letterSpacing: '-0.02em',
@@ -131,16 +116,17 @@ export default function Solutions() {
                           {feature.title}
                         </h3>
 
-                        <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl transition-all duration-300">
+                        <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
                           {feature.description}
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-end md:justify-start">
-                      <div className="text-white/40 group-hover:translate-x-2 transition-all duration-300">
-                        <ArrowRight size={20} className="sm:w-7 sm:h-7" />
-                      </div>
+                    <div className="flex items-center md:self-center ml-auto md:ml-0">
+                      <span className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 whitespace-nowrap">
+                        Learn more
+                        <ArrowRight size={16} />
+                      </span>
                     </div>
                   </div>
                 </div>
