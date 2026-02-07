@@ -32,7 +32,12 @@ function AppContent() {
 
   return (
     <div className="relative" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
-      <Grainient />
+      <Grainient
+        color1="#0d2868"
+        color2="#5227FF"
+        color3="#1a2847"
+        timeSpeed={1.3}
+      />
       <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
