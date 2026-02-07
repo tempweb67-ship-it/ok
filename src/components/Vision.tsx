@@ -294,7 +294,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
             Join The Winner's Revolution
           </h2>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10">
-            Systems that let you focus on what you do best. Less manual work. More output. That is the whole point.
+            Because winners automate and move with blazing speeds.
           </p>
           <motion.button
             onClick={onContactClick}
