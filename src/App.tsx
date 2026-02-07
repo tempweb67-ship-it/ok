@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import CustomCursor from './components/CustomCursor';
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BottomMarquee from './components/Marquee';
@@ -31,8 +31,7 @@ function AppContent() {
   }, [location.pathname]);
 
   return (
-    <div className="relative cursor-none" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
-      <CustomCursor />
+    <div className="relative" style={{ minHeight: '100dvh', overflowX: 'clip', width: '100%', maxWidth: '100vw' }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
       {showMarquee && <BottomMarquee />}
       <main style={{ minHeight: '100dvh' }}>
