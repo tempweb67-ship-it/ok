@@ -10,17 +10,17 @@ export default function Website() {
     {
       icon: Eye,
       title: 'Conversion-Focused Design',
-      description: 'Every pixel engineered with purpose—transforming visitors into customers through strategic design, intuitive flows, and persuasive experiences that drive measurable results.',
+      description: 'Strategic layouts, clear CTAs, and user flows designed to move visitors toward conversion. Every page element earns its place.',
     },
     {
       icon: Zap,
       title: 'Lightning Performance',
-      description: 'Blazing-fast load times and optimized experiences that keep visitors engaged. Superior performance that boosts rankings, reduces bounce rates, and maximizes conversions.',
+      description: 'Sub-2-second load times. Optimized assets. No render-blocking resources. Fast sites rank higher and convert better.',
     },
     {
       icon: Smartphone,
       title: 'Responsive Excellence',
-      description: 'Flawless experiences across every device and screen size. Adaptive design that maintains brand impact and usability whether viewed on mobile, tablet, or desktop.',
+      description: 'Looks and works perfectly on mobile, tablet, and desktop. No compromises on any screen size.',
     },
   ];
 
@@ -72,9 +72,9 @@ export default function Website() {
   return (
     <>
       <SEO
-        title="Next-Gen Web Development - AI-Powered Website Design & Development | Wexel"
-        description="Transform your digital presence with cutting-edge web development. High-performance websites engineered for conversion, optimized for search engines, and designed to dominate. Modern web experiences that captivate and scale."
-        keywords="web development, website design, AI website, modern web development, high-performance websites, responsive web design, SEO-optimized websites, web design agency, custom website development, professional web design"
+        title="Web Development - Fast, Conversion-Focused Websites | Wexel"
+        description="High-performance websites built to convert visitors into customers. Sub-2-second load times. SEO-optimized. Responsive across every device. No bloat."
+        keywords="web development, website design, high-performance websites, SEO-optimized websites, responsive web design, conversion-focused websites, custom web development"
         canonical="https://wexel.com/solutions/website"
         schema={{
           "@context": "https://schema.org",
@@ -84,7 +84,7 @@ export default function Website() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "Cutting-edge websites that captivate, convert, and scale with performance optimization",
+          "description": "High-performance, conversion-focused websites with SEO optimization and responsive design",
           "serviceType": "Web Development",
           "areaServed": "Worldwide"
         }}
@@ -146,7 +146,7 @@ export default function Website() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform your digital presence into a competitive advantage with websites that do more than look beautiful—they convert, engage, and scale. Powered by cutting-edge technology and strategic design, we create web experiences that captivate audiences, drive measurable growth, and position your brand as an industry leader. Every element engineered to maximize impact and unlock endless possibilities.
+              Websites that load fast, rank well, and convert visitors into customers. No bloated templates. No slow page speeds. Clean code, strategic design, and SEO built into the foundation. Every page has a job and it does it.
             </motion.p>
           </motion.div>
 
@@ -184,15 +184,15 @@ export default function Website() {
             steps={[
               {
                 title: 'Discovery & Strategy',
-                description: 'Deep dive into your business goals, target audience, and competitive landscape to architect a web strategy that drives transformation.'
+                description: 'We study your business, audience, and competitors. Then map a site structure that matches how your customers actually buy.'
               },
               {
                 title: 'Design & Development',
-                description: 'Craft stunning interfaces and robust architecture using modern frameworks, best practices, and performance optimization techniques.'
+                description: 'Clean interfaces built on modern frameworks. Optimized for speed and maintainability from the start.'
               },
               {
                 title: 'Launch & Optimization',
-                description: 'Deploy your website with comprehensive testing, then continuously optimize based on real user data and performance metrics.'
+                description: 'Ship after thorough testing. Then optimize continuously based on real user data and performance metrics.'
               }
             ]}
           />
@@ -255,8 +255,8 @@ export default function Website() {
           </div>
 
           <CTASection
-            title="Ready to transform your web presence?"
-            description="Create a digital experience that unlocks endless growth possibilities"
+            title="Need a website that actually converts?"
+            description="Fast, clean, SEO-ready sites built for results, not awards"
           />
         </div>
       </div>

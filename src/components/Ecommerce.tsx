@@ -12,17 +12,17 @@ export default function Ecommerce() {
     {
       icon: Brain,
       title: 'Intelligent Product Discovery',
-      description: 'Transform browsing into buying with AI that predicts desires, understands intent, and surfaces perfect products at the perfect moment—driving conversion and basket value.',
+      description: 'AI surfaces the right products at the right time based on browsing behavior and purchase intent. More clicks turn into sales.',
     },
     {
       icon: TrendingUp,
       title: 'Strategic Pricing Intelligence',
-      description: 'Maximize profitability with real-time pricing that responds to market dynamics, demand signals, and customer value—optimizing revenue while maintaining competitive advantage.',
+      description: 'Prices adjust in real time based on demand, competition, and customer segment. Maximize margin without manual repricing.',
     },
     {
       icon: Users,
       title: 'Behavioral Intelligence',
-      description: 'Unlock deep customer understanding with AI-powered segmentation that identifies patterns, predicts actions, and enables hyper-targeted experiences that drive loyalty and lifetime value.',
+      description: 'AI segments buyers by actual behavior patterns. You see who buys what, when, and why. Then target them accordingly.',
     },
   ];
 
@@ -71,9 +71,9 @@ export default function Ecommerce() {
   return (
     <>
       <SEO
-        title="E-Commerce Intelligence - AI-Powered E-Commerce Automation | Wexel"
-        description="Transform your online store with AI e-commerce intelligence. Predictive merchandising, dynamic pricing optimization, personalized shopping experiences, and AI-driven analytics that maximize revenue and conversions."
-        keywords="e-commerce AI, AI e-commerce, e-commerce automation, AI retail, intelligent merchandising, dynamic pricing AI, e-commerce personalization, AI shopping, retail automation, e-commerce optimization"
+        title="E-Commerce AI - Dynamic Pricing, Product Recs & Cart Recovery | Wexel"
+        description="AI for online stores. Dynamic pricing, smart product recommendations, cart abandonment recovery, and inventory intelligence. Higher AOV. More conversions. Less guesswork."
+        keywords="e-commerce AI, dynamic pricing, product recommendations, cart recovery, e-commerce automation, AI retail, inventory intelligence"
         canonical="https://wexel.com/solutions/ecommerce"
         schema={{
           "@context": "https://schema.org",
@@ -83,7 +83,7 @@ export default function Ecommerce() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "AI-driven e-commerce intelligence with predictive merchandising and dynamic optimization",
+          "description": "AI e-commerce systems for dynamic pricing, product recommendations, cart recovery, and inventory management",
           "serviceType": "E-Commerce Automation",
           "areaServed": "Worldwide"
         }}
@@ -145,7 +145,7 @@ export default function Ecommerce() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Transform your online business from transactional to exceptional with AI-driven intelligence that maximizes every interaction. Deploy predictive merchandising, dynamic optimization, and real-time insights that turn browsers into buyers and transactions into lasting relationships. Every product discovery becomes personalized, every price point optimized, and every customer experience elevated to drive sustainable growth.
+              AI that knows what your customers want before they do. Dynamic pricing adjusts in real time. Product recs surface the right items. Abandoned carts get recovered automatically. Higher AOV, more conversions, and inventory that stays right-sized.
             </motion.p>
           </motion.div>
 
@@ -579,10 +579,10 @@ export default function Ecommerce() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to transform your commerce experience?
+                  Want higher AOV and fewer abandoned carts?
                 </h2>
                 <p className="text-white/60">
-                  Unlock endless revenue possibilities with intelligent e-commerce transformation
+                  AI-powered pricing, recommendations, and recovery that move the numbers that matter
                 </p>
               </div>
               <Link

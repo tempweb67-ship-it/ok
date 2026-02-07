@@ -7,42 +7,42 @@ export default function Solutions() {
     {
       id: 1,
       title: 'Intelligent AI CRM',
-      description: 'Transform customer relationships with AI-driven automation, predictive analytics, and seamless workflow orchestration that drives revenue growth.',
+      description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
       category: 'Customer Experience',
       icon: BarChart3,
     },
     {
       id: 2,
       title: 'AI Voice Solutions',
-      description: 'Deploy autonomous voice agents that revolutionize customer interactions, scale operations infinitely, and deliver human-quality experiences 24/7.',
+      description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
       category: 'Conversational AI',
       icon: PhoneCall,
     },
     {
       id: 3,
       title: 'Mass Outreach Automation',
-      description: 'Transform outreach with hyper-personalized campaigns, intelligent segmentation, and AI-powered content that converts at scale.',
+      description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
       category: 'Digital Marketing',
       icon: Mail,
     },
     {
       id: 4,
       title: 'E-Commerce Intelligence',
-      description: 'Elevate your online business with predictive merchandising, dynamic optimization, and AI-driven insights that maximize every transaction.',
+      description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
       category: 'Commerce Solutions',
       icon: ShoppingCart,
     },
     {
       id: 5,
       title: 'Autonomous Social Media',
-      description: 'Amplify your brand presence with intelligent automation, performance analytics, and AI-powered engagement strategies across all channels.',
+      description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
       category: 'Social Intelligence',
       icon: Share2,
     },
     {
       id: 6,
       title: 'Next-Gen Web Experiences',
-      description: 'Transform your digital presence with cutting-edge websites that captivate, convert, and scale—engineered for performance, optimized for growth, and designed to dominate.',
+      description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
       category: 'Digital Presence',
       icon: Globe,
     },
@@ -51,9 +51,9 @@ export default function Solutions() {
   return (
     <>
       <SEO
-        title="AI Automation Solutions - Voice AI, CRM, Marketing & E-Commerce | Wexel"
-        description="Comprehensive AI automation solutions for modern businesses. AI voice agents, intelligent CRM, mass outreach automation, e-commerce intelligence, social media automation, and next-gen web development. Transform your business with AI."
-        keywords="AI automation solutions, AI voice solutions, AI CRM, email automation, e-commerce automation, social media automation, web development, business automation, digital transformation solutions"
+        title="AI Automation Solutions - Voice, CRM, Outreach, E-Commerce, Social & Web | Wexel"
+        description="Six core AI automation systems. Voice agents, CRM, mass outreach, e-commerce, social media, and web development. Each one built to run without babysitting."
+        keywords="AI automation solutions, AI voice agents, AI CRM, mass outreach automation, e-commerce AI, social media automation, web development, Wexel"
         canonical="https://wexel.com/solutions"
       />
       <div className="text-white" style={{ minHeight: '100dvh' }}>
@@ -73,7 +73,7 @@ export default function Solutions() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-base sm:text-lg mt-1 sm:mt-2" style={{ color: '#ffffff' }}>
-                Comprehensive digital transformation solutions with endless possibilities.
+                Six systems. Each one built to run without you.
               </p>
               <p className="text-sm sm:text-base mt-0.5 text-white/40">
                 Select a solution below to learn more.
@@ -151,10 +151,10 @@ export default function Solutions() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to transform your business?
+                  Need a system that works while you sleep?
                 </h2>
                 <p className="text-white/60 text-sm sm:text-base">
-                  Partner with us to unlock endless possibilities and accelerate your digital evolution
+                  Tell us what is broken. We will tell you exactly how to fix it.
                 </p>
               </div>
               <Link

@@ -10,17 +10,17 @@ export default function Outreach() {
     {
       icon: Target,
       title: 'Precision Personalization',
-      description: 'Transform every outreach touchpoint with AI that crafts individually tailored messages based on deep behavioral insights, engagement patterns, and contextual intelligence.',
+      description: 'Every email is written for one person. AI uses behavioral data, engagement history, and context to craft messages that feel personal because they are.',
     },
     {
       icon: Shield,
       title: 'Guaranteed Deliverability',
-      description: 'Ensure your message reaches decision-makers with advanced delivery optimization that bypasses filters and maximizes inbox placement rates consistently.',
+      description: 'Advanced delivery optimization that gets your emails into primary inboxes, not spam folders. 95% inbox placement.',
     },
     {
       icon: Zap,
       title: 'Infinite Scale',
-      description: 'Break capacity barriers with automation that sends thousands of authentically personalized emails—each one optimized to engage, persuade, and convert.',
+      description: 'Send thousands of unique, personalized emails per day. No templates. No limits. Each one optimized to get a reply.',
     },
   ];
 
@@ -72,9 +72,9 @@ export default function Outreach() {
   return (
     <>
       <SEO
-        title="Mass Outreach Automation - AI Email Marketing & Sales Automation | Wexel"
-        description="Scale outreach with AI-powered email automation. Hyper-personalized campaigns, intelligent segmentation, and automated mass outreach that converts. Send thousands of personalized emails at scale with AI precision."
-        keywords="mass outreach automation, email automation, AI email marketing, automated email campaigns, cold email automation, sales outreach automation, personalized email automation, AI marketing automation, bulk email automation, lead generation automation"
+        title="Mass Outreach Automation - AI Personalized Email at Scale | Wexel"
+        description="Send thousands of individually personalized emails that land in inboxes, not spam. AI writes the copy, optimizes send times, and tracks every open and reply."
+        keywords="mass outreach automation, AI email marketing, cold email automation, personalized email at scale, sales outreach automation, email deliverability"
         canonical="https://wexel.com/solutions/outreach"
         schema={{
           "@context": "https://schema.org",
@@ -84,7 +84,7 @@ export default function Outreach() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "AI-powered mass outreach with hyper-personalized campaigns and intelligent automation",
+          "description": "AI-powered mass outreach with individually personalized emails, optimized timing, and high deliverability",
           "serviceType": "Email Marketing Automation",
           "areaServed": "Worldwide"
         }}
@@ -146,7 +146,7 @@ export default function Outreach() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Scale your outreach to thousands while maintaining authentic personalization. Our AI-powered automation crafts individually tailored messages that cut through noise, bypass spam filters, and drive genuine engagement. Send hyper-personalized campaigns at unlimited scale—each message optimized for conversion, every prospect treated like a one-person conversation.
+              AI writes a unique email for every prospect. Not mail merge. Actual personalization based on who they are and what they care about. Thousands go out. They land in inboxes, not spam. And you track every open, click, and reply.
             </motion.p>
           </motion.div>
 
@@ -389,10 +389,10 @@ export default function Outreach() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to scale your outreach intelligently?
+                  Tired of emails going to spam?
                 </h2>
                 <p className="text-white/60">
-                  Discover how automated mass outreach at scale transforms your pipeline with personalized intelligence
+                  AI-written, individually personalized emails that actually get replies
                 </p>
               </div>
               <Link

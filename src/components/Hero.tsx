@@ -21,9 +21,9 @@ export default function Hero() {
   return (
     <>
       <SEO
-        title="Wexel - AI-First Automation Agency | Voice AI, CRM & Marketing Automation Solutions"
-        description="Transform your business with Wexel's AI-First automation solutions. Expert in AI voice agents, intelligent CRM, mass outreach automation, e-commerce AI, and social media automation. Drive growth with cutting-edge AI technology."
-        keywords="AI automation, voice automation, AI voice agents, AI CRM, conversational AI, mass outreach automation, email automation, e-commerce AI, social media automation, AI marketing, digital transformation, business automation"
+        title="Wexel - AI Automation Agency | Voice Agents, CRM, Outreach & E-Commerce"
+        description="Wexel builds AI automation systems for businesses. Voice agents, CRM, mass outreach, e-commerce, social media, and web. We specialize so you scale."
+        keywords="AI automation agency, AI voice agents, AI CRM, mass outreach automation, e-commerce AI, social media automation, business automation, Wexel"
         canonical="https://wexel.com/"
       />
       <div>

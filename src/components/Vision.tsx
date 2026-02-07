@@ -13,17 +13,17 @@ export default function Vision() {
     {
       icon: Lightbulb,
       title: 'Innovation-Driven Transformation',
-      description: 'Leveraging cutting-edge AI and emerging technologies to reimagine how your business operates, competes, and delivers value.'
+      description: 'We use AI where it makes a real difference. Not for the sake of it. To replace manual processes that slow your business down.'
     },
     {
       icon: Globe,
       title: 'End-to-End Solutions',
-      description: 'Comprehensive digital transformation from strategy to execution, ensuring seamless integration across all business functions and markets.'
+      description: 'Strategy through execution. We handle the full build, integration, and deployment. No handoffs. No gaps.'
     },
     {
       icon: Users,
       title: 'Human-Centered Design',
-      description: 'Transformation solutions that empower your people, enhance experiences, and unlock your organization\'s full potential.'
+      description: 'Automation built around how your team actually works. Not the other way around.'
     }
   ];
 
@@ -31,31 +31,31 @@ export default function Vision() {
     {
       icon: Sparkles,
       title: 'Transparency',
-      description: 'Clear insights into our transformation approach, technology roadmaps, and measurable outcomes at every stage.'
+      description: 'You see exactly what we are building, why, and what results it produces. No black boxes.'
     },
     {
       icon: Target,
       title: 'Excellence',
-      description: 'Delivering world-class solutions with precision, backed by proven methodologies and continuous optimization.'
+      description: 'We ship clean work that performs. Every system gets measured against real numbers, not vanity metrics.'
     },
     {
       icon: Heart,
       title: 'Partnership',
-      description: 'True collaboration from discovery to deployment. Your transformation journey is our shared mission.'
+      description: 'We work alongside your team from discovery to deployment. Your success is the only metric that matters.'
     },
     {
       icon: Shield,
       title: 'Trust & Security',
-      description: 'Enterprise-grade security, ethical AI practices, and unwavering commitment to protecting your data and privacy.'
+      description: 'Enterprise-grade security. Ethical AI practices. Your data stays protected. No exceptions.'
     }
   ];
 
   return (
     <>
       <SEO
-        title="Our Vision - Transforming Businesses for Tomorrow with AI | Wexel"
-        description="Discover Wexel's vision for the future of business automation. We pioneer AI-driven digital transformation with innovation, human-centered design, and end-to-end solutions that empower organizations to thrive."
-        keywords="Wexel vision, AI transformation vision, digital transformation strategy, AI innovation, business automation future, human-centered AI design, enterprise AI solutions"
+        title="Our Vision - AI Automation That Runs Your Business | Wexel"
+        description="Wexel builds AI systems that replace manual work with automation. Our focus: practical solutions that ship fast, measure results, and scale with your business."
+        keywords="Wexel vision, AI automation agency, business automation, AI-first approach, practical AI solutions"
         canonical="https://wexel.com/vision"
         breadcrumbs={[
           { name: 'Home', url: 'https://wexel.com/' },
@@ -65,14 +65,14 @@ export default function Vision() {
           "@context": "https://schema.org",
           "@type": "AboutPage",
           "name": "Our Vision - Wexel",
-          "description": "Wexel's vision for AI-driven digital transformation and business automation",
+          "description": "Wexel builds practical AI automation that ships fast, measures results, and scales with your business",
           "url": "https://wexel.com/vision",
           "mainEntity": {
             "@type": "Organization",
             "name": "Wexel",
-            "description": "AI-First Automation Agency enabling digital transformation at scale",
+            "description": "AI-First Automation Agency building systems that run businesses",
             "knowsAbout": ["Innovation-Driven Transformation", "End-to-End Solutions", "Human-Centered Design"],
-            "slogan": "Transforming Businesses for Tomorrow"
+            "slogan": "AI Systems That Run Your Business"
           },
           "speakable": {
             "@type": "SpeakableSpecification",
@@ -105,11 +105,11 @@ export default function Vision() {
                 fontSize: 'clamp(2.5rem, 10vw, 6rem)',
               }}
             >
-              Transforming Businesses for Tomorrow
+              We Build Systems That Run Your Business
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-              We're pioneering digital transformation solutions that unlock endless possibilities for businesses ready to evolve, scale, and thrive in the AI era.
+              Every system we build replaces manual work with automation that runs 24/7. We ship fast, measure everything, and only keep what works.
             </p>
 
             <p className="text-sm text-white/40 mt-6">
@@ -122,7 +122,7 @@ export default function Vision() {
           <div className="mb-16">
             <SectionHeader
               title="Strategic Objectives"
-              subtitle="How we drive transformation success for our clients"
+              subtitle="How we get results"
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {objectives.map((objective, index) => (
@@ -134,7 +134,7 @@ export default function Vision() {
           <div className="mb-16">
             <SectionHeader
               title="Core Values"
-              subtitle="The principles that guide everything we do"
+              subtitle="What we stand on"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {values.map((value, index) => (
@@ -198,10 +198,10 @@ function MissionSection() {
             letterSpacing: '-0.02em',
           }}
         >
-          Enabling Digital Transformation at Scale
+          Automation That Runs Without You
         </h3>
         <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-          We deliver transformative solutions that modernize operations, unlock new revenue streams, and position businesses for sustainable growth. From AI-powered automation to intelligent workflows, we architect the future of how organizations operate and compete.
+          We build AI systems that handle the work your team should not be doing manually. Lead follow-ups, phone calls, email campaigns, social posting, inventory decisions. Every system ships fast, gets measured, and improves over time.
         </p>
       </div>
     </motion.div>
@@ -294,7 +294,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
             Join The Winner's Revolution
           </h2>
           <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10">
-            We're not just implementing technology—we're reimagining what's possible. Through strategic innovation and proven transformation methodologies, we turn bold visions into market-leading realities. The future of your business starts here.
+            We build the systems that let you focus on what you do best. Less manual work. More output. Better results. That is the whole point.
           </p>
           <motion.button
             onClick={onContactClick}
@@ -307,7 +307,7 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
         </div>
       </div>
       <div className="mt-16 text-center text-white/30 text-sm">
-        <p>Ready to transform? Let's build the future together.</p>
+        <p>Ready to automate? Let us know what is slowing you down.</p>
       </div>
     </motion.div>
   );

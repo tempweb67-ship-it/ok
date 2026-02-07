@@ -12,17 +12,17 @@ export default function Social() {
     {
       icon: Calendar,
       title: 'Strategic Timing Intelligence',
-      description: 'Maximize reach and engagement with AI that identifies optimal posting windows, analyzes audience behavior patterns, and automatically schedules content for peak performance across every platform.',
+      description: 'AI finds when your audience is most active and schedules content to hit those windows automatically. Every platform. Every time.',
     },
     {
       icon: Target,
       title: 'Performance-Driven Content',
-      description: 'Transform content strategy with predictive intelligence that recommends formats, messaging, and tactics proven to drive engagement, conversions, and audience growth for your brand.',
+      description: 'AI recommends what to post, how to format it, and what messaging converts. Based on your actual performance data, not guesswork.',
     },
     {
       icon: BarChart3,
       title: 'Strategic Analytics Platform',
-      description: 'Make data-driven decisions with comprehensive performance tracking, predictive insights, and actionable intelligence that connects social engagement directly to business outcomes.',
+      description: 'Track what is working and what is not across every channel. Engagement, reach, conversions. All connected to actual business outcomes.',
     },
   ];
 
@@ -90,9 +90,9 @@ export default function Social() {
   return (
     <>
       <SEO
-        title="Autonomous Social Media Automation - AI Social Media Management | Wexel"
-        description="Automate your entire social media presence with AI. Intelligent content scheduling, multi-platform management, automated engagement, and performance analytics. Transform social media into a 24/7 growth engine with AI automation."
-        keywords="social media automation, AI social media, social media management, automated social posts, AI content scheduling, social media AI, automated engagement, social media analytics, social automation tools, AI social marketing"
+        title="AI Social Media Automation - Scheduling, Engagement & Analytics | Wexel"
+        description="AI handles your social media. Multi-platform scheduling, automated engagement, and performance tracking. Consistent posting without the manual grind."
+        keywords="social media automation, AI social media, social media scheduling, automated engagement, social media analytics, multi-platform posting"
         canonical="https://wexel.com/solutions/social"
         schema={{
           "@context": "https://schema.org",
@@ -102,7 +102,7 @@ export default function Social() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "AI-powered social media automation with intelligent scheduling and engagement strategies",
+          "description": "AI social media automation with multi-platform scheduling, engagement, and performance analytics",
           "serviceType": "Social Media Automation",
           "areaServed": "Worldwide"
         }}
@@ -164,7 +164,7 @@ export default function Social() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Automate your entire social media presence with intelligent agents that craft, schedule, and optimize content across all channels. Our AI-powered platform handles posting, engagement, analytics, and strategy—turning your brand presence into a growth machine that works 24/7 without manual effort.
+              AI that schedules posts, responds to engagement, and tracks performance across every platform you use. One dashboard. No manual posting. Your social media stays active whether you are online or not.
             </motion.p>
           </motion.div>
 
@@ -528,10 +528,10 @@ export default function Social() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Ready to amplify your brand presence?
+                  Done posting manually?
                 </h2>
                 <p className="text-white/60">
-                  Transform social media into a growth engine with endless possibilities
+                  Let AI handle scheduling, engagement, and analytics while you focus on your business
                 </p>
               </div>
               <Link

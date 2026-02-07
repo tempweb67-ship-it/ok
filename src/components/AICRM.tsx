@@ -10,17 +10,17 @@ export default function AICRM() {
     {
       icon: Brain,
       title: 'Predictive Intelligence',
-      description: 'Anticipate customer needs and opportunities with AI-driven forecasting that keeps you steps ahead of market dynamics and competitive threats.',
+      description: 'AI forecasting that flags opportunities and risks before they hit your pipeline. Stop reacting. Start anticipating.',
     },
     {
       icon: Zap,
       title: 'Intelligent Process Automation',
-      description: 'Eliminate operational friction with self-optimizing workflows that adapt in real-time, scaling infinitely with your business ambitions.',
+      description: 'Workflows that run themselves. Auto-assign leads, trigger sequences, update records. Your team works deals, not spreadsheets.',
     },
     {
       icon: TrendingUp,
       title: 'Strategic Analytics',
-      description: 'Convert complex data into business-changing insights with real-time analytics that drive decisions, optimize performance, and accelerate growth.',
+      description: 'Real-time dashboards that show what is working, what is not, and where to focus next. Data you act on, not just look at.',
     },
   ];
 
@@ -42,19 +42,19 @@ export default function AICRM() {
   const useCases = [
     {
       title: 'Lead Scoring & Prioritization',
-      description: 'Automatically score and rank leads based on engagement, behavior, and fit, ensuring your team focuses on high-value opportunities.',
+      description: 'Score and rank leads by engagement, behavior, and fit. Your team focuses on the deals most likely to close.',
     },
     {
       title: 'Automated Follow-ups',
-      description: 'Send personalized, timely follow-up messages across email, SMS, and social channels without manual intervention.',
+      description: 'Personalized follow-ups across email, SMS, and social. Sent on time, every time, without anyone touching a button.',
     },
     {
       title: 'Customer Segmentation',
-      description: 'Dynamically segment customers based on behavior, preferences, and lifecycle stage for targeted campaigns.',
+      description: 'Segment customers by behavior, preferences, and lifecycle stage. Targeted campaigns that land because they are relevant.',
     },
     {
       title: 'Sales Pipeline Management',
-      description: 'Visualize and optimize your sales pipeline with AI-driven insights that identify bottlenecks and accelerate deal closure.',
+      description: 'See your full pipeline with AI-flagged bottlenecks. Know which deals need attention and which will close on their own.',
     },
   ];
 
@@ -64,9 +64,9 @@ export default function AICRM() {
   return (
     <>
       <SEO
-        title="Intelligent AI CRM - AI-Powered Customer Relationship Management | Wexel"
-        description="Revolutionize customer relationships with AI-powered CRM. Predictive analytics, autonomous workflows, and intelligent automation that drive revenue growth. Transform every customer touchpoint with strategic AI intelligence."
-        keywords="AI CRM, intelligent CRM, AI customer management, CRM automation, predictive CRM, AI sales automation, customer intelligence, automated CRM, AI analytics, customer relationship automation"
+        title="AI CRM - Predictive Analytics, Auto Workflows & Lead Scoring | Wexel"
+        description="AI-powered CRM that scores leads, automates follow-ups, and segments customers without manual work. Built for teams that want pipeline visibility and faster closes."
+        keywords="AI CRM, CRM automation, predictive CRM, AI lead scoring, automated follow-ups, customer segmentation, sales pipeline AI"
         canonical="https://wexel.com/solutions/aicrm"
         schema={{
           "@context": "https://schema.org",
@@ -76,7 +76,7 @@ export default function AICRM() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "AI-powered CRM with predictive analytics, autonomous workflows, and intelligent automation",
+          "description": "AI CRM with lead scoring, automated follow-ups, and predictive analytics for faster sales cycles",
           "serviceType": "CRM Automation",
           "areaServed": "Worldwide"
         }}
@@ -138,7 +138,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Revolutionize customer relationships with AI-powered CRM intelligence. Our platform transforms transactional interactions into strategic opportunities through predictive analytics, autonomous workflows, and intelligent automation. Every customer touchpoint becomes a moment for deeper engagement, smarter decisions, and accelerated revenue growth.
+              AI-powered CRM that scores your leads, automates follow-ups across every channel, and shows you exactly where deals stall. Less manual data entry. Faster response times. A pipeline you can actually trust.
             </motion.p>
           </motion.div>
 
@@ -154,22 +154,22 @@ export default function AICRM() {
             steps={[
               {
                 title: 'Data Integration',
-                description: 'We seamlessly integrate with your existing systems, pulling in customer data from all touchpoints to create a unified view.'
+                description: 'Connect your existing tools. We pull customer data from every touchpoint into one unified view.'
               },
               {
                 title: 'AI Training',
-                description: 'Our AI learns from your historical data, identifying patterns and building predictive models tailored to your business.'
+                description: 'AI learns from your historical data. Patterns get identified. Predictive models get built for your specific business.'
               },
               {
                 title: 'Continuous Optimization',
-                description: 'The system continuously learns and adapts, becoming more accurate and effective with every customer interaction.'
+                description: 'The system gets smarter with every interaction. More accurate scoring, better timing, tighter segmentation over time.'
               }
             ]}
           />
 
           <CTASection
-            title="Ready to revolutionize your customer relationships?"
-            description="Discover how Intelligent AI CRM transforms your business with predictive insights and autonomous workflows"
+            title="Ready to stop losing deals to slow follow-ups?"
+            description="See how AI CRM gives your team pipeline clarity and automated workflows that close faster"
           />
         </div>
       </div>
@@ -234,10 +234,10 @@ function PerfectForSection() {
             <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0 sm:hover:border-0 sm:hover:bg-transparent">
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                 <Users size={20} className="flex-shrink-0 text-blue-400" />
-                Service Providers
+                Sales Teams
               </h3>
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                Track client interactions, automate appointment reminders, and nurture long-term relationships effortlessly.
+                Track every interaction, automate reminders, and nurture relationships without dropping the ball.
               </p>
             </div>
             <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0 sm:hover:border-0 sm:hover:bg-transparent">
@@ -246,7 +246,7 @@ function PerfectForSection() {
                 Anyone With Online Presence
               </h3>
               <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                Whether you're a solopreneur, content creator, or consultant, manage leads and customers with enterprise-grade AI.
+                Solopreneurs, creators, consultants. Manage leads and customers with the same AI tools enterprise teams use.
               </p>
             </div>
           </div>

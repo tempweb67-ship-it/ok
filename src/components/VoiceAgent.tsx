@@ -11,17 +11,17 @@ export default function VoiceAgent() {
     {
       icon: Clock,
       title: 'Always-On Operations',
-      description: 'Eliminate capacity constraints with AI agents that never sleep. Transform customer access into a competitive advantage with round-the-clock availability and instant response.',
+      description: 'No missed calls. No hold times. AI agents that answer instantly, every time, at any hour.',
     },
     {
       icon: Target,
       title: 'Intelligent Lead Orchestration',
-      description: 'Maximize sales efficiency with AI-powered qualification that identifies high-value opportunities, gathers critical insights, and routes prospects with precision.',
+      description: 'AI qualifies callers, gathers key info, and routes hot leads to the right person in seconds. No more wasted time on bad-fit prospects.',
     },
     {
       icon: MessageSquare,
       title: 'Human-Quality Dialogue',
-      description: 'Deploy conversations that build trust and drive action. Advanced AI delivers contextual understanding, emotional intelligence, and adaptive responses that convert.',
+      description: 'Conversations that sound natural, adapt to context, and handle objections. Callers cannot tell it is AI.',
     },
   ];
 
@@ -65,16 +65,16 @@ export default function VoiceAgent() {
   return (
     <>
       <SEO
-        title="AI Voice Solutions - Voice Automation & AI Voice Agents | Wexel"
-        description="Transform customer interactions with AI voice agents that work 24/7. Deploy autonomous voice automation for appointment scheduling, lead qualification, and customer support. Scale conversations infinitely with human-quality AI voice technology."
-        keywords="AI voice agents, voice automation, AI phone agents, conversational AI, voice AI, automated phone calls, AI call center, voice bots, speech AI, customer service automation, AI receptionist, voice assistant"
+        title="AI Voice Agents - 24/7 Phone Automation for Scheduling, Leads & Support | Wexel"
+        description="AI voice agents that handle calls around the clock. Appointment scheduling, lead qualification, and customer support on autopilot. Sounds human. Scales infinitely."
+        keywords="AI voice agents, voice automation, AI phone agents, automated phone calls, AI call center, AI receptionist, voice assistant, 24/7 phone automation"
         canonical="https://wexel.com/solutions/voice"
         breadcrumbs={[
           { name: "Solutions", url: "https://wexel.com/solutions" },
           { name: "AI Voice Solutions", url: "https://wexel.com/solutions/voice" }
         ]}
         articleData={{
-          headline: "AI Voice Solutions - Transform Customer Interactions with Voice Automation",
+          headline: "AI Voice Agents - 24/7 Phone Automation That Sounds Human",
           datePublished: "2024-01-01T00:00:00Z",
           dateModified: new Date().toISOString(),
           author: "Wexel"
@@ -87,7 +87,7 @@ export default function VoiceAgent() {
             "@type": "Organization",
             "name": "Wexel"
           },
-          "description": "Autonomous voice agents that revolutionize customer interactions and deliver human-quality experiences 24/7",
+          "description": "AI voice agents for appointment scheduling, lead qualification, and customer support. Always on, always consistent.",
           "serviceType": "Voice Automation",
           "areaServed": "Worldwide",
           "offers": {
@@ -157,7 +157,7 @@ export default function VoiceAgent() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Revolutionize customer interactions with autonomous voice agents that deliver human-quality conversations at infinite scale. Transform how your business handles calls, qualifies leads, and serves customers—24/7, without limits. Every conversation drives efficiency, captures opportunities, and elevates experiences beyond what human teams can achieve alone.
+              AI voice agents that pick up the phone, qualify leads, book appointments, and handle support. They sound human, work 24/7, and never miss a call. Your team handles the deals that close. The AI handles everything else.
             </motion.p>
           </motion.div>
 
@@ -189,7 +189,7 @@ export default function VoiceAgent() {
                       Call Centers
                     </h3>
                     <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                      Handle high call volumes efficiently while maintaining quality customer interactions and reducing wait times.
+                      Handle high call volumes without adding headcount. Zero wait times. Consistent quality on every call.
                     </p>
                   </div>
                   <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
@@ -198,7 +198,7 @@ export default function VoiceAgent() {
                       Healthcare Providers
                     </h3>
                     <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                      Automate appointment scheduling, reminders, and patient inquiries while maintaining HIPAA compliance.
+                      Automate scheduling, reminders, and patient inquiries. HIPAA-compliant from the start.
                     </p>
                   </div>
                   <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
@@ -207,16 +207,16 @@ export default function VoiceAgent() {
                       Real Estate Agencies
                     </h3>
                     <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                      Qualify leads, schedule property viewings, and follow up with prospects around the clock.
+                      Qualify leads, schedule viewings, and follow up with prospects at any hour.
                     </p>
                   </div>
                   <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-xl p-5 sm:backdrop-blur-none sm:bg-transparent sm:border-0 sm:p-0">
                     <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-2 flex items-center gap-2">
                       <Building2 size={20} className="flex-shrink-0" />
-                      Service Businesses
+                      Any Business With Phones
                     </h3>
                     <p className="text-white/60 leading-relaxed text-sm sm:text-base">
-                      Manage bookings, answer common questions, and provide 24/7 customer support without additional staffing.
+                      Bookings, FAQs, and 24/7 support handled automatically. No extra staff required.
                     </p>
                   </div>
                 </div>
@@ -228,22 +228,22 @@ export default function VoiceAgent() {
             steps={[
               {
                 title: 'Voice Agent Setup',
-                description: 'We configure your voice agent with your brand voice, common scenarios, and business logic tailored to your specific needs.'
+                description: 'We configure your voice agent with your brand voice, common scenarios, and business rules. Tailored to how your team actually works.'
               },
               {
                 title: 'Integration & Testing',
-                description: 'Connect to your phone system and CRM, then run extensive testing to ensure natural conversations and accurate information handling.'
+                description: 'Connect to your phone system and CRM. Extensive testing to make sure conversations sound right and data flows correctly.'
               },
               {
                 title: 'Deployment & Optimization',
-                description: 'Launch your voice agent and continuously improve performance based on real conversation data and feedback.'
+                description: 'Go live and improve continuously. Real conversation data feeds back into the system to sharpen performance over time.'
               }
             ]}
           />
 
           <CTASection
-            title="Ready to scale conversations infinitely?"
-            description="Transform customer engagement with voice AI that unlocks endless possibilities"
+            title="Ready to stop missing calls?"
+            description="Deploy voice AI that handles your phones 24/7 and never drops a lead"
           />
         </div>
       </div>
