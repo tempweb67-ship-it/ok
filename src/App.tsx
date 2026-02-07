@@ -18,7 +18,6 @@ import Ecommerce from './components/Ecommerce';
 import Social from './components/Social';
 import Website from './components/Website';
 
-
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();

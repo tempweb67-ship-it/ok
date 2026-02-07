@@ -1,4 +1,3 @@
-import { Sparkles, Zap, Target, Bot } from 'lucide-react';
 import SEO from './SEO';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -8,7 +7,6 @@ export default function Difference() {
       id: 1,
       title: 'Transformation-First Mindset',
       description: 'We architect solutions for the future, not patch legacy systems. Every engagement begins with reimagining what\'s possible.',
-      icon: Sparkles,
       metric: '10x',
       metricLabel: 'Innovation Velocity',
       tagline: 'Future-ready architecture from day one',
@@ -17,7 +15,6 @@ export default function Difference() {
       id: 2,
       title: 'Rapid Deployment',
       description: 'Our AI-powered approach delivers enterprise transformation in weeks, enabling you to capitalize on opportunities faster.',
-      icon: Zap,
       metric: '5x',
       metricLabel: 'Faster Time to Market',
       tagline: 'Live in weeks with immediate impact',
@@ -26,7 +23,6 @@ export default function Difference() {
       id: 3,
       title: 'Measurable Impact',
       description: 'Every solution is engineered to deliver quantifiable ROI through operational excellence and revenue acceleration.',
-      icon: Target,
       metric: '300%',
       metricLabel: 'Average ROI',
       tagline: 'Quantifiable results from day one',
@@ -35,7 +31,6 @@ export default function Difference() {
       id: 4,
       title: 'Always-On Intelligence',
       description: 'Deploy solutions that never sleep. Our AI-powered systems operate 24/7 with superhuman consistency.',
-      icon: Bot,
       metric: '24/7',
       metricLabel: 'Unlimited Scalability',
       tagline: 'Superhuman performance, infinite scale',

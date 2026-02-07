@@ -22,7 +22,7 @@ export default function SEO({
   description,
   keywords = "AI automation, voice automation, AI voice agents, digital transformation, business automation",
   canonical = "https://wexel.com/",
-  ogImage = "https://wexel.com/og-image.jpg",
+  ogImage = "https://wexel.com/wexel.jpg",
   ogType = "website",
   schema,
   breadcrumbs,
