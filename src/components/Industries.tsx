@@ -1,4 +1,4 @@
-import { Building2, ShoppingCart, Heart, Briefcase, Factory, GraduationCap, ArrowRight } from 'lucide-react';
+import { Building2, ShoppingCart, Heart, Factory, GraduationCap, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from './SEO';
 
@@ -7,37 +7,31 @@ export default function Industries() {
     {
       id: 1,
       title: 'Real Estate',
-      description: 'We dissect every friction point in your pipeline -- from first-touch lead capture to post-close retention. Our systems auto-qualify prospects, route hot leads in under 90 seconds, and deploy property-matched nurture sequences that convert at 3x the industry average. You stop chasing. Deals start closing themselves.',
+      description: 'Lead capture, auto-qualification, and nurture sequences built for how people actually buy property. Leads get routed in seconds, not hours. Follow-ups never slip. Your pipeline stays full without you babysitting it.',
       icon: Building2,
     },
     {
       id: 2,
       title: 'E-Commerce & Retail',
-      description: 'We surgically eliminate cart abandonment, dead inventory, and wasted ad spend. Our AI segments buyers by micro-intent, dynamically reprices in real time, and orchestrates cross-channel campaigns that know your customer better than they know themselves. The result: higher AOV, tighter margins, and loyalty that compounds.',
+      description: 'Cart abandonment recovery, real-time repricing, and buyer segmentation that actually moves units. We build the systems that turn browsers into repeat customers and cut wasted ad spend to zero.',
       icon: ShoppingCart,
     },
     {
       id: 3,
       title: 'Healthcare',
-      description: 'We operate on the inefficiencies that bleed clinics dry -- missed appointments, intake bottlenecks, compliance blind spots. Our automation handles scheduling, patient follow-ups, and documentation with zero-error precision while keeping every interaction HIPAA-locked. Your staff focuses on care. The system handles everything else.',
+      description: 'Automated scheduling, intake, patient follow-ups, and documentation. HIPAA-compliant from day one. Your staff stops doing admin work and starts doing the work they were hired for.',
       icon: Heart,
     },
     {
       id: 4,
-      title: 'Professional Services',
-      description: 'We pinpoint exactly where billable hours leak and client handoffs break down. Our systems automate proposal generation, scope tracking, and client communication so your team operates at peak capacity. Less admin overhead, faster delivery cycles, and clients who never feel forgotten.',
-      icon: Briefcase,
-    },
-    {
-      id: 5,
       title: 'Manufacturing',
-      description: 'We diagnose downtime before it happens. Our predictive maintenance, supply chain monitoring, and quality control systems catch the failures your floor team cannot see yet. Fewer production halts, tighter tolerances, and a supply chain that adapts before disruptions hit your bottom line.',
+      description: 'Predictive maintenance, quality control, and supply chain monitoring that catches problems before they cost you a production run. Less downtime. Tighter tolerances. Faster throughput.',
       icon: Factory,
     },
     {
-      id: 6,
+      id: 5,
       title: 'Education',
-      description: 'We isolate exactly where students disengage and where admin workflows stall. Our platforms adapt content delivery in real time, automate enrollment and retention outreach, and surface the data that tells you which interventions actually move the needle. Every decision backed by evidence, not intuition.',
+      description: 'Adaptive content delivery, enrollment automation, and retention outreach that responds to real student behavior. You see exactly what works and what does not, backed by data.',
       icon: GraduationCap,
     },
   ];
@@ -46,8 +40,8 @@ export default function Industries() {
     <>
       <SEO
         title="Industries We Serve - AI Automation for Healthcare, Retail, Real Estate & More | Wexel"
-        description="Wexel delivers industry-specific AI automation solutions for e-commerce, healthcare, professional services, real estate, manufacturing, and education. Custom digital transformation strategies for your sector."
-        keywords="AI automation industries, healthcare AI, e-commerce automation, real estate AI, manufacturing AI, education technology, professional services automation, industry-specific AI solutions"
+        description="Wexel delivers industry-specific AI automation for real estate, e-commerce, healthcare, manufacturing, and education. Precision systems built for your vertical."
+        keywords="AI automation industries, healthcare AI, e-commerce automation, real estate AI, manufacturing AI, education technology, industry-specific AI solutions"
         canonical="https://wexel.com/industries"
         breadcrumbs={[
           { name: 'Home', url: 'https://wexel.com/' },
@@ -66,14 +60,13 @@ export default function Industries() {
           "mainEntity": {
             "@type": "ItemList",
             "name": "Industries Served by Wexel",
-            "numberOfItems": 6,
+            "numberOfItems": 5,
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Real Estate", "description": "Precision lead systems, auto-qualification, and deal-closing automation" },
-              { "@type": "ListItem", "position": 2, "name": "E-Commerce & Retail", "description": "Cart recovery, dynamic pricing, and micro-intent buyer segmentation" },
-              { "@type": "ListItem", "position": 3, "name": "Healthcare", "description": "HIPAA-compliant automation for scheduling, intake, and patient follow-ups" },
-              { "@type": "ListItem", "position": 4, "name": "Professional Services", "description": "Billable hour optimization, proposal automation, and client retention systems" },
-              { "@type": "ListItem", "position": 5, "name": "Manufacturing", "description": "Predictive maintenance, quality control, and supply chain resilience" },
-              { "@type": "ListItem", "position": 6, "name": "Education", "description": "Adaptive learning, enrollment automation, and evidence-based intervention systems" }
+              { "@type": "ListItem", "position": 1, "name": "Real Estate", "description": "Lead capture, auto-qualification, and nurture automation" },
+              { "@type": "ListItem", "position": 2, "name": "E-Commerce & Retail", "description": "Cart recovery, repricing, and buyer segmentation" },
+              { "@type": "ListItem", "position": 3, "name": "Healthcare", "description": "HIPAA-compliant scheduling, intake, and follow-up automation" },
+              { "@type": "ListItem", "position": 4, "name": "Manufacturing", "description": "Predictive maintenance, quality control, and supply chain monitoring" },
+              { "@type": "ListItem", "position": 5, "name": "Education", "description": "Adaptive delivery, enrollment automation, and retention outreach" }
             ]
           }
         }}
@@ -95,10 +88,10 @@ export default function Industries() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-lg text-white/60 mt-3">
-                We don't do general practice. We specialize.
+                Deep expertise. Narrow focus. Real results.
               </p>
               <p className="text-base text-white/60 mt-0.5">
-                Every vertical has its own pathology. We diagnose the exact bottlenecks bleeding your revenue, then build precision systems that eliminate them permanently.
+                We know the exact problems in your industry because we have solved them before. No generic solutions. Systems built for how your business actually works.
               </p>
             </div>
           </div>
@@ -151,7 +144,7 @@ export default function Industries() {
                 Don't see your industry?
               </h2>
               <p className="text-white/60 mb-8">
-                If your vertical isn't listed, it doesn't mean we can't operate on it. We study your industry's specific pain points, build a custom protocol, and deploy systems engineered for your exact situation.
+                We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
               </p>
               <Link
                 to="/"
