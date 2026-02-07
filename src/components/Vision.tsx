@@ -110,6 +110,7 @@ export default function Vision() {
 
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
              Every system we build is made with security and a backup plan in mind. 24/7 autonomous systems for your peace of mind.
+              
             </p>
 
             <p className="text-sm text-white/40 mt-6">
