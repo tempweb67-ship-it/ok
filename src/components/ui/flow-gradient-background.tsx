@@ -87,21 +87,21 @@ class GradientBackground {
     this.uniforms = {
       uTime: { value: 0 },
       uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-      uColor1: { value: new THREE.Vector3(1.0, 0.5, 0.35) },
-      uColor2: { value: new THREE.Vector3(0.9, 0.95, 1.0) },
-      uColor3: { value: new THREE.Vector3(1.0, 0.5, 0.35) },
-      uColor4: { value: new THREE.Vector3(0.9, 0.95, 1.0) },
-      uColor5: { value: new THREE.Vector3(1.0, 0.5, 0.35) },
-      uColor6: { value: new THREE.Vector3(0.9, 0.95, 1.0) },
-      uSpeed: { value: 1.2 },
-      uIntensity: { value: 1.8 },
+      uColor1: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
+      uColor2: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
+      uColor3: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
+      uColor4: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
+      uColor5: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
+      uColor6: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
+      uSpeed: { value: 0.8 },
+      uIntensity: { value: 1.3 },
       uTouchTexture: { value: null },
       uGrainIntensity: { value: 0.08 },
       uDarkNavy: { value: new THREE.Vector3(0.95, 0.97, 1.0) },
       uGradientSize: { value: 0.45 },
       uGradientCount: { value: 12.0 },
-      uColor1Weight: { value: 0.5 },
-      uColor2Weight: { value: 1.8 }
+      uColor1Weight: { value: 0.35 },
+      uColor2Weight: { value: 1.4 }
     };
   }
 
