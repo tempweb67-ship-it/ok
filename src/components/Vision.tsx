@@ -109,7 +109,7 @@ export default function Vision() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-              Every system we build replaces manual work with automation that runs 24/7. We ship fast, measure everything, and only keep what works.
+              Every system we build is made in mind with security and backup plan, custom built everytime. Unlinke other agencies abusing templates.
             </p>
 
             <p className="text-sm text-white/40 mt-6">
