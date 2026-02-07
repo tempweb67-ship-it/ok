@@ -6,38 +6,38 @@ export default function Industries() {
   const industries = [
     {
       id: 1,
-      title: 'E-Commerce & Retail',
-      description: 'Complete digital transformation of customer journeys with AI-powered personalization, intelligent inventory optimization, and seamless omnichannel experiences that drive conversion and loyalty.',
-      icon: ShoppingCart,
+      title: 'Real Estate',
+      description: 'We dissect every friction point in your pipeline -- from first-touch lead capture to post-close retention. Our systems auto-qualify prospects, route hot leads in under 90 seconds, and deploy property-matched nurture sequences that convert at 3x the industry average. You stop chasing. Deals start closing themselves.',
+      icon: Building2,
     },
     {
       id: 2,
-      title: 'Healthcare',
-      description: 'Modernize patient experiences and operational workflows with intelligent automation, predictive analytics, and secure platforms that enhance care delivery while ensuring compliance.',
-      icon: Heart,
+      title: 'E-Commerce & Retail',
+      description: 'We surgically eliminate cart abandonment, dead inventory, and wasted ad spend. Our AI segments buyers by micro-intent, dynamically reprices in real time, and orchestrates cross-channel campaigns that know your customer better than they know themselves. The result: higher AOV, tighter margins, and loyalty that compounds.',
+      icon: ShoppingCart,
     },
     {
       id: 3,
-      title: 'Professional Services',
-      description: 'Transform service delivery with AI-driven insights, automated workflows, and intelligent systems that amplify expertise and accelerate client outcomes.',
-      icon: Briefcase,
+      title: 'Healthcare',
+      description: 'We operate on the inefficiencies that bleed clinics dry -- missed appointments, intake bottlenecks, compliance blind spots. Our automation handles scheduling, patient follow-ups, and documentation with zero-error precision while keeping every interaction HIPAA-locked. Your staff focuses on care. The system handles everything else.',
+      icon: Heart,
     },
     {
       id: 4,
-      title: 'Real Estate',
-      description: 'Revolutionize property operations with end-to-end digital solutions: automated lead nurturing, intelligent matching, virtual experiences, and predictive market intelligence.',
-      icon: Building2,
+      title: 'Professional Services',
+      description: 'We pinpoint exactly where billable hours leak and client handoffs break down. Our systems automate proposal generation, scope tracking, and client communication so your team operates at peak capacity. Less admin overhead, faster delivery cycles, and clients who never feel forgotten.',
+      icon: Briefcase,
     },
     {
       id: 5,
       title: 'Manufacturing',
-      description: 'Drive operational excellence with smart factory solutions, predictive maintenance, supply chain intelligence, and quality systems that optimize every aspect of production.',
+      description: 'We diagnose downtime before it happens. Our predictive maintenance, supply chain monitoring, and quality control systems catch the failures your floor team cannot see yet. Fewer production halts, tighter tolerances, and a supply chain that adapts before disruptions hit your bottom line.',
       icon: Factory,
     },
     {
       id: 6,
       title: 'Education',
-      description: 'Reimagine learning with adaptive platforms, personalized experiences, intelligent assessment, and data-driven insights that unlock potential for every student.',
+      description: 'We isolate exactly where students disengage and where admin workflows stall. Our platforms adapt content delivery in real time, automate enrollment and retention outreach, and surface the data that tells you which interventions actually move the needle. Every decision backed by evidence, not intuition.',
       icon: GraduationCap,
     },
   ];
@@ -68,12 +68,12 @@ export default function Industries() {
             "name": "Industries Served by Wexel",
             "numberOfItems": 6,
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "E-Commerce & Retail", "description": "AI-powered personalization, intelligent inventory optimization, and omnichannel experiences" },
-              { "@type": "ListItem", "position": 2, "name": "Healthcare", "description": "Intelligent automation, predictive analytics, and secure platforms for care delivery" },
-              { "@type": "ListItem", "position": 3, "name": "Professional Services", "description": "AI-driven insights, automated workflows, and intelligent systems for service delivery" },
-              { "@type": "ListItem", "position": 4, "name": "Real Estate", "description": "Automated lead nurturing, intelligent matching, and predictive market intelligence" },
-              { "@type": "ListItem", "position": 5, "name": "Manufacturing", "description": "Smart factory solutions, predictive maintenance, and supply chain intelligence" },
-              { "@type": "ListItem", "position": 6, "name": "Education", "description": "Adaptive learning platforms, personalized experiences, and data-driven insights" }
+              { "@type": "ListItem", "position": 1, "name": "Real Estate", "description": "Precision lead systems, auto-qualification, and deal-closing automation" },
+              { "@type": "ListItem", "position": 2, "name": "E-Commerce & Retail", "description": "Cart recovery, dynamic pricing, and micro-intent buyer segmentation" },
+              { "@type": "ListItem", "position": 3, "name": "Healthcare", "description": "HIPAA-compliant automation for scheduling, intake, and patient follow-ups" },
+              { "@type": "ListItem", "position": 4, "name": "Professional Services", "description": "Billable hour optimization, proposal automation, and client retention systems" },
+              { "@type": "ListItem", "position": 5, "name": "Manufacturing", "description": "Predictive maintenance, quality control, and supply chain resilience" },
+              { "@type": "ListItem", "position": 6, "name": "Education", "description": "Adaptive learning, enrollment automation, and evidence-based intervention systems" }
             ]
           }
         }}
@@ -95,10 +95,10 @@ export default function Industries() {
             </h1>
             <div className="max-w-2xl">
               <p className="text-lg text-white/60 mt-3">
-                Industry-specific digital transformation solutions with endless potential.
+                We don't do general practice. We specialize.
               </p>
               <p className="text-base text-white/60 mt-0.5">
-                We architect transformation strategies that address your sector's unique challenges and unlock new opportunities.
+                Every vertical has its own pathology. We diagnose the exact bottlenecks bleeding your revenue, then build precision systems that eliminate them permanently.
               </p>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function Industries() {
                 Don't see your industry?
               </h2>
               <p className="text-white/60 mb-8">
-                We transform businesses across all sectors. Our solutions adapt to your industry's unique requirements, unlocking possibilities you haven't imagined.
+                If your vertical isn't listed, it doesn't mean we can't operate on it. We study your industry's specific pain points, build a custom protocol, and deploy systems engineered for your exact situation.
               </p>
               <Link
                 to="/"
