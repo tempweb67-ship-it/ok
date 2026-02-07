@@ -87,17 +87,17 @@ class GradientBackground {
     this.uniforms = {
       uTime: { value: 0 },
       uResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-      uColor1: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
-      uColor2: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
-      uColor3: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
-      uColor4: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
-      uColor5: { value: new THREE.Vector3(1.0, 0.65, 0.5) },
-      uColor6: { value: new THREE.Vector3(0.93, 0.96, 1.0) },
+      uColor1: { value: new THREE.Vector3(0.78, 0.78, 0.78) },
+      uColor2: { value: new THREE.Vector3(0.96, 0.96, 0.96) },
+      uColor3: { value: new THREE.Vector3(0.65, 0.65, 0.65) },
+      uColor4: { value: new THREE.Vector3(0.88, 0.88, 0.88) },
+      uColor5: { value: new THREE.Vector3(0.72, 0.72, 0.72) },
+      uColor6: { value: new THREE.Vector3(0.92, 0.92, 0.92) },
       uSpeed: { value: 0.8 },
       uIntensity: { value: 1.3 },
       uTouchTexture: { value: null },
       uGrainIntensity: { value: 0.08 },
-      uDarkNavy: { value: new THREE.Vector3(0.95, 0.97, 1.0) },
+      uDarkNavy: { value: new THREE.Vector3(0.94, 0.94, 0.94) },
       uGradientSize: { value: 0.45 },
       uGradientCount: { value: 12.0 },
       uColor1Weight: { value: 0.35 },
@@ -226,7 +226,7 @@ class App {
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
     this.camera.position.z = 50;
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xf5f7ff);
+    this.scene.background = new THREE.Color(0xf2f2f2);
     this.clock = new THREE.Clock();
     this.touchTexture = new TouchTexture();
     this.gradientBackground = new GradientBackground(this);
