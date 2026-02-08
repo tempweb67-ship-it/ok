@@ -57,7 +57,7 @@ export default function Explore() {
               Explore
             </h1>
             <p className="text-lg text-white/60 max-w-2xl mt-6">
-              Discover how we automate digital platforms with Ai and unlock endless possibilities for forward-thinking organizations
+              Discover how we automate digital platforms with Ai and unlock endless possibilities for forward-thinking organizations.
             </p>
           </div>
 
