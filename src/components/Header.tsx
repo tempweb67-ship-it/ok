@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -9,13 +9,19 @@ export default function Header({ onContactClick }: HeaderProps) {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
-  const isActive = (path: string) => location.pathname === path;
-
   const navItems = [
-    { label: 'Industries', path: '/#industries' },
-    { label: 'Solutions', path: '/#solutions' },
-    { label: 'FAQ', path: '/#faq' },
+    { label: 'Industries', id: 'industries' },
+    { label: 'Solutions', id: 'solutions' },
+    { label: 'FAQ', id: 'faq' },
   ];
+
+  const handleNavClick = (id: string) => {
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 pt-4 px-4 md:px-6" role="banner">
@@ -33,13 +39,13 @@ export default function Header({ onContactClick }: HeaderProps) {
 
         <div className="hidden md:flex items-center gap-8 flex-1 mx-8">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.label}
-              href={item.path}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap"
+              onClick={() => handleNavClick(item.id)}
+              className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap cursor-pointer bg-transparent border-none"
             >
               {item.label}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -64,14 +70,13 @@ export default function Header({ onContactClick }: HeaderProps) {
       {isOpen && (
         <div className="md:hidden mt-2 rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 p-4 space-y-3">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.label}
-              href={item.path}
-              onClick={() => setIsOpen(false)}
-              className="block text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 px-4 py-2"
+              onClick={() => handleNavClick(item.id)}
+              className="block w-full text-left text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 px-4 py-2 cursor-pointer bg-transparent border-none"
             >
               {item.label}
-            </a>
+            </button>
           ))}
           <button
             onClick={() => {

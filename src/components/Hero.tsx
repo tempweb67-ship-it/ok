@@ -142,13 +142,19 @@ export default function Hero() {
               </div>
             </div>
 
-            <IndustriesSection />
+            <div id="industries">
+              <IndustriesSection />
+            </div>
 
-            <SolutionsSection />
+            <div id="solutions">
+              <SolutionsSection />
+            </div>
           </div>
         </div>
 
-        <FAQ />
+        <div id="faq">
+          <FAQ />
+        </div>
 
         <div className="w-full backdrop-blur-md bg-white/10 py-1 border-t border-white/5 mt-12">
           <Marquee speed={50} autoFill>
