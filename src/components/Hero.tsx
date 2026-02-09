@@ -98,11 +98,6 @@ export default function Hero() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-md bg-blue-500/20 rounded-full mb-8 border border-blue-500/30">
-                <Rocket size={16} className="text-blue-400" />
-                <span className="text-sm text-blue-400 uppercase tracking-wider">Our Vision</span>
-              </div>
-
               <h2
                 className="text-white leading-[0.9] mb-8"
                 style={{
