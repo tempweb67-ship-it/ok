@@ -190,7 +190,7 @@ function MissionSection() {
       transition={{ duration: 0.6 }}
     >
       <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10">
-        <div className="text-sm text-white/40 uppercase tracking-wider mb-4">Mission</div>
+        <div className="text-sm text-white/40 uppercase tracking-wider mb-4">Achievement</div>
         <h3
           className="text-3xl md:text-4xl font-bold mb-6"
           style={{
