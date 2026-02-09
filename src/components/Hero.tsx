@@ -461,7 +461,7 @@ function SolutionsSection() {
       description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
       category: 'Customer Experience',
       icon: BarChart3,
-      route: '/solutions/aicrm',
+      route: '/aicrm',
     },
     {
       id: 2,
@@ -469,7 +469,7 @@ function SolutionsSection() {
       description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
       category: 'Conversational AI',
       icon: PhoneCall,
-      route: '/solutions/voice',
+      route: '/voice',
     },
     {
       id: 3,
@@ -477,7 +477,7 @@ function SolutionsSection() {
       description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
       category: 'Digital Marketing',
       icon: Mail,
-      route: '/solutions/outreach',
+      route: '/outreach',
     },
     {
       id: 4,
@@ -485,7 +485,7 @@ function SolutionsSection() {
       description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
       category: 'Commerce Solutions',
       icon: ShoppingCart,
-      route: '/solutions/ecommerce',
+      route: '/ecommerce',
     },
     {
       id: 5,
@@ -493,7 +493,7 @@ function SolutionsSection() {
       description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
       category: 'Social Intelligence',
       icon: Share2,
-      route: '/solutions/social',
+      route: '/social',
     },
     {
       id: 6,
@@ -501,7 +501,7 @@ function SolutionsSection() {
       description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
       category: 'Digital Presence',
       icon: Globe,
-      route: '/solutions/website',
+      route: '/website',
     },
   ];
 

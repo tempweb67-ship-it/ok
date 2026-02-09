@@ -64,12 +64,12 @@ function AppContent() {
         <Route path="/" element={<Hero />} />
         <Route path="/explore" element={<Explore />} />
 
-        <Route path="/solutions/aicrm" element={<AICRM />} />
-        <Route path="/solutions/voice" element={<VoiceAgent />} />
-        <Route path="/solutions/outreach" element={<Outreach />} />
-        <Route path="/solutions/ecommerce" element={<Ecommerce />} />
-        <Route path="/solutions/social" element={<Social />} />
-        <Route path="/solutions/website" element={<Website />} />
+        <Route path="/aicrm" element={<AICRM />} />
+        <Route path="/voice" element={<VoiceAgent />} />
+        <Route path="/outreach" element={<Outreach />} />
+        <Route path="/ecommerce" element={<Ecommerce />} />
+        <Route path="/social" element={<Social />} />
+        <Route path="/website" element={<Website />} />
         <Route path="/difference" element={<Difference />} />
 
 
