@@ -287,17 +287,17 @@ function EndCTA() {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="text-center max-w-5xl mx-auto px-6">
+      <div className="text-center max-w-3xl mx-auto px-6">
         <h2
-          className="text-4xl md:text-6xl font-bold mb-6"
+          className="text-2xl md:text-3xl font-bold mb-3"
           style={{
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-            letterSpacing: '-0.04em',
+            letterSpacing: '-0.02em',
           }}
         >
           Need a system that works while you sleep?
         </h2>
-        <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-12">
+        <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-2xl mx-auto mb-12">
           Tell us what is broken. We will tell you exactly how to fix it.
         </p>
       </div>
