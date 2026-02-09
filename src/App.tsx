@@ -6,10 +6,6 @@ import Hero from './components/Hero';
 
 import Grainient from './components/Grainient';
 import Contact from './components/Contact';
-import Explore from './components/Explore';
-
-import Difference from './components/Difference';
-
 
 import Privacy from './components/Privacy';
 import AICRM from './components/AICRM';
@@ -59,20 +55,15 @@ function AppContent() {
       <Header onContactClick={() => setIsContactOpen(true)} />
       <main style={{ minHeight: '100dvh' }}>
         <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/explore" element={<Explore />} />
-
-        <Route path="/aicrm" element={<AICRM />} />
-        <Route path="/voice" element={<VoiceAgent />} />
-        <Route path="/outreach" element={<Outreach />} />
-        <Route path="/ecommerce" element={<Ecommerce />} />
-        <Route path="/social" element={<Social />} />
-        <Route path="/website" element={<Website />} />
-        <Route path="/difference" element={<Difference />} />
-
-
-        <Route path="/privacy" element={<Privacy />} />
-      </Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/aicrm" element={<AICRM />} />
+          <Route path="/voice" element={<VoiceAgent />} />
+          <Route path="/outreach" element={<Outreach />} />
+          <Route path="/ecommerce" element={<Ecommerce />} />
+          <Route path="/social" element={<Social />} />
+          <Route path="/website" element={<Website />} />
+          <Route path="/privacy" element={<Privacy />} />
+        </Routes>
       </main>
       <Contact isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       </div>
