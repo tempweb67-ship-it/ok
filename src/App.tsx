@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 
 import Header from './components/Header';
 import Hero from './components/Hero';
-import BottomMarquee from './components/Marquee';
+
 import Grainient from './components/Grainient';
 import Contact from './components/Contact';
 import Explore from './components/Explore';
@@ -22,7 +22,6 @@ import Website from './components/Website';
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();
-  const showMarquee = location.pathname === '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,7 +57,6 @@ function AppContent() {
       />
       <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
-      {showMarquee && <BottomMarquee />}
       <main style={{ minHeight: '100dvh' }}>
         <Routes>
         <Route path="/" element={<Hero />} />
