@@ -58,6 +58,7 @@ function AppContent() {
       />
       <div className="relative" style={{ zIndex: 1 }}>
       <Header onContactClick={() => setIsContactOpen(true)} />
+      {showMarquee && <BottomMarquee />}
       <main style={{ minHeight: '100dvh' }}>
         <Routes>
         <Route path="/" element={<Hero />} />
