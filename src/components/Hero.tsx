@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon } from 'lucide-react';
+import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
 
@@ -146,6 +146,8 @@ export default function Hero() {
             </div>
 
             <FutureSection />
+
+            <IndustriesSection />
           </div>
         </div>
 
@@ -311,6 +313,133 @@ function FutureSection() {
       </div>
       <div className="mt-16 text-center text-white/30 text-sm">
         <p>Ready to automate? Let us know what is slowing you down.</p>
+      </div>
+    </motion.div>
+  );
+}
+
+function IndustriesSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.2 });
+
+  const industries = [
+    {
+      id: 1,
+      title: 'Real Estate',
+      description: 'Lead capture, auto-qualification, and nurture sequences built for how people actually buy property. Leads get routed in seconds, not hours. Follow-ups never slip. Your pipeline stays full without you babysitting it.',
+      icon: Building2,
+    },
+    {
+      id: 2,
+      title: 'E-Commerce & Retail',
+      description: 'Cart abandonment recovery, real-time repricing, and buyer segmentation that actually moves units. We build the systems that turn browsers into repeat customers and cut wasted ad spend to zero.',
+      icon: ShoppingCart,
+    },
+    {
+      id: 3,
+      title: 'Healthcare',
+      description: 'Automated scheduling, intake, patient follow-ups, and documentation. HIPAA-compliant from day one. Your staff stops doing admin work and starts doing the work they were hired for.',
+      icon: Heart,
+    },
+    {
+      id: 4,
+      title: 'Manufacturing',
+      description: 'Predictive maintenance, quality control, and supply chain monitoring that catches problems before they cost you a production run. Less downtime. Tighter tolerances. Faster throughput.',
+      icon: Factory,
+    },
+  ];
+
+  return (
+    <motion.div
+      ref={ref}
+      className="mt-32 max-w-7xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="mb-16">
+        <h2
+          className="text-white leading-[0.9] mb-4"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: 700,
+            letterSpacing: '-0.04em',
+            fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+          }}
+        >
+          Industries
+        </h2>
+        <div className="max-w-2xl">
+          <p className="text-lg text-white/60 mt-3">
+            Deep expertise. Narrow focus. Real results.
+          </p>
+          <p className="text-base text-white/60 mt-0.5">
+            We know the exact problems in your industry because we have solved them before. No generic solutions. Systems built for how your business actually works.
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+        {industries.map((industry) => {
+          const Icon = industry.icon;
+          return (
+            <motion.article
+              key={industry.id}
+              className="group relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: industry.id * 0.1 }}
+            >
+              <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+                <div className="relative z-10">
+                  <div className="mb-6">
+                    <div className="inline-flex p-4 rounded-xl backdrop-blur-md bg-white/10 transition-all duration-500">
+                      <Icon size={32} className="text-white" />
+                    </div>
+                  </div>
+
+                  <h3
+                    className="text-2xl font-bold leading-tight mb-4"
+                    style={{
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
+                    {industry.title}
+                  </h3>
+
+                  <p className="text-white/70 leading-relaxed">
+                    {industry.description}
+                  </p>
+                </div>
+              </div>
+            </motion.article>
+          );
+        })}
+      </div>
+
+      <div className="pt-12 border-t border-white/10">
+        <div className="text-center max-w-3xl mx-auto">
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4"
+            style={{
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Don't see your industry?
+          </h2>
+          <p className="text-white/60 mb-8">
+            We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
+          </p>
+          <motion.button
+            className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Contact Us <ArrowRight size={18} />
+          </motion.button>
+        </div>
       </div>
     </motion.div>
   );
