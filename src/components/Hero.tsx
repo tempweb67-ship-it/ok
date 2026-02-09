@@ -1,19 +1,17 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
-import Contact from './Contact';
 
 export default function Hero() {
-  const [contactOpen, setContactOpen] = useState(false);
   const fullText = "Wexel";
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true, amount: 0.2 });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (currentIndex < fullText.length) {
       const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + fullText[currentIndex]);
@@ -73,7 +71,6 @@ export default function Hero() {
         keywords="AI automation agency, AI voice agents, AI CRM, mass outreach automation, e-commerce AI, social media automation, business automation, Wexel"
         canonical="https://wexel.com/"
       />
-      <Contact isOpen={contactOpen} onClose={() => setContactOpen(false)} />
       <div className="text-white">
         <section className="flex items-center justify-center px-6 pt-12 relative" style={{ minHeight: '100dvh' }}>
           <div className="w-full max-w-[1800px] relative z-10 text-center">
@@ -148,7 +145,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <FutureSection onContactClick={() => setContactOpen(true)} />
+            <FutureSection />
           </div>
         </div>
 
@@ -277,7 +274,7 @@ function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
   );
 }
 
-function FutureSection({ onContactClick }: { onContactClick: () => void }) {
+function FutureSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -304,7 +301,6 @@ function FutureSection({ onContactClick }: { onContactClick: () => void }) {
             Because winners automate and move with blazing speeds.
           </p>
           <motion.button
-            onClick={onContactClick}
             className="inline-flex items-center px-8 py-4 rounded-full bg-blue-500 text-white font-semibold transition-all duration-300 hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/30 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
