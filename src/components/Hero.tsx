@@ -144,12 +144,13 @@ export default function Hero() {
             <IndustriesSection />
 
             <SolutionsSection />
-
-            <FutureSection />
           </div>
         </div>
 
         <FAQ />
+
+        <EndCTA />
+      </div>
       </div>
     </>
   );
@@ -274,19 +275,19 @@ function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
   );
 }
 
-function FutureSection() {
+function EndCTA() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <motion.div
       ref={ref}
-      className="relative max-w-5xl mx-auto mb-12"
+      className="relative max-w-5xl mx-auto mb-12 mt-12"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative p-12 md:p-20 rounded-3xl backdrop-blur-md bg-blue-500/20 border border-blue-500/30">
+      <div className="relative p-12 md:p-20 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10">
         <div className="text-center">
           <h2
             className="text-3xl md:text-5xl font-bold mb-8"
@@ -295,22 +296,12 @@ function FutureSection() {
               letterSpacing: '-0.02em',
             }}
           >
-            Join The Winners' Revolution
+            Need a system that works while you sleep?
           </h2>
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10">
-            Because winners automate and move with blazing speeds.
+          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+            Tell us what is broken. We will tell you exactly how to fix it.
           </p>
-          <motion.button
-            className="inline-flex items-center px-8 py-4 rounded-full bg-blue-500 text-white font-semibold transition-all duration-300 hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/30 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Join the Revolution
-          </motion.button>
         </div>
-      </div>
-      <div className="mt-16 text-center text-white/30 text-sm">
-        <p>Ready to automate? Let us know what is slowing you down.</p>
       </div>
     </motion.div>
   );
