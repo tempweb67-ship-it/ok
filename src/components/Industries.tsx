@@ -28,12 +28,6 @@ export default function Industries() {
       description: 'Predictive maintenance, quality control, and supply chain monitoring that catches problems before they cost you a production run. Less downtime. Tighter tolerances. Faster throughput.',
       icon: Factory,
     },
-    {
-      id: 5,
-      title: 'Education',
-      description: 'Adaptive content delivery, enrollment automation, and retention outreach that responds to real student behavior. You see exactly what works and what does not, backed by data.',
-      icon: GraduationCap,
-    },
   ];
 
   return (
