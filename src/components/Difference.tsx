@@ -6,6 +6,7 @@ export default function Difference() {
     {
       id: 1,
       title: 'Transformation-First Mindset',
+      description: 'We build for where your business is going, not where it has been. No patching old systems. Clean builds from day one.',
       metric: '10x',
       metricLabel: 'Innovation Velocity',
       tagline: 'Future-ready architecture from day one',
@@ -13,6 +14,7 @@ export default function Difference() {
     {
       id: 2,
       title: 'Rapid Deployment',
+      description: 'Live in weeks, not months. Our process is built for speed without cutting corners.',
       metric: '5x',
       metricLabel: 'Faster Time to Market',
       tagline: 'Live in weeks with immediate impact',
@@ -20,6 +22,7 @@ export default function Difference() {
     {
       id: 3,
       title: 'Measurable Impact',
+      description: 'Every system we build gets measured against real numbers. If it does not move the needle, we fix it or cut it.',
       metric: '300%',
       metricLabel: 'Average ROI',
       tagline: 'Quantifiable results from day one',
@@ -27,6 +30,8 @@ export default function Difference() {
     {
       id: 4,
       title: 'Always-On Intelligence',
+      description: 'Systems that run around the clock with zero downtime. Consistent performance at any scale.',
+      metric: '24/7',
       metricLabel: 'Unlimited Scalability',
       tagline: 'Superhuman performance, infinite scale',
     },
