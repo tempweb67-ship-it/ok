@@ -32,7 +32,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         <Link
           to="/"
           className="uppercase leading-[0.85] flex-shrink-0"
-          style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: '1.5rem', color: '#ffffff' }}
+          style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: '1rem', color: '#ffffff' }}
         >
           Wexel
         </Link>
