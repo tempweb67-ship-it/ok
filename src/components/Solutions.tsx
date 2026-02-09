@@ -76,7 +76,7 @@ export default function Solutions() {
                 Built from the ground up on demand.
               </p>
               <p className="text-sm sm:text-base mt-0.5 text-white/40">
-                Click on them to learn more.
+                Six emerging solutions for the year.
               </p>
             </div>
           </div>
