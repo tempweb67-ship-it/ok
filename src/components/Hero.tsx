@@ -152,7 +152,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div id="faq">
+        <div id="faq" className="pt-12">
           <FAQ />
         </div>
 
