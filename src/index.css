@@ -16,7 +16,8 @@
     width: 100%;
     overflow: hidden;
     background-color: #0a1628;
-    scroll-behavior: auto !important;
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 120px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -35,7 +36,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    scroll-behavior: auto !important;
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 120px;
   }
 
   body::-webkit-scrollbar {
