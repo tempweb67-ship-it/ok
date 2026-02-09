@@ -81,7 +81,7 @@ export default function Difference() {
                 fontWeight: 400,
               }}
             >
-              Fast deployment. Measurable results. Systems that scale.
+              Irresistible offers and Solutions
             </p>
           </div>
 
