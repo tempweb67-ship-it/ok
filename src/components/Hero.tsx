@@ -2,6 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
+import Marquee from 'react-fast-marquee';
 import SEO from './SEO';
 import FAQ from './FAQ';
 
@@ -281,26 +282,34 @@ function EndCTA() {
   return (
     <motion.div
       ref={ref}
-      className="relative max-w-5xl mx-auto mb-12 mt-12"
+      className="relative mt-12 pb-40"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="relative p-12 md:p-20 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10">
-        <div className="text-center">
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-8"
-            style={{
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            Need a system that works while you sleep?
-          </h2>
-          <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-            Tell us what is broken. We will tell you exactly how to fix it.
-          </p>
-        </div>
+      <div className="text-center max-w-5xl mx-auto px-6">
+        <h2
+          className="text-4xl md:text-6xl font-bold mb-6"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            letterSpacing: '-0.04em',
+          }}
+        >
+          Need a system that works while you sleep?
+        </h2>
+        <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-12">
+          Tell us what is broken. We will tell you exactly how to fix it.
+        </p>
+      </div>
+
+      <div className="fixed bottom-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 py-1 border-t border-white/5">
+        <Marquee speed={50} autoFill>
+          <span className="text-xs font-bold uppercase tracking-wider mx-4">
+            <span className="text-white">WHERE AI MEETS </span>
+            <span className="text-white">BUSINESS EXCELLENCE</span>
+            <span className="text-white">.</span>
+          </span>
+        </Marquee>
       </div>
     </motion.div>
   );
