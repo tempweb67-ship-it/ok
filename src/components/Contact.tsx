@@ -95,7 +95,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                     TALK
                   </h1>
                   <p className="text-white/60 text-lg leading-relaxed max-w-md">
-                    We usually contact you first. But here are the official channels used for communications.
+                    Providing solutions globally. Here are the official channels used for communications.
                   </p>
                 </motion.div>
 
