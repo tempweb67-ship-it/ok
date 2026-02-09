@@ -7,6 +7,7 @@ import SEO from './SEO';
 import FAQ from './FAQ';
 
 export default function Hero() {
+  console.log("[v0] Hero component rendering");
   const fullText = "Wexel";
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
