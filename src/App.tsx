@@ -7,7 +7,7 @@ import BottomMarquee from './components/Marquee';
 import Grainient from './components/Grainient';
 import Contact from './components/Contact';
 import Explore from './components/Explore';
-import Solutions from './components/Solutions';
+
 import Difference from './components/Difference';
 
 
@@ -63,7 +63,7 @@ function AppContent() {
         <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/solutions" element={<Solutions />} />
+
         <Route path="/solutions/aicrm" element={<AICRM />} />
         <Route path="/solutions/voice" element={<VoiceAgent />} />
         <Route path="/solutions/outreach" element={<Outreach />} />

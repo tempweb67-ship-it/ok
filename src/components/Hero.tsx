@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight } from 'lucide-react';
+import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
 
@@ -148,6 +148,8 @@ export default function Hero() {
             <FutureSection />
 
             <IndustriesSection />
+
+            <SolutionsSection />
           </div>
         </div>
 
@@ -438,6 +440,163 @@ function IndustriesSection() {
             whileTap={{ scale: 0.95 }}
           >
             Contact Us <ArrowRight size={18} />
+          </motion.button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function SolutionsSection() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.2 });
+
+  const solutions = [
+    {
+      id: 1,
+      title: 'Intelligent AI CRM',
+      description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
+      category: 'Customer Experience',
+      icon: BarChart3,
+    },
+    {
+      id: 2,
+      title: 'AI Voice Solutions',
+      description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
+      category: 'Conversational AI',
+      icon: PhoneCall,
+    },
+    {
+      id: 3,
+      title: 'Mass Outreach Automation',
+      description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
+      category: 'Digital Marketing',
+      icon: Mail,
+    },
+    {
+      id: 4,
+      title: 'E-Commerce Intelligence',
+      description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
+      category: 'Commerce Solutions',
+      icon: ShoppingCart,
+    },
+    {
+      id: 5,
+      title: 'Autonomous Social Media',
+      description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
+      category: 'Social Intelligence',
+      icon: Share2,
+    },
+    {
+      id: 6,
+      title: 'Next-Gen Web Experiences',
+      description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
+      category: 'Digital Presence',
+      icon: Globe,
+    },
+  ];
+
+  return (
+    <motion.div
+      ref={ref}
+      className="mt-32 max-w-7xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="mb-16">
+        <h2
+          className="text-white leading-[0.9] mb-4"
+          style={{
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            fontWeight: 700,
+            letterSpacing: '-0.04em',
+            fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+          }}
+        >
+          Solutions
+        </h2>
+        <div className="max-w-2xl">
+          <p className="text-lg text-white/60 mt-3">
+            Built from the ground up on demand.
+          </p>
+          <p className="text-base text-white/60 mt-0.5">
+            Six emerging solutions for the year
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        {solutions.map((solution) => {
+          const Icon = solution.icon;
+          return (
+            <motion.div
+              key={solution.id}
+              className="group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: solution.id * 0.08 }}
+            >
+              <div className="h-full rounded-2xl border border-white/12 bg-white/6 backdrop-blur-xl hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="flex-shrink-0 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                    <Icon size={24} className="text-blue-400" />
+                  </div>
+                  <p className="text-xs text-white/40 uppercase tracking-wider font-semibold">
+                    {solution.category}
+                  </p>
+                </div>
+
+                <h3
+                  className="text-2xl lg:text-3xl font-bold leading-tight mb-3"
+                  style={{
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  {solution.title}
+                </h3>
+
+                <p className="text-white/50 text-sm lg:text-base leading-relaxed mb-8 flex-1">
+                  {solution.description}
+                </p>
+
+                <div className="flex items-center justify-between pt-5 border-t border-white/6">
+                  <span className="text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
+                    Learn more
+                  </span>
+                  <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+                    <ArrowRight size={16} className="text-blue-400 group-hover:translate-x-0.5 transition-transform duration-300" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      <div className="pt-12 border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div>
+            <h2
+              className="text-3xl font-bold mb-2"
+              style={{
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Need a system that works while you sleep?
+            </h2>
+            <p className="text-white/60">
+              Tell us what is broken. We will tell you exactly how to fix it.
+            </p>
+          </div>
+          <motion.button
+            className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get in Touch <ArrowRight size={18} />
           </motion.button>
         </div>
       </div>
