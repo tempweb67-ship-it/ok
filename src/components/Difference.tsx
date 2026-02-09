@@ -81,7 +81,7 @@ export default function Difference() {
                 fontWeight: 400,
               }}
             >
-              Irresistible offers and Solutions
+            
             </p>
           </div>
 
