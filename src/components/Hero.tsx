@@ -141,11 +141,11 @@ export default function Hero() {
               </div>
             </div>
 
-            <FutureSection />
-
             <IndustriesSection />
 
             <SolutionsSection />
+
+            <FutureSection />
           </div>
         </div>
 
