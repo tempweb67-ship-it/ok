@@ -10,7 +10,7 @@ import Explore from './components/Explore';
 import Solutions from './components/Solutions';
 import Difference from './components/Difference';
 import Industries from './components/Industries';
-import Vision from './components/Vision';
+
 import Privacy from './components/Privacy';
 import AICRM from './components/AICRM';
 import VoiceAgent from './components/VoiceAgent';
@@ -72,7 +72,7 @@ function AppContent() {
         <Route path="/solutions/website" element={<Website />} />
         <Route path="/difference" element={<Difference />} />
         <Route path="/industries" element={<Industries />} />
-        <Route path="/vision" element={<Vision />} />
+
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
       </main>
