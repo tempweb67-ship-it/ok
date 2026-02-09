@@ -6,7 +6,6 @@ export default function Difference() {
     {
       id: 1,
       title: 'Transformation-First Mindset',
-      description: 'We build for where your business is going, not where it has been. No patching old systems. Clean builds from day one.',
       metric: '10x',
       metricLabel: 'Innovation Velocity',
       tagline: 'Future-ready architecture from day one',
