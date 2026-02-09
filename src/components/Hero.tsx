@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
@@ -451,6 +452,8 @@ function SolutionsSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.2 });
 
+  const navigate = useNavigate();
+
   const solutions = [
     {
       id: 1,
@@ -458,6 +461,7 @@ function SolutionsSection() {
       description: 'Lead scoring, automated follow-ups, and pipeline visibility. Your CRM works while your team sells.',
       category: 'Customer Experience',
       icon: BarChart3,
+      route: '/solutions/aicrm',
     },
     {
       id: 2,
@@ -465,6 +469,7 @@ function SolutionsSection() {
       description: 'AI picks up the phone, qualifies leads, books appointments, handles support. Sounds human. Works 24/7.',
       category: 'Conversational AI',
       icon: PhoneCall,
+      route: '/solutions/voice',
     },
     {
       id: 3,
@@ -472,6 +477,7 @@ function SolutionsSection() {
       description: 'Thousands of personalized emails sent at scale. Each one tailored per prospect. High deliverability. Real replies.',
       category: 'Digital Marketing',
       icon: Mail,
+      route: '/solutions/outreach',
     },
     {
       id: 4,
@@ -479,6 +485,7 @@ function SolutionsSection() {
       description: 'Smart product recs, dynamic pricing, and cart recovery. Built to increase AOV and cut abandoned checkouts.',
       category: 'Commerce Solutions',
       icon: ShoppingCart,
+      route: '/solutions/ecommerce',
     },
     {
       id: 5,
@@ -486,6 +493,7 @@ function SolutionsSection() {
       description: 'Content scheduling, engagement automation, and analytics across every platform. Your social runs itself.',
       category: 'Social Intelligence',
       icon: Share2,
+      route: '/solutions/social',
     },
     {
       id: 6,
@@ -493,6 +501,7 @@ function SolutionsSection() {
       description: 'Fast, responsive, conversion-focused websites. SEO-optimized. Built to load in under 2 seconds and turn visitors into customers.',
       category: 'Digital Presence',
       icon: Globe,
+      route: '/solutions/website',
     },
   ];
 
@@ -537,7 +546,9 @@ function SolutionsSection() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: solution.id * 0.08 }}
             >
-              <div className="h-full rounded-2xl border border-white/12 bg-white/6 backdrop-blur-xl hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
+              <div 
+                onClick={() => navigate(solution.route)}
+                className="h-full rounded-2xl border border-white/12 bg-white/6 backdrop-blur-xl hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex-shrink-0 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
                     <Icon size={24} className="text-blue-400" />
