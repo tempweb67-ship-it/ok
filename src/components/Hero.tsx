@@ -430,13 +430,6 @@ function IndustriesSection() {
           <p className="text-white/60 mb-8">
             We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
           </p>
-          <motion.button
-            className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact Us <ArrowRight size={18} />
-          </motion.button>
         </div>
       </div>
     </motion.div>
