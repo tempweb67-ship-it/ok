@@ -18,6 +18,7 @@ import Website from './components/Website';
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();
+  console.log("[v0] Current route:", location.pathname);
 
   useEffect(() => {
     window.scrollTo(0, 0);

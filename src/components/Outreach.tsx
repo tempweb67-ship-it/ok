@@ -5,6 +5,7 @@ import { FeatureSection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
 
 export default function Outreach() {
+  console.log("[v0] Outreach component mounted");
   const features = [
     {
       icon: Target,
