@@ -86,7 +86,7 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section className="pt-32 pb-20 px-4 md:px-8" aria-label="Frequently asked questions" id="faq">
+    <section className="pt-20 sm:pt-32 pb-8 sm:pb-20 px-4 md:px-8" aria-label="Frequently asked questions" id="faq">
       <div className="max-w-4xl mx-auto">
         <h2
           className="text-white text-center mb-4"
