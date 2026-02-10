@@ -23,6 +23,12 @@ export default function Header({ onContactClick }: HeaderProps) {
     }
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 pt-4 px-4 md:px-6" role="banner">
       <nav 
@@ -31,7 +37,8 @@ export default function Header({ onContactClick }: HeaderProps) {
       >
         <Link
           to="/"
-          className="uppercase leading-[0.85] flex-shrink-0"
+          onClick={handleLogoClick}
+          className="uppercase leading-[0.85] flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity duration-200"
           style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: '1rem', color: '#ffffff' }}
         >
           Wexel

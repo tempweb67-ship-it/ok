@@ -1,7 +1,7 @@
-import { ArrowLeft, ShoppingCart, TrendingUp, Brain, BarChart3, Users, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ShoppingCart, TrendingUp, Brain, BarChart3, Users, Zap } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from './SEO';
 
 export default function Ecommerce() {
@@ -91,20 +91,6 @@ export default function Ecommerce() {
       <div className="text-white" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link
-              to="/solutions"
-              className="inline-flex items-center gap-2 text-white transition-all duration-300 mb-4 sm:mb-8"
-            >
-              <ArrowLeft size={20} />
-              Back to Solutions
-            </Link>
-          </motion.div>
-
           <motion.div
             ref={heroRef}
             className="mb-8 sm:mb-16"
