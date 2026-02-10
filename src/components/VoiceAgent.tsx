@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
 import Breadcrumbs from './Breadcrumbs';
-import BackToTop from './BackToTop';
 
 export default function VoiceAgent() {
   const features = [
@@ -103,7 +102,6 @@ export default function VoiceAgent() {
           { name: "AI Voice Solutions", url: "/solutions/voice" }
         ]} />
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <BackToTop />
           <motion.div
             ref={heroRef}
             className="mb-8 sm:mb-16"

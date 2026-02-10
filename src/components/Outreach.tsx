@@ -3,7 +3,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
-import BackToTop from './BackToTop';
 
 export default function Outreach() {
   const features = [
@@ -92,7 +91,6 @@ export default function Outreach() {
       <div className="text-white" style={{ minHeight: '100dvh' }}>
       <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <BackToTop />
           <motion.div
             ref={heroRef}
             className="mb-8 sm:mb-16"
