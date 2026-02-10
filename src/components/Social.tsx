@@ -1,6 +1,7 @@
 import { Share2, Calendar, TrendingUp, Target, Zap, BarChart3, Users } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from './SEO';
 
 export default function Social() {

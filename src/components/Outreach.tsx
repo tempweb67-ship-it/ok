@@ -1,11 +1,11 @@
 import { Mail, Target, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { FeatureSection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
 
 export default function Outreach() {
-  console.log("[v0] Outreach component mounted");
   const features = [
     {
       icon: Target,
