@@ -87,7 +87,7 @@ export default function FAQ() {
 
   return (
     <section className="text-white" aria-label="Frequently asked questions" id="faq">
-      <div className="pt-12 sm:pt-16 pb-8 sm:pb-20">
+      <div className="pt-0 pb-8 sm:pb-20">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
         <h2
           className="text-white text-center mb-4"
