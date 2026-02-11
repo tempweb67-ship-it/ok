@@ -132,7 +132,6 @@ export default function Hero() {
             <div className="mb-16">
               <SectionHeader
                 title="Core Values"
-                subtitle="What we stand on"
               />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                 {values.map((value, index) => (
