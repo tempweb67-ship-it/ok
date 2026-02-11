@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 
 import Privacy from './components/Privacy';
 import AICRM from './components/AICRM';
+import VoiceAgent from './components/VoiceAgent';
 import Outreach from './components/Outreach';
 import Ecommerce from './components/Ecommerce';
 import Social from './components/Social';
@@ -57,6 +58,8 @@ function AppContent() {
           <Route path="/" element={<Hero />} />
           <Route path="/aicrm" element={<AICRM />} />
           <Route path="/solutions/aicrm" element={<AICRM />} />
+          <Route path="/voice" element={<VoiceAgent />} />
+          <Route path="/solutions/voice" element={<VoiceAgent />} />
           <Route path="/outreach" element={<Outreach />} />
           <Route path="/solutions/outreach" element={<Outreach />} />
           <Route path="/ecommerce" element={<Ecommerce />} />
