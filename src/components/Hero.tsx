@@ -305,7 +305,7 @@ function IndustriesSection() {
     {
       id: 2,
       title: 'E-Commerce & Retail',
-      description: 'Cart abandonment recovery, real-time repricing, and buyer segmentation that actually moves units. We build the systems that turn browsers into repeat customers and cut wasted ad spend to zero.',
+      description: 'From support to complete self automated and intelligent Commerce platforms. systems made to keep up with incomming traffics and operations.',
       icon: ShoppingCart,
     },
     {
