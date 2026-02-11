@@ -3,7 +3,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FeatureSection, HowItWorksSection, CTASection, BenefitsGrid } from './shared/SolutionPageComponents';
 import SEO from './SEO';
-import Breadcrumbs from './Breadcrumbs';
 
 export default function VoiceAgent() {
   const features = [
@@ -68,10 +67,6 @@ export default function VoiceAgent() {
         description="AI voice agents that handle calls around the clock. Appointment scheduling, lead qualification, and customer support on autopilot. Sounds human. Scales infinitely."
         keywords="AI voice agents, voice automation, AI phone agents, automated phone calls, AI call center, AI receptionist, voice assistant, 24/7 phone automation"
         canonical="https://wexel.com/solutions/voice"
-        breadcrumbs={[
-          { name: "Solutions", url: "https://wexel.com/solutions" },
-          { name: "AI Voice Solutions", url: "https://wexel.com/solutions/voice" }
-        ]}
         articleData={{
           headline: "AI Voice Agents - 24/7 Phone Automation That Sounds Human",
           datePublished: "2024-01-01T00:00:00Z",
@@ -96,11 +91,7 @@ export default function VoiceAgent() {
         }}
       />
       <div className="text-white" style={{ minHeight: '100dvh' }}>
-      <div className="pt-20 sm:pt-24 pb-12 sm:pb-20">
-        <Breadcrumbs items={[
-          { name: "Solutions", url: "/solutions" },
-          { name: "AI Voice Solutions", url: "/solutions/voice" }
-        ]} />
+      <div className="pt-20 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.div
             ref={heroRef}
