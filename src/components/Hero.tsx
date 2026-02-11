@@ -299,7 +299,7 @@ function IndustriesSection() {
     {
       id: 1,
       title: 'Real Estate',
-      description: 'Lead capture, auto-qualification, and nurture sequences built for how people actually buy property. Leads get routed in seconds, not hours. Follow-ups never slip. Your pipeline stays full without you babysitting it.',
+      description: 'Lead capture, auto-qualification, and more. built for how people actually buy property. Leads get routed in seconds, not hours. Follow-ups never slip.',
       icon: Building2,
     },
     {
