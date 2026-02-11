@@ -2,7 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
-import { Sparkles, Globe, Users, Shield, Lightbulb, Target, Heart, Rocket, LucideIcon, Building2, ShoppingCart, Factory, GraduationCap, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
+import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Factory, Heart, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
 
@@ -39,29 +39,6 @@ export default function Hero() {
       icon: Users,
       title: 'Human-Centered Design',
       description: 'Automation built around how your team actually works. Not the other way around.'
-    }
-  ];
-
-  const values = [
-    {
-      icon: Sparkles,
-      title: 'Transparency',
-      description: 'You see exactly what we are building, why, and what results it produces. No black boxes.'
-    },
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We ship clean work that performs. Every system gets measured against real numbers, not vanity metrics.'
-    },
-    {
-      icon: Heart,
-      title: 'Partnership',
-      description: 'We work alongside your team from discovery to deployment. Your success is the only metric that matters.'
-    },
-    {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Enterprise-grade security. Ethical AI practices. Your data stays protected. No exceptions.'
     }
   ];
 
@@ -129,17 +106,6 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="mb-16">
-              <SectionHeader
-                title="Core Values"
-              />
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                {values.map((value, index) => (
-                  <ValueCard key={index} {...value} index={index} />
-                ))}
-              </div>
-            </div>
-
             <div id="industries">
               <IndustriesSection />
             </div>
@@ -168,7 +134,7 @@ export default function Hero() {
   );
 }
 
-function SectionHeader({ title, subtitle }: { title: string; subtitle: string }) {
+function SectionHeader({ title, subtitle }: { title: string; subtitle?: string }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -189,7 +155,7 @@ function SectionHeader({ title, subtitle }: { title: string; subtitle: string })
       >
         {title}
       </h2>
-      <p className="text-lg text-white/60">{subtitle}</p>
+      {subtitle && <p className="text-lg text-white/60">{subtitle}</p>}
     </motion.div>
   );
 }
@@ -254,40 +220,6 @@ function ObjectiveCard({ icon: Icon, title, description, index }: ObjectiveCardP
     </motion.div>
   );
 }
-
-interface ValueCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  index: number;
-}
-
-function ValueCard({ icon: Icon, title, description, index }: ValueCardProps) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.3 });
-
-  return (
-    <motion.div
-      ref={ref}
-      className="group relative"
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-    >
-      <div className="relative p-8 rounded-2xl backdrop-blur-md bg-white/5 border border-white/10 h-full transition-all duration-300 hover:border-blue-500/30 hover:bg-blue-500/10">
-        <div className="flex items-start gap-4 mb-4">
-          <div className="p-3 bg-blue-500/20 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-500/30">
-            <Icon size={24} className="text-blue-400" />
-          </div>
-          <h3 className="text-xl font-bold pt-2">{title}</h3>
-        </div>
-        <p className="text-white/60 leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-}
-
-
 
 function IndustriesSection() {
   const ref = useRef(null);
@@ -542,32 +474,6 @@ function SolutionsSection() {
             </motion.div>
           );
         })}
-      </div>
-
-      <div className="pt-12 border-t border-white/10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div>
-            <h2
-              className="text-3xl font-bold mb-2"
-              style={{
-                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                letterSpacing: '-0.02em',
-              }}
-            >
-              Need a system that works while you sleep?
-            </h2>
-            <p className="text-white/60">
-              Tell us what is broken. We will tell you exactly how to fix it.
-            </p>
-          </div>
-          <motion.button
-            className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get in Touch <ArrowRight size={18} />
-          </motion.button>
-        </div>
       </div>
     </motion.div>
   );
