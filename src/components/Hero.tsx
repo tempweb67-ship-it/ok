@@ -297,13 +297,13 @@ function IndustriesSection() {
     {
       id: 1,
       title: 'Real Estate',
-      description: 'Built how people actually buy properties. Leads get routed in seconds, not hours. Lead capture, auto-qualification, and more.',
+      description: 'Built how people actually buy properties. Leads get routed in seconds, not hours. Lead capture, auto-qualification, and so much more.',
       icon: Building2,
     },
     {
       id: 2,
       title: 'E-Commerce & Retail',
-      description: 'From support to complete intelligent self automated E-Commerce platforms. systems made to keep up with incomming traffics and operations.',
+      description: 'From support to complete intelligent self automated E-Commerce platforms. systems made to keep up with incomming traffics and operations needs.',
       icon: ShoppingCart,
     },
     {
