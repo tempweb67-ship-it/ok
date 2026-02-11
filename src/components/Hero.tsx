@@ -488,7 +488,7 @@ function SolutionsSection() {
         </h2>
         <div className="max-w-2xl">
           <p className="text-lg text-white/60 mt-3">
-            Built from the ground up on demand.
+            We choose what you need, But perhaps you may choose somthing fancy aswell. ;)
           </p>
         </div>
       </div>
