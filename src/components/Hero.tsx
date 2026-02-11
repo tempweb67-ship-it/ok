@@ -120,8 +120,8 @@ export default function Hero() {
 
             <div className="mb-16">
               <SectionHeader
-                title="Strategic Objectives"
-                subtitle="How we get results"
+                title="How we get results"
+                subtitle="strategically coded"
               />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {objectives.map((objective, index) => (
