@@ -299,7 +299,7 @@ function IndustriesSection() {
     {
       id: 1,
       title: 'Real Estate',
-      description: 'Lead capture, auto-qualification, and more. built for how people actually buy properties. Leads get routed in seconds, not hours. Follow-ups never slip.',
+      description: 'Lead capture, auto-qualification, and more. built for how people actually buy properties. Leads get routed in seconds, not hours.',
       icon: Building2,
     },
     {
