@@ -487,7 +487,7 @@ function SolutionsSection() {
           Solutions
         </h2>
         <div className="max-w-2xl">
-          <p className="text-lg text-white/70 mt-3">
+          <p className="text-lg text-white/70 mt-2">
             Your Vision, Our Algorithm
           </p>
         </div>
