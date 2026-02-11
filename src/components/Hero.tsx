@@ -490,9 +490,6 @@ function SolutionsSection() {
           <p className="text-lg text-white/60 mt-3">
             Built from the ground up on demand.
           </p>
-          <p className="text-base text-white/60 mt-0.5">
-            Six emerging solutions for the year
-          </p>
         </div>
       </div>
 
