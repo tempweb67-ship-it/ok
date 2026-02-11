@@ -112,7 +112,7 @@ export default function Hero() {
               </h2>
 
               <p className="text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto">
-               Every system built with security and a backup plan in mind. 24/7 autonomous systems for your peace of mind.
+               Every system built with security and a backup plan in mind. Autonomous systems that work 24/7 without breaking sweat.
               </p>
             </motion.div>
 
