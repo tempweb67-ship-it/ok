@@ -95,7 +95,7 @@ export default function Contact({ isOpen, onClose }: ContactProps) {
                     TALK
                   </h1>
                   <p className="text-white/60 text-lg leading-relaxed max-w-md">
-                    We build what others can't. Let's hop on a call to identify your needs and engineer a custom solution that fits.
+                   We build what others can't. No hype. Let's hop on a call to identify your needs and engineer the custom solution that fits.
                   </p>
                 </motion.div>
 
