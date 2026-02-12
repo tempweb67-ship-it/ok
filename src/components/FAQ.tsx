@@ -13,10 +13,10 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How long does it take to implement AI voice agents?",
-    answer: "Our AI voice agents can be deployed in weeks, not months. We use rapid deployment methodologies that enable you to go live quickly while maintaining enterprise-grade quality and reliability. Most implementations are operational within 2-4 weeks."
+    answer: "Our AI voice agents can be deployed in weeks, not months. We use rapid deployment methodologies that enable you to go live quickly while maintaining enterprise-grade quality and reliability. Most implementations are operational within 2-3 weeks."
   },
   {
-    question: "What industries does Wexel serve?",
+    question: "What industries does Wexel serve?"
     answer: "We serve healthcare, finance, retail, e-commerce, real estate, professional services, and technology companies. Our AI solutions are designed to adapt to industry-specific requirements and compliance needs."
   },
   {
