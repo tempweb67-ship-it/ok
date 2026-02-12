@@ -29,7 +29,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Can AI voice agents handle complex customer inquiries?",
-    answer: "Yes, our AI voice agents are powered by advanced natural language processing and can handle complex, multi-turn conversations. They understand context, intent, and sentiment, providing human-quality responses 24/7. For highly specialized queries, they can seamlessly escalate to human agents."
+    answer: "Yes, our AI voice agents are powered by advanced natural language processing and can handle complex, multi-turn conversations. understanding context, intent, and sentiment, providing human-quality responses 24/7. For highly specialized queries, they can seamlessly escalate to human agents."
   },
   {
     question: "How does mass outreach automation maintain personalization?",
