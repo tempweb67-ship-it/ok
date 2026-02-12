@@ -15,6 +15,8 @@ export default function Header({ onContactClick }: HeaderProps) {
     { label: 'FAQ', id: 'faq' },
   ];
 
+  const privacyLink = { label: 'Privacy', path: '/privacy' };
+
   const handleNavClick = (id: string) => {
     setIsOpen(false);
     const element = document.getElementById(id);
@@ -54,6 +56,12 @@ export default function Header({ onContactClick }: HeaderProps) {
               {item.label}
             </button>
           ))}
+          <Link
+            to={privacyLink.path}
+            className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 whitespace-nowrap"
+          >
+            {privacyLink.label}
+          </Link>
         </div>
 
         <button
@@ -85,6 +93,13 @@ export default function Header({ onContactClick }: HeaderProps) {
               {item.label}
             </button>
           ))}
+          <Link
+            to={privacyLink.path}
+            onClick={() => setIsOpen(false)}
+            className="block w-full text-left text-sm font-medium text-white/70 hover:text-white transition-colors duration-200 px-4 py-2"
+          >
+            {privacyLink.label}
+          </Link>
           <button
             onClick={() => {
               onContactClick();
