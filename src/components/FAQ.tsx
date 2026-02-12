@@ -25,7 +25,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What is the difference between AI CRM and traditional CRM?",
-    answer: "Traditional CRM stores data; AI CRM acts on it. Using predictive analytics and automation, AI CRM scores leads and drives engagement, allowing your team to focus on closing deals.
+    answer: "Traditional CRM stores data; AI CRM acts on it. Using predictive analytics and automation, AI CRM scores leads and drives engagement, allowing your team to focus on closing deals."
   },
   {
     question: "Can AI voice agents handle complex customer inquiries?",
