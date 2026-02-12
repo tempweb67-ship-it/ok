@@ -33,7 +33,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How does mass outreach automation maintain personalization?",
-    answer: "Our AI-powered outreach automation uses advanced personalization engines that analyze recipient data, behavior, and preferences to create hyper-personalized messages at scale. Each message is uniquely tailored while maintaining brand consistency and compliance."
+    answer: "Our AI-powered outreach automation uses advanced personalization engines that analyze recipient data, behavior, and preferences to create hyper-personalized messages at scale. Each message is uniquely tailored while maintaining brand consistency and compliance!"
   },
   {
     question: "What ROI can I expect from AI automation?",
