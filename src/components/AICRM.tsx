@@ -123,7 +123,7 @@ export default function AICRM() {
               animate={heroInView ? { opacity: 0.7 } : { opacity: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              AI-powered CRM that drives engagement, scores leads, and automates follow-ups across every channel—identifying exactly where deals stall. Faster response times. A pipeline you can actually trust.
+              AI-powered CRM that drives engagement, scores leads, and automates follow-ups across every channel, identifying exactly where deals stall. Faster response times. A pipeline you can actually trust.
             </motion.p>
           </motion.div>
 
