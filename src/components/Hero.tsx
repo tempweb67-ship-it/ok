@@ -247,7 +247,7 @@ function IndustriesSection() {
     {
       id: 4,
       title: 'Crypto',
-      description: 'We have automated many of the algorithmic and security aspects of the blockchain, facilitating faster development in the meme coin industry—from code to websites—countless times.',
+      description: 'We automated many of the algorithmic and security aspects of the blockchain, facilitating faster development in the meme coin industry—from code to websites—countless times.',
       icon: Bitcoin,
     },
   ];
