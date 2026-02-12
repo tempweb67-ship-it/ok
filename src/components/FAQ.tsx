@@ -25,7 +25,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What is the difference between AI CRM and traditional CRM?",
-    answer: "AI CRM goes beyond traditional CRM by incorporating predictive analytics, automated workflows, intelligent lead scoring, and personalized customer engagement. It learns from data patterns to provide actionable insights and automates routine tasks, enabling your team to focus on high-value activities."
+    answer: "Traditional CRM stores data; AI CRM acts on it. Using predictive analytics and automation, AI CRM scores leads and drives engagement, allowing your team to focus on closing deals.
   },
   {
     question: "Can AI voice agents handle complex customer inquiries?",
