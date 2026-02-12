@@ -46,9 +46,12 @@ export default function Header({ onContactClick }: HeaderProps) {
     }
   };
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (location.pathname === '/') {
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
     }
   };
 
@@ -61,6 +64,7 @@ export default function Header({ onContactClick }: HeaderProps) {
         <Link
           to="/"
           onClick={handleLogoClick}
+          aria-label="Wexel - Back to home"
           className="uppercase leading-[0.85] flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity duration-200"
           style={{ fontFamily: 'Blanka, sans-serif', fontWeight: 900, letterSpacing: '0.08em', fontSize: '1rem', color: '#ffffff' }}
         >
