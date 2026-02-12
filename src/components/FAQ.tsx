@@ -9,7 +9,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "What is AI automation and how can it help my business?",
-    answer: "AI automation leverages intelligent systems to handle repetitive or complex tasks autonomously. This allows you to offload operational bottlenecks and focus on high-level strategy while AI drives your business efficiency."
+    answer: "AI automation handles repetitive and complex tasks autonomously, freeing you to focus on scaling while it drives efficiency."
   },
   {
     question: "How long does it take to implement AI voice agents?",
