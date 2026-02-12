@@ -17,7 +17,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What industries does Wexel serve?",
-    answer: "We serve healthcare, finance, retail, e-commerce, real estate, professional services, and technology companies. Our AI solutions are designed to adapt to industry-specific requirements and compliance needs."
+    answer: "We primarily serve real estate, e-commerce, healthcare, and crypto tech companies. Solutions are designed for industry-specific requirements and compliance needs."
   },
   {
     question: "How secure is your AI automation platform?",
