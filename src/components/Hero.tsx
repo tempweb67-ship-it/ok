@@ -246,8 +246,8 @@ function IndustriesSection() {
     },
     {
       id: 4,
-      title: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and supply chain monitoring that catches problems before they cost you a production run. Less downtime. Tighter tolerances. Faster throughput.',
+      title: 'Crypto',
+      description: 'We have automated many of the algorithmic and security aspects of the blockchain, facilitating faster development in the meme coin industry—from code to websites—countless times.',
       icon: Bitcoin,
     },
   ];
