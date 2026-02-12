@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 interface HeaderProps {
@@ -7,7 +7,9 @@ interface HeaderProps {
 
 export default function Header({ onContactClick }: HeaderProps) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
 
   const navItems = [
     { label: 'Industries', id: 'industries' },
@@ -17,11 +19,30 @@ export default function Header({ onContactClick }: HeaderProps) {
 
   const privacyLink = { label: 'Privacy', path: '/privacy' };
 
+  useEffect(() => {
+    if (pendingScroll && location.pathname === '/') {
+      const timer = setTimeout(() => {
+        const element = document.getElementById(pendingScroll);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setPendingScroll(null);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [pendingScroll, location.pathname]);
+
   const handleNavClick = (id: string) => {
     setIsOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (location.pathname !== '/') {
+      setPendingScroll(id);
+      navigate('/');
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
@@ -66,6 +87,7 @@ export default function Header({ onContactClick }: HeaderProps) {
 
         <button
           onClick={onContactClick}
+          data-contact-btn
           className="hidden md:inline-flex px-6 py-2 rounded-lg bg-blue-500/80 hover:bg-blue-600 text-white text-sm font-semibold transition-all duration-200 whitespace-nowrap"
         >
           Contact
@@ -105,6 +127,7 @@ export default function Header({ onContactClick }: HeaderProps) {
               onContactClick();
               setIsOpen(false);
             }}
+            data-contact-btn
             className="w-full px-4 py-2 rounded-lg bg-blue-500/80 hover:bg-blue-600 text-white text-sm font-semibold transition-all duration-200"
           >
             Contact
