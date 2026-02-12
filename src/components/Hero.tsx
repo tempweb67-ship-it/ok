@@ -234,7 +234,7 @@ function IndustriesSection() {
     },
     {
       id: 2,
-      title: 'E-Commerce & Retail',
+      title: 'E-Commerce',
       description: 'From support to complete intelligent self automated E-Commerce platforms. systems made to keep up with incomming traffics and operations needs.',
       icon: ShoppingCart,
     },
