@@ -436,9 +436,9 @@ function SolutionsSection() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: solution.id * 0.08 }}
             >
-              <div 
+              <div
                 onClick={() => navigate(solution.route)}
-                className="h-full rounded-2xl border border-white/12 bg-white/6 backdrop-blur-xl hover:border-blue-500/30 hover:bg-white/10 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
+                className="h-full rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl hover:border-white/30 hover:bg-white/15 transition-all duration-300 p-7 lg:p-8 flex flex-col cursor-pointer">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex-shrink-0 p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
                     <Icon size={24} className="text-blue-400" />
