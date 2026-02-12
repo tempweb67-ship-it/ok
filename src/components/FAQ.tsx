@@ -45,7 +45,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "How does AI social media automation work?",
-    answer: "Our AI social media automation analyzes your brand voice, audience behavior, and content performance to create, schedule, and optimize social media content. It handles posting, engagement monitoring, response generation, and performance analytics across multiple platforms automatically."
+    answer: "Our AI social media automation analyzes your brand voice, audience behavior, and content performance to create, schedule and optimize social media content. It handles posting, engagement, response generation, and performance analytics across multiple platforms automatically."
   }
 ];
 
