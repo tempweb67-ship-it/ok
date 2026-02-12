@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "What ROI can I expect from AI automation?",
-    answer: "Our clients typically see 300% average ROI through increased efficiency, reduced operational costs, improved customer satisfaction, and revenue acceleration. Specific results vary by implementation, but we design every solution to deliver measurable, quantifiable business impact."
+    answer: "Our clients typically see 300% average ROI with increased efficiency, reduced operational costs, improved customer satisfaction, and revenue acceleration. Specific results vary by implementation, but we design every solution to deliver measurable, quantifiable business impact."
   },
   {
     question: "Do you provide training and support after implementation?",
