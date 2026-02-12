@@ -2,7 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Marquee from 'react-fast-marquee';
-import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Coins, Heart, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
+import { Globe, Users, Lightbulb, LucideIcon, Building2, ShoppingCart, Bitcoin, Heart, ArrowRight, BarChart3, PhoneCall, Mail, Share2 } from 'lucide-react';
 import SEO from './SEO';
 import FAQ from './FAQ';
 
@@ -248,7 +248,7 @@ function IndustriesSection() {
       id: 4,
       title: 'Manufacturing',
       description: 'Predictive maintenance, quality control, and supply chain monitoring that catches problems before they cost you a production run. Less downtime. Tighter tolerances. Faster throughput.',
-      icon: Coins,
+      icon: Bitcoin,
     },
   ];
 
