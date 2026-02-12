@@ -9,7 +9,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: "What is AI automation and how can it help my business?",
-    answer: "AI automation uses artificial intelligence to streamline business operations, reduce manual tasks, and improve efficiency. It helps businesses save time, reduce costs, enhance customer experiences, and scale operations without proportionally increasing headcount. Our solutions typically deliver 300% ROI and 5x faster time to market."
+    answer: "AI automation leverages intelligent systems to handle repetitive or complex tasks autonomously. This allows you to offload operational bottlenecks and focus on high-level strategy while AI drives your business efficiency."
   },
   {
     question: "How long does it take to implement AI voice agents?",
