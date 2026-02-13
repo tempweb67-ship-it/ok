@@ -321,22 +321,29 @@ function IndustriesSection() {
         })}
       </div>
 
-      <div className="pt-12 border-t border-white/10">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            style={{
-              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            Don't see your industry?
-          </h2>
-          <p className="text-white/60 mb-8">
-            We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
-          </p>
+      <motion.article
+        className="group relative mt-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+          <div className="relative z-10 text-center max-w-2xl mx-auto">
+            <h2
+              className="text-2xl font-bold leading-tight mb-4"
+              style={{
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Don't see your industry?
+            </h2>
+            <p className="text-white/70 leading-relaxed">
+              We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
+            </p>
+          </div>
         </div>
-      </div>
+      </motion.article>
     </motion.div>
   );
 }

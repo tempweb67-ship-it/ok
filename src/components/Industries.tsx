@@ -126,34 +126,36 @@ export default function Industries() {
             })}
           </div>
 
-          <div className="mt-20 pt-12 border-t border-white/10">
-            <div className="text-center max-w-3xl mx-auto">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-4"
-                style={{
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                  letterSpacing: '-0.02em',
-                }}
-              >
-                Don't see your industry?
-              </h2>
-              <p className="text-white/60 mb-8">
-                We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
-              </p>
-              <Link
-                to="/"
-                onClick={() => {
-                  const contactBtn = document.querySelector('[data-contact-btn]');
-                  if (contactBtn) {
-                    (contactBtn as HTMLButtonElement).click();
-                  }
-                }}
-                className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2"
-              >
-                Contact Us <ArrowRight size={18} />
-              </Link>
+          <article className="group relative mt-8">
+            <div className="relative rounded-2xl p-8 h-full backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+              <div className="relative z-10 text-center max-w-2xl mx-auto">
+                <h2
+                  className="text-2xl font-bold leading-tight mb-4"
+                  style={{
+                    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  Don't see your industry?
+                </h2>
+                <p className="text-white/70 leading-relaxed mb-6">
+                  We learn your industry's specific problems, then build systems engineered for your exact situation. No templates. No guesswork.
+                </p>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    const contactBtn = document.querySelector('[data-contact-btn]');
+                    if (contactBtn) {
+                      (contactBtn as HTMLButtonElement).click();
+                    }
+                  }}
+                  className="px-8 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-all duration-300 inline-flex items-center gap-2"
+                >
+                  Contact Us <ArrowRight size={18} />
+                </Link>
+              </div>
             </div>
-          </div>
+          </article>
           </div>
         </div>
       </div>
